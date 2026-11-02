@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Publications — Dr. Ghulam Mubashar Hassan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1C3F;
+    --navy-mid: #1A2D5A;
+    --blue: #2E5BA8;
+    --blue-light: #4A7BD4;
+    --gold: #C4922A;
+    --gold-light: #E8B84B;
+    --bg: #F7F5F0;
+    --bg-alt: #EFEDE8;
+    --text: #1A1A1A;
+    --text-mid: #3C3C3C;
+    --text-muted: #6B6B6B;
+    --border: #D8D5CE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #0A1428;
+      --navy-mid: #122040;
+      --blue: #4A7BD4;
+      --blue-light: #6B9AE8;
+      --gold: #E8B84B;
+      --gold-light: #F0CC7A;
+      --bg: #111827;
+      --bg-alt: #1A2436;
+      --text: #EEE9E0;
+      --text-mid: #C8C3B8;
+      --text-muted: #8A8580;
+      --border: #2A3548;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: var(--text); background: var(--bg); }
+
+  .gm-name { font-weight: 700; color: var(--gold); }
+
+  .page-header {
+    background: var(--navy-mid);
+    padding: 3rem 4rem 2.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,146,42,0.12) 0%, transparent 70%);
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--gold-light); }
+  .back-link svg { width: 14px; height: 14px; }
+  .page-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .page-subtitle { font-size: 0.88rem; color: rgba(255,255,255,0.55); }
+
+  /* STICKY TOC */
+  .layout { display: grid; grid-template-columns: 200px 1fr; min-height: calc(100vh - 200px); }
+
+  .toc {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--bg-alt);
+    padding: 2rem 1.25rem;
+    border-right: 1px solid var(--border);
+  }
+  .toc-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .toc a {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.35rem 0.5rem;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    line-height: 1.3;
+    margin-bottom: 0.1rem;
+  }
+  .toc a:hover { color: var(--text); border-left-color: var(--gold); }
+
+  /* CONTENT */
+  .content { padding: 3rem 4rem 5rem; max-width: 820px; }
+
+  .pub-section { margin-bottom: 3.5rem; }
+
+  .pub-section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    color: var(--navy);
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 2rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    .pub-section-title { color: var(--blue-light); }
+  }
+
+  .pub-item {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.83rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+  .pub-item:last-child { border-bottom: none; }
+  .pub-item a { color: var(--blue); text-decoration: none; }
+  .pub-item a:hover { text-decoration: underline; }
+
+  .pub-note {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-left: 0.4rem;
+  }
+
+  .copyright-note {
+    margin-top: 3rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-alt);
+    border-left: 3px solid var(--border);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; }
+    .toc { display: none; }
+    .page-header { padding: 2.5rem 1.5rem 2rem; }
+    .content { padding: 2rem 1.5rem 4rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <a href="index.html" class="back-link">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12L6 8l4-4"/></svg>
+    Back to profile
+  </a>
+  <div class="page-eyebrow">University of Western Australia</div>
+  <h1 class="page-title">Publications</h1>
+  <p class="page-subtitle">Dr. Ghulam Mubashar Hassan — Department of Computer Science &amp; Software Engineering</p>
+</header>
+
+<div class="layout">
+  <nav class="toc">
+    <div class="toc-label">Jump to</div>
+    <a href="#book-chapters">Book Chapters</a>
+    <a href="#datasets">Datasets</a>
+    <a href="#journal-papers">Journal Papers</a>
+    <a href="#conference-papers">Conference Papers</a>
+  </nav>
+
+  <div class="content">
+
+    <!-- BOOK CHAPTERS -->
+    <div class="pub-section" id="book-chapters">
+      <h2 class="pub-section-title">Book Chapters</h2>
+      <div class="pub-item">
+        <span class="gm-name">Ghulam Mubashar Hassan</span>, "Computational Thinking", <em>CA ANZ Risk and Technology</em>, Wrightbooks – John Wiley &amp; Sons Australia Ltd, Page 207–230, ISBN: 9780730391272, 2021.
+      </div>
+    </div>
+
+    <!-- DATASETS -->
+    <div class="pub-section" id="datasets">
+      <h2 class="pub-section-title">Datasets</h2>
+      <div class="pub-item">
+        J. Jorgensen, M. Hodkiewicz, E. Cripps and <span class="gm-name">Ghulam Mubashar Hassan</span>, "OpenBoltRF: An open-source workflow to analyse load transfer for geometrically imperfect bolted ring-flanges in offshore wind turbines," 2024. doi: <a href="https://doi.org/10.5281/ZENODO.8287222" target="_blank">10.5281/ZENODO.8287222</a>
+      </div>
+      <div class="pub-item">
+        J. Jorgensen, M. Hodkiewicz, E. Cripps and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Finite Element Method Numerical Simulation results for analysis of Segment Model of Bolted Ring Flange," 2022. doi: <a href="https://doi.org/10.26182/31hp-td58" target="_blank">10.26182/31hp-td58</a>
+      </div>
+      <div class="pub-item">
+        Z. M. Malakan, S. Anwar, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Sequential storytelling image dataset (SSID)," 2023. doi: <a href="https://doi.org/10.21227/dbr9-dq51" target="_blank">10.21227/dbr9-dq51</a>
+      </div>
+    </div>
+
+    <!-- JOURNAL PAPERS -->
+    <div class="pub-section" id="journal-papers">
+      <h2 class="pub-section-title">Journal Papers</h2>
+
+      <div class="pub-item">D. Ali, A. Mian, N. Akhtar and <span class="gm-name">Ghulam Mubashar Hassan</span>, "DRBD-Mamba for robust and efficient brain tumor segmentation with analytical insights," <em>Brain Informatics</em>, 2026. doi: <a href="https://link.springer.com/article/10.1186/s40708-026-00326-w" target="_blank">10.1186/s40708-026-00326-w</a></div>
+
+      <div class="pub-item">K. Molin, J. Li, N. Barry, J. Ong, A. Iravani, M. Hofman, <span class="gm-name">Ghulam Mubashar Hassan</span>, M. Ebert and J. Kendrick, "Pre-therapeutic PSMA PET Imaging Biomarkers Demonstrate Prognostic Value in Patients Undergoing [177Lu]Lu-PSMA Therapy: A Systematic Review and Meta-analysis," <em>Clinical Genitourinary Cancer</em>, 2026. doi: <a href="https://doi.org/10.1016/j.clgc.2026.102628" target="_blank">10.1016/j.clgc.2026.102628</a></div>
+
+      <div class="pub-item">B. Wright, M. Ebert, J. Kendrick and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Robust optimisation for photon radiotherapy: A scoping review of models, paradigms, and reporting," <em>Radiotherapy and Oncology</em>, 2026. doi: <a href="https://doi.org/10.1016/j.radonc.2026.111709" target="_blank">10.1016/j.radonc.2026.111709</a></div>
+
+      <div class="pub-item">A. Varghese, P. Huggett, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Design, development and testing of a digitally instrumented slurry pump test rig enabling sustainability-conscious pump assessment in mining," <em>HardwareX</em>, Vol. 26, 2026. doi: <a href="https://doi.org/10.1016/j.ohx.2026.e00801" target="_blank">10.1016/j.ohx.2026.e00801</a></div>
+
+      <div class="pub-item">A. Alelyani, A. Datta and <span class="gm-name">Ghulam Mubashar Hassan</span>, "A machine learning technique for optimizing virtual machine placement in data-centres," <em>Journal of Cloud Computing</em>, 2026. doi: <a href="https://doi.org/10.1186/s13677-026-00851-3" target="_blank">10.1186/s13677-026-00851-3</a></div>
+
+      <div class="pub-item">J. Kendrick, R. Francis, <span class="gm-name">Ghulam Mubashar Hassan</span>, J.S.L. Ong, R. Jeraj, N. Barry and M. Ebert, "Deep learning-based PSMA PET segmentation repeatability," <em>La Radiologia Medica</em>, 2026. doi: <a href="https://doi.org/10.1007/s11547-025-02137-1" target="_blank">10.1007/s11547-025-02137-1</a></div>
+
+      <div class="pub-item">N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, <span class="gm-name">Ghulam Mubashar Hassan</span>, J. Dowling, J.L. Ong, P. Parizel, M.S. Hofman, B. Kocak, R. Cuocolo and M. Ebert, "The long and winding road of radiomics: learnings from two meta-analyses of the radiomics quality score," <em>Physics in Medicine and Biology</em>, 71(3), 2026. doi: <a href="https://doi.org/10.1088/1361-6560/ae36e0" target="_blank">10.1088/1361-6560/ae36e0</a></div>
+
+      <div class="pub-item">J. Li, J. Kendrick, M. Ebert, <span class="gm-name">Ghulam Mubashar Hassan</span>, N. Barry, K. Wright, S. Lee, J. Bellinge and C. Schultz, "Auto-segmentation, radiomic reproducibility, and comparison of radiomics between manual and AI-derived segmentations for coronary arteries in cardiac [18F]NaF PET/CT images," <em>EJNMMI Physics</em>, Vol. 10(1), 2025. doi: <a href="https://doi.org/10.1186/s40658-025-00751-6" target="_blank">10.1186/s40658-025-00751-6</a></div>
+
+      <div class="pub-item">N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, <span class="gm-name">Ghulam Mubashar Hassan</span>, J. Dowling, P.M. Parizel, M.S. Hofman and M. Ebert, "Correction: Evaluating the impact of the radiomics quality score," <em>European Radiology</em>, Vol. 35(10), 2025. doi: <a href="https://doi.org/10.1007/s00330-025-11570-9" target="_blank">10.1007/s00330-025-11570-9</a></div>
+
+      <div class="pub-item">K. Molin, J.S.L. Ong, R. Francis, <span class="gm-name">Ghulam Mubashar Hassan</span>, M. Ebert and Jake Kendrick, "RECIP 1.0 more predictive of overall survival than PSMA PET progression criteria in biochemically recurrent prostate cancer," <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2025. doi: <a href="https://doi.org/10.1007/s00259-025-07592-6" target="_blank">10.1007/s00259-025-07592-6</a></div>
+
+      <div class="pub-item">X. Jin, C.T. Lai, S.L. Perrella, Z. Gridneva, J.L. McEachran, <span class="gm-name">Ghulam Mubashar Hassan</span>, N. Taylor and D. Geddes, "Defining Low Milk Supply: A Data-Driven Diagnostic Framework and Risk Factor Analysis for Breastfeeding Women," <em>Nutrients</em> 2025, 17(22), 2025. doi: <a href="https://doi.org/10.3390/nu17223524" target="_blank">10.3390/nu17223524</a></div>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "A systematic review on the sustainability of slurry pumps in the mining industry," <em>Minerals Engineering</em>, Vol. 234, 2025. doi: <a href="https://doi.org/10.1016/j.mineng.2025.109731" target="_blank">10.1016/j.mineng.2025.109731</a></div>
+
+      <div class="pub-item">Juwita, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "3D-SCUMamba: An Abdominal Tumor Segmentation model," <em>IEEE Access</em>, 2025. doi: <a href="https://ieeexplore.ieee.org/document/11015497" target="_blank">10.1109/ACCESS.2025.3573619</a></div>
+
+      <div class="pub-item">Juwita, <span class="gm-name">Ghulam Mubashar Hassan</span>, N. Akhtar and A. Datta, "MMPU-Net: A parameter-efficient network for fine-stage of pancreas and pancreas-tumor segmentation on CT scans," <em>Biomedical Signal Processing and Control</em>, Vol. 110, 2025. doi: <a href="https://doi.org/10.1016/j.bspc.2025.108224" target="_blank">10.1016/j.bspc.2025.108224</a></div>
+
+      <div class="pub-item">Juwita, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Pancreas segmentation in CT scans: A novel MOMUNet based workflow," <em>Computers in Biology and Medicine</em>, Vol. 193, 2025. doi: <a href="https://doi.org/10.1016/j.compbiomed.2025.110346" target="_blank">10.1016/j.compbiomed.2025.110346</a></div>
+
+      <div class="pub-item">M. Belkina, S. Daniel, S. Nikolic, R. Haque, S. Lyden, P. Neal, S. Grundy and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Implementing generative AI (GenAI) in higher education: A systematic review of case studies," <em>Computers and Education: Artificial Intelligence</em>, Vol. 8, 2025. doi: <a href="https://doi.org/10.1016/j.caeai.2025.100407" target="_blank">10.1016/j.caeai.2025.100407</a></div>
+
+      <div class="pub-item">N. Barry, J. Kendrick, P. Rowshanfarzad, <span class="gm-name">Ghulam Mubashar Hassan</span>, RJ Francis, N. Bucknell, E.S. Koh, A. Scott, M. Ebert, et al., "An External, Independent Validation of an O-(2-[18F]Fluoroethyl)-l-Tyrosine PET Automatic Segmentation Network on a Single-Center, Prospective Dataset of Patients with Glioblastoma," <em>Journal of Nuclear Medicine</em>, 2025. doi: <a href="https://doi.org/10.2967/jnumed.124.268925" target="_blank">10.2967/jnumed.124.268925</a></div>
+
+      <div class="pub-item">R. Anggrainingsih, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Evaluating BERT-based language models for detecting misinformation," <em>Neural Computing &amp; Applications</em>, 2025. doi: <a href="https://doi.org/10.1007/s00521-025-11101-z" target="_blank">10.1007/s00521-025-11101-z</a></div>
+
+      <div class="pub-item">A. Shati, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "A comprehensive fusion model for improved pneumonia prediction based on KNN-wavelet-GLCM and a residual network," <em>Journal of Intelligent Systems with Applications</em>, 2025. doi: <a href="https://doi.org/10.1016/j.iswa.2025.200492" target="_blank">10.1016/j.iswa.2025.200492</a></div>
+
+      <div class="pub-item">S. Nikolic, T. Suesse, S. Grundy, R. Haque, S. Lyden, S. Lal, <span class="gm-name">Ghulam Mubashar Hassan</span>, S. Daniel and M. Belkina, "Assessment integrity and validity in the teaching laboratory: adapting to GenAI by developing an understanding of the verifiable learning objectives behind laboratory assessment selection," <em>European Journal of Engineering Education</em>, 2025. doi: <a href="https://www.tandfonline.com/doi/full/10.1080/03043797.2025.2456944" target="_blank">10.1080/03043797.2025.2456944</a></div>
+
+      <div class="pub-item">A. Shati, A. Datta, A. Mansoor and <span class="gm-name">Ghulam Mubashar Hassan</span>, "ETDHDNet: An advanced DenseNet-based extended texture descriptor for efficient tuberculosis prediction in CXR images," <em>Journal of Intelligence-Based Medicine</em>, 2025. doi: 10.1016/j.ibmed.2025.100269</div>
+
+      <div class="pub-item">N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, <span class="gm-name">Ghulam Mubashar Hassan</span>, J. Dowling, P. Parizel, M.S. Hofman and M. Ebert, "Evaluating the impact of the Radiomics Quality Score: a systematic review and meta-analysis," <em>European Radiology</em>, 2025. doi: <a href="https://link.springer.com/article/10.1007/s00330-024-11341-y" target="_blank">10.1007/s00330-024-11341-y</a></div>
+
+      <div class="pub-item">X. Jin, C. Lai, S. Perrella, X. Zhou, <span class="gm-name">Ghulam Mubashar Hassan</span>, J. McEachran, Z. Gridneva, N. Taylor, M. Wlodek and D. Geddes, "Milk composition is predictive of low milk supply using machine learning approaches," <em>Diagnostics</em>, Vol. 15(2), 2025. doi: <a href="https://doi.org/10.3390/diagnostics15020191" target="_blank">10.3390/diagnostics15020191</a></div>
+
+      <div class="pub-item">K. Molin, N. Barry, S. Gill, <span class="gm-name">Ghulam Mubashar Hassan</span>, R.J. Francis, J.S.L. Ong, M. Ebert and J. Kendrick, "Evaluating the prognostic value of radiomics and clinical features in metastatic prostate cancer using [68Ga]Ga-PSMA-11 PET/CT," <em>Physical and Engineering Sciences in Medicine</em>, 2025. doi: <a href="https://link.springer.com/article/10.1007/s13246-024-01516-8" target="_blank">10.1007/s13246-024-01516-8</a></div>
+
+      <div class="pub-item">R. Anggrainingsih, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Transformer-based models for combating rumours on microblogging platforms: a review," <em>Artificial Intelligence Review</em>, Vol. 57(212), 2024. doi: <a href="https://doi.org/10.1007/s10462-024-10837-9" target="_blank">10.1007/s10462-024-10837-9</a></div>
+
+      <div class="pub-item">S. Nikolic, T. Suesse, S. Grundy, R. Haque, S. Lyden, <span class="gm-name">Ghulam Mubashar Hassan</span>, S. Daniel, M. Belkina and S. Lal, "Laboratory learning objectives: ranking objectives across the cognitive, psychomotor and affective domains within engineering," <em>European Journal of Engineering Education</em>, Vol. 49(3), 2024. doi: 10.1080/03043797.2023.2248042</div>
+
+      <div class="pub-item">S. Nikolic, C. Sandison, R. Haque, S. Daniel, S. Grundy, M. Belkina, S. Lyden, <span class="gm-name">Ghulam Mubashar Hassan</span> and P. Neal, "ChatGPT, Copilot, Gemini, SciSpace and Wolfram versus higher education assessments: an updated multi-institutional study," <em>Australasian Journal of Engineering Education</em>, Vol. 28, 2024. doi: <a href="https://doi.org/10.1080/22054952.2024.2372154" target="_blank">10.1080/22054952.2024.2372154</a> <span class="pub-note">★ Most-read &amp; 3rd most-cited; Best Article 2023</span></div>
+
+      <div class="pub-item">X. Lyu, H. Ran, M. Elchalakani, A. Wittek, <span class="gm-name">Ghulam Mubashar Hassan</span>, P. Ayough and T.M. Pham, "Dynamic responses of rubberised concrete: A study using short-length F-shape barriers subjected to pendulum impact," <em>Journal of Building Engineering</em>, Vol. 95, 2024. doi: 10.1016/j.jobe.2024.110135</div>
+
+      <div class="pub-item">S. Zahan, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Learning Sparse Temporal Video Mapping for Action Quality Assessment in Floor Gymnastics," <em>IEEE Transactions on Instrumentation and Measurement</em>, Vol. 73, 2024. doi: 10.1109/TIM.2024.3398072</div>
+
+      <div class="pub-item">N. Barry, E.S. Koh, M. Ebert, A. Moore, R.J. Francis, P. Rowshanfarzad, <span class="gm-name">Ghulam Mubashar Hassan</span>, et al., "[18]F-fluoroethyl-l-tyrosine positron emission tomography for radiotherapy target delineation," <em>Physics and Imaging in Radiation Oncology</em>, 2024. doi: 10.1016/j.phro.2024.100568</div>
+
+      <div class="pub-item">A. Alelyani, A. Datta and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Optimizing Cloud Performance: A Microservice Scheduling Strategy for Enhanced Fault-Tolerance, Reduced Network Traffic, and Lower Latency," <em>IEEE Access</em>, Mar 2024. doi: <a href="https://doi.org/10.1109/ACCESS.2024.3373316" target="_blank">10.1109/ACCESS.2024.3373316</a></div>
+
+      <div class="pub-item">B. Rusanov, <span class="gm-name">Ghulam Mubashar Hassan</span>, M. Reynolds, M. Sabet, J. Kendrick, P. Rowshanfarzad and M. Ebert, "Transformer CycleGAN with uncertainty estimation for CBCT based synthetic CT in adaptive radiotherapy," <em>Physics in Medicine and Biology</em>, Vol. 69(3), Jan 2024. doi: <a href="https://doi.org/10.1088/1361-6560/ad1cfc" target="_blank">10.1088/1361-6560/ad1cfc</a></div>
+
+      <div class="pub-item">H. Almutairi, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Machine Learning Based Approaches for Sleep Stage Classification Utilising a Combination of Physiological Signals: A Systematic Review," <em>Applied Sciences</em>, Vol. 13(24), Dec 2023. doi: <a href="https://doi.org/10.3390/app132413280" target="_blank">10.3390/app132413280</a></div>
+
+      <div class="pub-item">J. Kendrick, R. Francis, <span class="gm-name">Ghulam Mubashar Hassan</span>, P. Rowshan Farzad, JSL Ong, N. Barry, B. Rusanov and M. Ebert, "Quantitative [68Ga]Ga-PSMA-11 PET Biomarkers for the analysis of Lesion-level Progression in Biochemically Recurrent Prostate Cancer," <em>Scientific Reports</em>, Springer Nature, Vol. 13, 2023. doi: <a href="https://doi.org/10.1038/s41598-023-45106-2" target="_blank">10.1038/s41598-023-45106-2</a></div>
+
+      <div class="pub-item">J. Kendrick, R. Francis, <span class="gm-name">Ghulam Mubashar Hassan</span>, P. Rowshan Farzad, JSL Ong, R. Jeraj, N. Barry, T. Hagan and M. Ebert, "Prospective inter- and intra-tracer repeatability analysis of radiomics features in [68Ga]Ga-PSMA-11 and [18F]F-PSMA-1007 PET scans in metastatic prostate cancer," <em>The British Journal of Radiology</em>, 2023. doi: <a href="https://doi.org/10.1259/bjr.20221178" target="_blank">10.1259/bjr.20221178</a></div>
+
+      <div class="pub-item">R. Anggrainingsih, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "CE-BERT: Concise And Efficient BERT-based Model for Detecting Rumours on Twitter," <em>IEEE Access</em>, Vol. 11, pp. 80207–80217, 2023. doi: <a href="https://doi.org/10.1109/ACCESS.2023.3299858" target="_blank">10.1109/ACCESS.2023.3299858</a></div>
+
+      <div class="pub-item">N. Barry, R.J. Francis, M.A. Ebert, E.S. Koh, P. Rowshanfarzad, <span class="gm-name">Ghulam Mubashar Hassan</span>, J. Kendrick, et al., "Delineation and agreement of FET PET biological volumes in glioblastoma: results of the nuclear medicine credentialing program from the FIG study—TROG 18.06," <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2023. doi: <a href="https://doi.org/10.1007/s00259-023-06371-5" target="_blank">10.1007/s00259-023-06371-5</a></div>
+
+      <div class="pub-item">A. Alelyani, A. Datta and <span class="gm-name">Ghulam Mubashar Hassan</span>, "DAScheduler: Dependency-Aware Scheduling Algorithm for Containerized Dependent Jobs," <em>Journal of Grid Computing</em>, Vol. 21(46), 2023. doi: <a href="https://doi.org/10.1007/s10723-023-09679-6" target="_blank">10.1007/s10723-023-09679-6</a></div>
+
+      <div class="pub-item">J. Kendrick, R.J. Francis, <span class="gm-name">Ghulam Mubashar Hassan</span>, P. Rowshan Farzad, J.SL Ong, M.C. McCarthy, S. Alexander and M. Ebert, "Prognostic utility of RECIP 1.0 with manual and AI-based segmentations in biochemically recurrent prostate cancer from [68Ga]Ga-PSMA-11 PET images," <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2023. doi: <a href="https://doi.org/10.1007/s00259-023-06382-2" target="_blank">10.1007/s00259-023-06382-2</a></div>
+
+      <div class="pub-item">Z. M. Malakan, S. Anwar, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Sequential Vision to Language as Story: A Storytelling Dataset and Benchmarking," <em>IEEE Access</em>, Vol. 11, 2023. doi: <a href="https://ieeexplore.ieee.org/document/10177150" target="_blank">10.1109/ACCESS.2023.3293646</a></div>
+
+      <div class="pub-item">H. Albaqami, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Automatic Detection of Abnormal EEG Signals Using WaveNet and LSTM," <em>Journal of Sensors</em> (Special Issue: Biomedical Sensors), 2023.</div>
+
+      <div class="pub-item">S. Nikolic, S. Daniel, R. Haque, M. Belkina, <span class="gm-name">Ghulam Mubashar Hassan</span>, S. Grundy, S. Lyden, P. Neal and C. Sandison, "ChatGPT versus engineering education assessment: a multidisciplinary and multi-institutional benchmarking and analysis," <em>European Journal of Engineering Education</em>, Vol. 48, 2023. doi: <a href="https://doi.org/10.1080/03043797.2023.2213169" target="_blank">10.1080/03043797.2023.2213169</a> <span class="pub-note">★ 2nd most-read &amp; most-cited; Best Article 2023</span></div>
+
+      <div class="pub-item">H. Albaqami, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Subasi and A. Datta, "MP-SeizNet: A Multi-Path CNN Bi-LSTM Network for Seizure-Type Classification Using EEG," <em>Biomedical Signal Processing and Control</em>, Vol. 84, 2023.</div>
+
+      <div class="pub-item">M. Marinelli, S.A. Male, A. Valentine, T. van der Veen and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Using VR to teach safety in design: what and how do engineering students learn?," <em>European Journal of Engineering Education</em>, 2023. doi: <a href="https://www.tandfonline.com/doi/full/10.1080/03043797.2023.2172382" target="_blank">10.1080/03043797.2023.2172382</a></div>
+
+      <div class="pub-item">J. Jorgensen, M. Hodkiewicz, E. Cripps and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Requirements for the application of the Digital Twin Paradigm to offshore wind turbine structures for uncertain fatigue analysis," <em>Computers in Industry</em>, 2023.</div>
+
+      <div class="pub-item">S. Zahan, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "SDFA: Structure Aware Discriminative Feature Aggregation for Efficient Human Fall Detection in Video," <em>IEEE Transactions on Industrial Informatics</em>, 2022.</div>
+
+      <div class="pub-item">Y. Zhang, M. Reynolds, A. Lugmayr, K. Damjanov, <span class="gm-name">Ghulam Mubashar Hassan</span>, "A Visual Data Storytelling Framework," <em>Journal of Informatics</em>, Vol. 9(73), 2022. <span class="pub-note">★ Editor's Choice</span></div>
+
+      <div class="pub-item">J. Kendrick, R. Francis, <span class="gm-name">Ghulam Mubashar Hassan</span>, P. Rowshanfarzad, J. Ong and M. Ebert, "Fully Automatic Prognostic Biomarker Extraction from Metastatic Prostate Lesion Segmentations in Whole-body [68Ga]Ga-PSMA-11 PET/CT Images," <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2022.</div>
+
+      <div class="pub-item">B. Rusanov, <span class="gm-name">Ghulam Mubashar Hassan</span>, M. Reynolds, M. Sabet, J. Kendrick, P. Rowshanfarzad and M. Ebert, "Deep learning methods for enhancing cone-beam CT image quality toward adaptive radiation therapy: A systematic review," <em>Medical Physics</em>, 2022.</div>
+
+      <div class="pub-item">H. Albaqami, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Wavelet-based multi-class seizure type classification system," <em>Journal of Applied Sciences</em>, Vol. 12, 2022.</div>
+
+      <div class="pub-item">F. Salami, A. Bozorgi-Amiri, <span class="gm-name">Ghulam Mubashar Hassan</span>, R.T. Moghaddam and A. Datta, "Designing a clinical decision support system for Alzheimer's diagnosis on OASIS-3 data set," <em>Biomedical Signal Processing and Control</em>, Vol. 74, 2022.</div>
+
+      <div class="pub-item">J. Kendrick, R. Francis, <span class="gm-name">Ghulam Mubashar Hassan</span>, P. Rowshanfarzad, R. Jeraj, C. Kasisi, B. Rusanov and M. Ebert, "Radiomics for Identification and Prediction in Metastatic Prostate Cancer: A Review of Studies," <em>Frontiers in Oncology</em>, 2021. doi: <a href="https://doi.org/10.3389/fonc.2021.771787" target="_blank">10.3389/fonc.2021.771787</a></div>
+
+      <div class="pub-item">B. Rusanov, M. Ebert, G. Mukwada, <span class="gm-name">Ghulam Mubashar Hassan</span> and M. Sabet, "A convolutional neural network for estimating cone-beam CT intensity deviations from virtual CT projections," <em>Physics in Medicine &amp; Biology</em>, 2021.</div>
+
+      <div class="pub-item">H. Albaqami, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Subasi and A. Datta, "Automatic detection of abnormal EEG signals using wavelet feature extraction and gradient boosting decision tree," <em>Biomedical Signal Processing and Control</em>, Vol. 70, 2021.</div>
+
+      <div class="pub-item">H. Almutairi, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Classification of Obstructive Sleep Apnoea from single-lead ECG signals using convolutional neural and Long Short Term Memory networks," <em>Biomedical Signal Processing and Control</em>, Vol. 69, 2021.</div>
+
+      <div class="pub-item">R. Kaur, K. Bekki, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Estimating galaxy masses from kinematics of globular cluster systems: a new method based on deep learning," <em>Monthly Notices of the Royal Astronomical Society</em>, 2021.</div>
+
+      <div class="pub-item">A. Valentine, T.V.D. Veen, P. Kenworthy, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Guzzomi, R.N. Khan and S. Male, "Using head mounted display virtual reality simulations in large engineering classes: Operating vs observing," <em>Australasian Journal of Educational Technology</em>, Vol. 37(3), 2021, pp. 119–136.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, "Deformation measurement in the presence of discontinuities with digital image correlation: A review," <em>Optics and Lasers in Engineering</em>, Vol. 137, 2021, pp. 1–14.</div>
+
+      <div class="pub-item">B. Wright, <span class="gm-name">Ghulam Mubashar Hassan</span>, G. Mukwada, M. Ebert, S. Goodall, M. Sabet and P.R. Farzad, "Comprehensive investigation into the stability of Varian and Elekta kV imaging systems during arc delivery," <em>Biomedical Physics and Engineering Express</em>, Vol. 6(6), 2020.</div>
+
+      <div class="pub-item">A. Valentine, S. Lowenhoff, M. Marinelli, S. Male and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Building students' nascent understanding of ethics in engineering education," <em>European Journal of Engineering Education</em>, Vol. 45(6), 2020, pp. 957–970.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, "Digital Image Correlation for discontinuous displacement measurement using subset segmentation," <em>Optics and Lasers in Engineering</em>, Vol. 115, 2019, pp. 208–216.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, "Discontinuous and pattern matching algorithm to measure deformation having discontinuities," <em>Engineering Applications of Artificial Intelligence</em>, Vol. 81, 2019, pp. 223–233.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, A.V. Dyskin, C. MacNish, E. Pasternak and I. Shufrin, "Discontinuous Digital Image Correlation to reconstruct displacement and strain fields with discontinuities: Dislocation approach," <em>Engineering Fracture Mechanics</em>, Vol. 189, 2017, pp. 173–192.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, C. MacNish, A.V. Dyskin and I. Shufrin, "Digital Image Correlation with Dynamic Subset Selection," <em>Optics and Lasers in Engineering</em>, Vol. 84, 2016, pp. 1–9.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, A.V. Dyskin and C. MacNish, "A Comparative Study of Techniques of Distant Reconstruction of Displacement and Strain Fields using the DISTRESS Simulator," <em>Optik</em>, Vol. 127(23), 2016, pp. 11288–11305.</div>
+
+      <div class="pub-item">E. Pasternak, A.V. Dyskin, M. Esim, <span class="gm-name">Ghulam Mubashar Hassan</span> and C. MacNish, "Rotations and Pattern Formation in Granular Materials under Loading," <em>Philosophical Magazine</em>, Vol. 95(28), 2015, pp. 3122–3145.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span> and Saleh M. Al-Saqer, "Support Vector Machine based Red Palm Weevil Recognition System," <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 7(1), 2012.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span> and Saleh M. Al-Saqer, "Pecan Weevil Recognition using Support Vector Machine Method," <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(4), 2011, pp. 521–526.</div>
+
+      <div class="pub-item">Saleh M. Al-Saqer and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Artificial Neural Network based Red Palm Weevil Recognition System," <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(3), 2011.</div>
+
+      <div class="pub-item">Saleh M. Al-Saqer and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Optimization of Solenoid Valve in Variable Rate Application Systems," <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(3), 2011, pp. 348–355.</div>
+
+      <div class="pub-item">Saleh M. Al-Saqer and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Red Palm Weevil Recognition by Image Processing Techniques," <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(3), 2011.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, K.M. Yahya and I.U. Haq, "Dynamic Feedback Controller for Leader-Follower approach for Unicycle Robots," <em>Journal of Engineering &amp; Applied Sciences</em>, Vol. 25(2), 2006, pp. 965–970.</div>
+    </div>
+
+    <!-- CONFERENCE PAPERS -->
+    <div class="pub-section" id="conference-papers">
+      <h2 class="pub-section-title">Conference Papers</h2>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Challenges and Lessons from Integrating Digital Technologies in Slurry Pumping for the Mining Industry," <em>CIM CONNECT 2026</em>, May 2026.</div>
+
+      <div class="pub-item">S. Grundy, M. Belkina, S. Nikolic, S. Lyden, R. Haque, P. Neal, S. Daniel, <span class="gm-name">Ghulam Mubashar Hassan</span>, "Practical Strategies for Integrating GenAI in the Classroom," <em>AAEE2025</em>, December 2025. <a href="https://research.usc.edu.au/esploro/outputs/conferencePaper/Practical-Strategies-for-Integrating-GenAI-in/991188344602621" target="_blank">Link</a> <span class="pub-note">★ Best Practice Paper Award</span></div>
+
+      <div class="pub-item">Danish Ali, A. Mian, N. Akhtar and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Attention-Guided Vector Quantized Variational Autoencoder for Brain Tumor Segmentation," <em>MICCAI 2025</em>, Lecture Notes in Computer Science, Springer Nature, 2026. <a href="https://papers.miccai.org/miccai-2025/paper/3774_paper.pdf" target="_blank">Link</a></div>
+
+      <div class="pub-item">V. Mutiawani, N. Sharif, N. Morlet, S. Manners and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Generalized Visual Field Pattern Discovery Using Archetypal Analysis," <em>MICCAI 2025 Workshop on Ophthalmic Medical Image Analysis</em>, Springer Nature, 2026.</div>
+
+      <div class="pub-item">A. Varghese, J. Xiang, P. Mikkonen, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Remote Monitoring of Slurry Pumps in Mining and Mineral Processing," <em>APCOM 2025</em>, August 2025. <a href="https://www.ausimm.com/conferences-and-events/apcom-2025/" target="_blank">Link</a></div>
+
+      <div class="pub-item">Khanh Nguyen, <span class="gm-name">Ghulam Mubashar Hassan</span> and Ajmal Mian, "Occlusion-aware Text-Image-Point Cloud Pretraining for Open-World 3D Object Recognition," <em>CVPR 2025</em>, June 2025. <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Nguyen_Occlusion-aware_Text-Image-Point_Cloud_Pretraining_for_Open-World_3D_Object_Recognition_CVPR_2025_paper.pdf" target="_blank">Link</a></div>
+
+      <div class="pub-item">M. Belkina, P. Neal, S. Grundy, <span class="gm-name">Ghulam Mubashar Hassan</span>, R. Haque, S. Daniel, S. Nikolic and Sarah Lyden, "Systematic Literature Review of GenAI Integration in Higher Education and Analysis of Opportunities for Engineering Education," <em>AAEE2024</em>, December 2024. <a href="https://search.informit.org/doi/epdf/10.3316/informit.T2025032000013600019570733" target="_blank">Link</a></div>
+
+      <div class="pub-item">H. Fernando, F. Tahmasebinia, X. Wu, R. Goldsworthy, Y. No, K. Chung, M. Takatsuka, S. McManus, S. Nikolic, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Dorval and D. Mihaylov, "Piloting Implementation of Strategic Guidelines for AI use within an Engineering Design-Thinking Project," <em>AAEE2024</em>, December 2024. <a href="https://search.informit.org/doi/epdf/10.3316/informit.T2025032000014590125451591" target="_blank">Link</a></div>
+
+      <div class="pub-item">S. Daniel, S. Nikolic, C. Sandison, R. Haque, S. Grundy, M. Belkina, S. Lyden, <span class="gm-name">Ghulam Mubashar Hassan</span> and P. Neal, "Engineering Assessment in the Age of Generative Artificial Intelligence: A Critical Analysis," <em>IEEE WEEF-GEDC</em>, December 2024. doi: <a href="https://ieeexplore.ieee.org/document/10854936" target="_blank">10.1109/WEEF-GEDC63419.2024.10854936</a></div>
+
+      <div class="pub-item">P. Ciceklidag, M. Ibrahim, H. Wang, Y. Miao, J. Hong, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "High-Definition 3D Point Cloud Mapping of the City of Subiaco in Western Australia," <em>DICTA 2024</em>, December 2024.</div>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Digitalization of Centrifugal Slurry Pumps: A Reflection of Innovation, R&amp;D and Lessons Learned," <em>IMPC 2024</em>, October 2024.</div>
+
+      <div class="pub-item">J. Vo, N. Sharif and <span class="gm-name">Ghulam Mubashar Hassan</span>, "MNA-net: Multimodal Neuroimaging Attention-Based Architecture for Cognitive Decline Prediction," <em>MICCAI 2024 Workshop (PRIME)</em>, Springer, October 2024. <span class="pub-note">★ Best Paper Award</span></div>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Advancing Sustainability in Pumping Systems," <em>International Future Mining Conference</em>, September 2024.</div>
+
+      <div class="pub-item">P. Neal, S. Daniel, <span class="gm-name">Ghulam Mubashar Hassan</span>, S. Grundy, R. Haque, S. Nikolic, M. Belkina, S. Lyden and C. Sandison, "Evaluating and transforming assessments in an age of generative AI," <em>SEFI 2024</em>, September 2024.</div>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Optimizing Mill Circuit Pump Reliability," <em>Mill Circuit 2024</em>, June 2024.</div>
+
+      <div class="pub-item">J. Jorgensen, M. Hodkiewicz, E. Cripps and <span class="gm-name">Ghulam Mubashar Hassan</span>, "An open-source analysis workflow for geometrically imperfect bolted ring-flanges in wind turbine support structures," <em>TORQUE 2024</em>, May 2024.</div>
+
+      <div class="pub-item">Z.M. Malakan, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Sequential Image Storytelling Model Based on Transformer Attention Pooling," <em>IVCNZ 2023</em>, December 2023.</div>
+
+      <div class="pub-item">A. Hasibuan, M. Reynolds, <span class="gm-name">Ghulam Mubashar Hassan</span> and S. Male, "Role of Theory in Analysing the Dynamic of Self-regulated Learning Process based on Students' Event Logs Data," <em>ASCILITE 2023</em>, December 2023.</div>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Slurry Pump Safety Considerations in Mineral Processing Plants," <em>Metplant Conference 2023</em>, November 2023. <span class="pub-note">★ Runner Up Best Paper Award</span></div>
+
+      <div class="pub-item">A. Shati, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "COVID-19 Detection System: A Comparative Analysis Based on Acoustic Features of Cough Audio Signals," <em>TrustCom 2023</em>, November 2023.</div>
+
+      <div class="pub-item">A. Saleem, Z. Ilyas, D. Suter, <span class="gm-name">Ghulam Mubashar Hassan</span>, S. Reid, et al., "SCOL: Supervised Contrastive Ordinal Loss for Abdominal Aortic Calcification Scoring," <em>MICCAI 2023</em>, Lecture Notes in Computer Science, Springer, Cham. doi: <a href="https://doi.org/10.1007/978-3-031-43987-2_27" target="_blank">10.1007/978-3-031-43987-2_27</a></div>
+
+      <div class="pub-item">H. Almutairi, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Detecting Sleep Disorders from NREM Using DeepSDBPLM," <em>12th International Conference on Robotics, Vision, Signal Processing and Power Applications</em>, August 2023.</div>
+
+      <div class="pub-item">M. McDougall, H. Albaqami, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Patient independent interictal Epileptiform Discharge Detection," <em>IEEE EMBC 2023</em>, July 2023.</div>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Pumps and Sustainability in Mineral Processing," <em>World Mining Congress (WMC 2023)</em>, June 2023.</div>
+
+      <div class="pub-item">S. Zahan, Z. Gilani, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Human Gesture and Gait Analysis for Autism Detection," <em>CVPR 2023 Workshops</em>, June 2023.</div>
+
+      <div class="pub-item">J. Bardwell, <span class="gm-name">Ghulam Mubashar Hassan</span>, F. Salami and N. Akhtar, "Cognitive impairment prediction by normal cognitive brain MRI scans using deep learning," <em>AJCAI 2022</em>, December 2022.</div>
+
+      <div class="pub-item">Z. Malakan, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Vision Transformer Based Model for describing a Set of Images as a Story," <em>AJCAI 2022</em>, December 2022.</div>
+
+      <div class="pub-item">S. Nikolic, T. Suesse, R. Haque, <span class="gm-name">Ghulam Mubashar Hassan</span>, S. Lyden, S. Grundy, S. Daniel, S. Lal and M. Belkina, "An Australian University Comparison of Engineering Laboratory Learning Objectives Rankings," <em>AAEE 2022</em>, December 2022.</div>
+
+      <div class="pub-item">S. Nikolic, T. Suesse, S. Grundy, R. Haque, S. Lyden, <span class="gm-name">Ghulam Mubashar Hassan</span>, S. Daniel, M. Belkina and S. Lal, "A European vs Australasian Comparison of Engineering Laboratory Learning Objectives Rankings," <em>SEFI 2022</em>, September 2022.</div>
+
+      <div class="pub-item">A. Varghese, S. Martins, E. Lessing, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Karrech, "Pumping sustainably — power and water consumption in mineral processing plants," <em>IMPC Asia-Pacific 2022</em>, August 2022.</div>
+
+      <div class="pub-item">J. Jorgensen, M. Hodkiewicz, E. Cripps and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Probabilistic assessment of the effect of bolt pre-load loss over time in offshore wind turbine bolted ring-flanges," <em>OMAE 2022</em>, June 2022.</div>
+
+      <div class="pub-item">H. Albaqami, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Comparison of WPD, DWT and DTCWT for multi-class seizure classification," <em>IEEE SPMB 2021</em>, December 2021.</div>
+
+      <div class="pub-item">M.A. Hasibuan, M. Reynolds, S. Male, <span class="gm-name">Ghulam Mubashar Hassan</span> and T.F. Kusumasari, "Assessing a Measurement Model of Self-regulated Learning in an Online Collaborative Learning Environment," <em>REES/AAEE 2021</em>, December 2021.</div>
+
+      <div class="pub-item">A. Gell, S. Male, M. Marinelli and <span class="gm-name">Ghulam Mubashar Hassan</span>, "How and when do Engineers in the mining industry learn about Safety Culture?," <em>REES/AAEE 2021</em>, December 2021.</div>
+
+      <div class="pub-item">A. Sones, M. Marinelli, S. Male and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Competencies that lead to high performance as a project engineer in management consulting," <em>REES/AAEE 2021</em>, December 2021.</div>
+
+      <div class="pub-item">R. Tan, M. Marinelli, S. Male and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Engineering in a pandemic: the impact of remote working and learning on quality of work produced," <em>REES/AAEE 2021</em>, December 2021.</div>
+
+      <div class="pub-item">S. Zahan, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Modeling human skeleton joint dynamics for fall detection," <em>DICTA 2021</em>, Gold Coast, Australia, December 2021.</div>
+
+      <div class="pub-item">Z. Malakan, <span class="gm-name">Ghulam Mubashar Hassan</span>, M. Jalwana, N. Aafaq and A. Mian, "Semantic attribute enriched storytelling from a sequence of images," <em>DICTA 2021</em>, Gold Coast, Australia, December 2021.</div>
+
+      <div class="pub-item">J. Jorgensen, M. Hodkiewicz, E. Cripps and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Predicting bolt stress under uncertainty in offshore wind turbine structural connections using a Gaussian process surrogate model," <em>ISOPE 2021</em>, Rhodes, Greece, June 2021.</div>
+
+      <div class="pub-item">J. Jung, N. Akhtar and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Analysing adversarial examples for deep learning," <em>VISIGRAPP 2021</em>, pp. 585–592.</div>
+
+      <div class="pub-item">Z. Aljawy, N. Aafaq, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Contextualise, attend, modulate and tell: visual storytelling," <em>VISIGRAPP 2021</em>, pp. 196–205.</div>
+
+      <div class="pub-item">H. Satnani, M. Marinelli, S. Male and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Engineering graduates working in maintenance within the mining industry in Australia: capability and conceptual gaps," <em>AAEE 2020</em>. <span class="pub-note">★ Best Student Paper Award</span></div>
+
+      <div class="pub-item">K. Ludewick, S. Male, A. Valentine and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Identification of threshold capabilities in engineering workplace conflict resolution," <em>AAEE 2020</em>.</div>
+
+      <div class="pub-item">H. Almutairi, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Datta, "Detection of obstructive sleep apnoea by ECG signals using deep learning architectures," <em>EUSIPCO 2020</em>, pp. 1382–1386.</div>
+
+      <div class="pub-item">Y. Liu, M. Reynolds, D. Huynh and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Study of accurate and fast estimation method of vehicle length based on YOLOs," <em>IEEE ICAIIS 2020</em>.</div>
+
+      <div class="pub-item">J. Skotny, A. Valentine, <span class="gm-name">Ghulam Mubashar Hassan</span> and S. Male, "Conceptual learning and immersive properties in dead-mounted-display virtual reality simulations," <em>AAEE 2019</em>.</div>
+
+      <div class="pub-item">B. Lee, S.Z. Gilani, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Mian, "Facial gender classification — analysis using convolutional neural network," <em>IEEE DICTA 2019</em>, pp. 1–8.</div>
+
+      <div class="pub-item">F. Ta, A. Valentine, S. Male and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Piloted online training module to teach on-site safety in engineering," <em>ASCILITE 2019</em>, pp. 1–10.</div>
+
+      <div class="pub-item">S. Male, P. Kenworthy, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Guzzomi and T. French, "Teaching safety in design in large classes using VR," <em>AAEE 2018</em>.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span> and M. Reynolds, "Genetic algorithms for scheduling and optimization of ore train network," <em>GCAI 2018</em>, EPiC Series in Computing, Vol. 55, pp. 81–92.</div>
+
+      <div class="pub-item">R. Barker, A. Hurst, R. Shrubsall, <span class="gm-name">Ghulam Mubashar Hassan</span> and T. French, "A low-cost hardware-in-the-loop agent-based simulation testbed for autonomous vehicles," <em>IEEE/ASME AIM 2018</em>, pp. 1015–1020.</div>
+
+      <div class="pub-item">N. Phillips, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Dyskin, C. MacNish and E. Pasternak, "Digital Image Correlation to analyze nonlinear elastic behavior of materials," <em>IEEE ICIP 2017</em>, pp. 4367–4371.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, D. Hang, C. MacNish and A. Dyskin, "Characteristics of Color Digital Image Correlation for deformation measurement in geomechanical structures," <em>IEEE DICTA 2016</em>, pp. 1–8.</div>
+
+      <div class="pub-item">C. MacNish, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Dyskin and E. Pasternak, "Towards affordable and robust remote photogrammetric sensing for early warning of fracturing and structural failure," <em>IEEE IHTC 2015</em>, pp. 1–6.</div>
+
+      <div class="pub-item">N.V. Dinh, <span class="gm-name">Ghulam Mubashar Hassan</span>, A. Dyskin and C. MacNish, "Digital Image Correlation for Small Strain Measurement in Deformable Solids and Geomechanical Structures," <em>IEEE ICIP 2015</em>, pp. 3324–3328.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, C. MacNish and A. Dyskin, "Extending Digital Image Correlation to Reconstruct Displacement and Strain Fields around Discontinuities in Geomechanical Structures under Deformation," <em>IEEE WACV 2015</em>, pp. 710–717.</div>
+
+      <div class="pub-item">I. Ashraf, <span class="gm-name">Ghulam Mubashar Hassan</span>, K.M. Yahya, S.A.A. Shah, S. Ullah, M.A. Manzoor and M. Murad, "Parameter Tuning of Evolutionary Algorithm by Meta-EAs for WCET Analysis," <em>IEEE ICET 2010</em>, pp. 7–10.</div>
+
+      <div class="pub-item">S.A.A. Shah, K.M. Yahya, <span class="gm-name">Ghulam Mubashar Hassan</span> and A. Bais, "Quantification and Visualization of MRI Cartilage of the Knee: A Simplified Approach," <em>IEEE ICET 2010</em>, pp. 175–180.</div>
+
+      <div class="pub-item">M. Irfan, Q. Habib, <span class="gm-name">Ghulam Mubashar Hassan</span>, K.M. Yahya and S. Hayat, "Combinational Digital Circuit Synthesis using Cartesian Genetic Programming from a NAND Gate Template," <em>IEEE ICET 2010</em>, pp. 343–347.</div>
+
+      <div class="pub-item">M.F. Jan, Q. Habib, M. Irfan, M. Murad, K.M. Yahya and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Carbon Monoxide Detection and Autonomous Countermeasure System using Wireless Sensor and Actuator Network," <em>IEEE ICET 2010</em>, pp. 405–409.</div>
+
+      <div class="pub-item">W. Ahmad, S.A. Hassan, M.A. Irfan, A. Bais, <span class="gm-name">Ghulam Mubashar Hassan</span>, S.A.A. Shah and K.M. Yahya, "Design and Implementation of Real Time LPR System on a Fixed Point DSP," <em>IEEE ICET 2010</em>, pp. 159–163.</div>
+
+      <div class="pub-item">M.A. Manzoor, M. Farooq, S.A.A. Shah, A.A. Shah, S. Ullah, A. Bais, <span class="gm-name">Ghulam Mubashar Hassan</span> and K.M. Yahya, "Real Time Image Registration Based on Feature Tracking using Digital Signal Processor," <em>IEEE ICET 2010</em>, pp. 155–158.</div>
+
+      <div class="pub-item">S.A.A. Shah, M.A. Manzoor, M. Farooq, A.A. Shah, A. Bais, K.M. Yahya and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Efficient implementation of Image Registration based on Feature Tracking," <em>IEEE WiCOM 2010</em>, pp. 1–3.</div>
+
+      <div class="pub-item">M. Murad, K.M. Yahya and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Web Based Poultry Farm Monitoring System Using Wireless Sensor Network," <em>ACM FIT 2009</em>.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, A.I. Marwat, S. Wahid, F. Kareem, K.M. Yahya and A. Bais, "Cell Phone based Geographical Advertisement System (CGAS)," <em>IEEE SCRD 2009</em>.</div>
+
+      <div class="pub-item">A. Bais, M.U.K. Khan, K.M. Yahya, R. Sablatnig and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Memory Efficient Vision Based Line Feature Extraction for Tiny Mobile Robots," <em>ICIAR 2009</em>, Lecture Notes in Computer Science, Springer, pp. 287–296.</div>
+
+      <div class="pub-item">M.U.K. Khan, A. Bais, K.M. Yahya, <span class="gm-name">Ghulam Mubashar Hassan</span> and R. Arshad, "A Swift and Memory Efficient Hough Transform for Systems with Limited Fast Memory," <em>ICIAR 2009</em>, Lecture Notes in Computer Science, Springer, pp. 297–306.</div>
+
+      <div class="pub-item">S. Mahmood, <span class="gm-name">Ghulam Mubashar Hassan</span> and M.H. Hassan, "DoS and DDoS Attacks: Analysis and Prevention," <em>1st National Conference on Security, Computing &amp; Communication</em>, 2008, pp. 22–27.</div>
+
+      <div class="pub-item">I.U. Haq, K.M. Yahya, <span class="gm-name">Ghulam Mubashar Hassan</span> and T.M. Jadoon, "Analysis of VoIP by Using Different Vocoders in IEEE 802.11b Wireless Networks," <em>1st National Conference on Security, Computing &amp; Communication</em>, 2008, pp. 84–87.</div>
+
+      <div class="pub-item">A. Bais, R. Sablatnig, J. Hu, K.M. Yahya, M. Usman, <span class="gm-name">Ghulam Mubashar Hassan</span> and M.T. Iqbal, "Stereo Vision Based Self-Localization of Autonomous Mobile Robots," <em>Robot Vision Conference</em>, Springer, 2008, pp. 367–380.</div>
+
+      <div class="pub-item">A. Bais, R. Sablatnig, K.M. Yahya and <span class="gm-name">Ghulam Mubashar Hassan</span>, "A Hybrid Approach towards Vision based Self-Localization of Autonomous Mobile Robots," <em>IEEE ICMV 2007</em>, pp. 1–6.</div>
+
+      <div class="pub-item">M.F. Nazir, <span class="gm-name">Ghulam Mubashar Hassan</span>, I.G. Chaudhry, S.A. Khan and K.M. Yahya, "To analyze customers' willingness to change Mobile Service using MNP based on Quality Service parameters," <em>Asian Network for Quality Congress</em>, 2007, pp. 960–968.</div>
+
+      <div class="pub-item">S. Ahmed, M.N. Karsiti and <span class="gm-name">Ghulam Mubashar Hassan</span>, "Feedback Linearization Techniques for Collaborative Robots," <em>IEEE ICCAS 2007</em>, pp. 1551–1556.</div>
+
+      <div class="pub-item"><span class="gm-name">Ghulam Mubashar Hassan</span>, K.M. Yahya and I.U. Haq, "Leader-Follower Approach using Full-State Linearization via Dynamic Extension," <em>IEEE ICET 2006</em>, pp. 297–305.</div>
+
+      <div class="copyright-note">
+        <strong>Copyright Notice:</strong> This material is presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /layout -->
+
+</body>
+</html>

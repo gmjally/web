@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grants — Dr. Ghulam Mubashar Hassan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1C3F;
+    --navy-mid: #1A2D5A;
+    --blue: #2E5BA8;
+    --blue-light: #4A7BD4;
+    --gold: #C4922A;
+    --gold-light: #E8B84B;
+    --bg: #F7F5F0;
+    --bg-alt: #EFEDE8;
+    --text: #1A1A1A;
+    --text-mid: #3C3C3C;
+    --text-muted: #6B6B6B;
+    --border: #D8D5CE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #0A1428;
+      --navy-mid: #122040;
+      --blue: #4A7BD4;
+      --blue-light: #6B9AE8;
+      --gold: #E8B84B;
+      --gold-light: #F0CC7A;
+      --bg: #111827;
+      --bg-alt: #1A2436;
+      --text: #EEE9E0;
+      --text-mid: #C8C3B8;
+      --text-muted: #8A8580;
+      --border: #2A3548;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: var(--text); background: var(--bg); }
+
+  .gm-name { font-weight: 700; color: var(--gold); }
+
+  /* HEADER */
+  .page-header {
+    background: var(--navy-mid);
+    padding: 3rem 4rem 2.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,146,42,0.12) 0%, transparent 70%);
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--gold-light); }
+  .back-link svg { width: 14px; height: 14px; }
+  .page-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .page-subtitle {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+  }
+  .total-badge {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--gold-light);
+  }
+  .total-label {
+    display: block;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.1rem;
+  }
+
+  /* CONTENT */
+  .content { max-width: 860px; margin: 0 auto; padding: 3rem 4rem 5rem; }
+
+  .grant-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 2rem;
+    align-items: start;
+  }
+  .grant-item:last-child { border-bottom: none; }
+
+  .grant-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.45;
+    margin-bottom: 0.35rem;
+  }
+  .grant-authors {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+  .grant-funder {
+    font-size: 0.8rem;
+    color: var(--blue);
+    font-weight: 500;
+  }
+  .grant-right { text-align: right; }
+  .grant-amount {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .grant-year {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
+  @media (max-width: 640px) {
+    .page-header { padding: 2.5rem 1.5rem 2rem; }
+    .content { padding: 2rem 1.5rem 4rem; }
+    .grant-item { grid-template-columns: 1fr; }
+    .grant-right { text-align: left; margin-top: 0.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <a href="index.html" class="back-link">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12L6 8l4-4"/></svg>
+    Back to profile
+  </a>
+  <div class="page-eyebrow">University of Western Australia</div>
+  <h1 class="page-title">Research Grants</h1>
+  <p class="page-subtitle">Dr. Ghulam Mubashar Hassan — Department of Computer Science &amp; Software Engineering</p>
+  <div class="total-badge">AUD $2,448,923</div>
+  <span class="total-label">Total funding awarded</span>
+</header>
+
+<div class="content">
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"WA Human Milk Research Biorepository"</div>
+      <div class="grant-authors">Donna Geddes, Debbie Palmer, Mark Nicol, Mary Sharp, <span class="gm-name">Ghulam Mubashar Hassan</span>, Sharon Perrella, Lisa Stinson</div>
+      <div class="grant-funder">Stan Perron Charitable Foundation</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $1,305,695</div><div class="grant-year">2025–2029</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Clinical Evaluation of Deep Learning for Identification and Prognosis in Metastatic Prostate Cancer"</div>
+      <div class="grant-authors">Jake Kendrick, Martin Ebert, <span class="gm-name">Ghulam Mubashar Hassan</span>, Nathaniel Barry, Pejman Rowshan Farzad, Branimir Rusanov, Jeremy Ong, Mikaela Dell'Oro</div>
+      <div class="grant-funder">Department of Health (Western Australia)</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $361,146</div><div class="grant-year">2025–2026</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Accelerating Clinical Translation: An Open-Source Framework for Robust, Automated Development of Radiomics Models in Glioblastoma"</div>
+      <div class="grant-authors">N. Barry, M. Bynevelt, J. Kendrick, M. Ebert, <span class="gm-name">Ghulam Mubashar Hassan</span>, P. Rowshan Farzad</div>
+      <div class="grant-funder">Royal Perth Hospital</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $80,000</div><div class="grant-year">2025–2026</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Matariki Funding Application (Deepfakes)"</div>
+      <div class="grant-authors"><span class="gm-name">Ghulam Mubashar Hassan</span>, T. Reed, M. Farhad, M. Hardey, L.S. Scharnick-Udemans, Y. Watanabe, W. Ahmed, K. Sharma, R. Das</div>
+      <div class="grant-funder">The Matariki Network of Universities (MNU)</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $8,314</div><div class="grant-year">2025–2026</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"AI Adoption in WA Volunteering Sector"</div>
+      <div class="grant-authors">R. Das, S. Roy, <span class="gm-name">Ghulam Mubashar Hassan</span>, T. Reed, M. Loyola</div>
+      <div class="grant-funder">Volunteer Centre of Western Australia INC</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $20,000</div><div class="grant-year">2025–2026</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Investigation of Integrating Generative AI into the Learning and Assessment of Engineering across Australasian Universities"</div>
+      <div class="grant-authors">Peter Neal, Marina Belkina, Sarah Grundy, <span class="gm-name">Ghulam Mubashar Hassan</span>, Rezwanul Haque, Scott Daniel, Sasha Nikolic, Sarah Lyden</div>
+      <div class="grant-funder">Australasian Association for Engineering Education</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $20,000</div><div class="grant-year">2024</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Conversion between Brain Cancer Imaging Modalities using Generative AI"</div>
+      <div class="grant-authors">Martin Ebert, Nathaniel Barry, Branimir Rusanov, Jake Kendrick, Saima Safdar, Pejman Rowshan Farzad, <span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">Innovation Challenge 2023 — Generative AI Applications, Department of Health (Western Australia)</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $38,805</div><div class="grant-year">2023–2024</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Radiomics for Survival Prediction in Prostate Cancer Patients"</div>
+      <div class="grant-authors">Jake Kendrick and <span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">UWA Data Institute Summer Research Project Grant</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $8,000</div><div class="grant-year">2023–2024</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">Workshop in AAEE2023 "ChatGPT vs Engineering Education: A Pathway to Becoming an Everyday Tool"</div>
+      <div class="grant-authors"><span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">UWA Data Institute Travel Grant</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $2,927</div><div class="grant-year">2023</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Smart Roadside Barriers with Enhanced Sustainability and Impact Resistance"</div>
+      <div class="grant-authors">Mohamed Elchalakani, <span class="gm-name">Ghulam Mubashar Hassan</span>, Adam Wittak and Thomas Braunl</div>
+      <div class="grant-funder">Road Safety Innovation Funds, Department of Infrastructure, Transport, Regional Development and Communications</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $300,500</div><div class="grant-year">2021–2023</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Digitization of Centrifugal Slurry Pumps"</div>
+      <div class="grant-authors">Ali Karrech, <span class="gm-name">Ghulam Mubashar Hassan</span> and Mohamed Elchalakani</div>
+      <div class="grant-funder">Metso Sweden</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $66,500</div><div class="grant-year">2021–2024</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Drone Video Analytics for Short-Term Traffic Prediction"</div>
+      <div class="grant-authors">Chao Sun, Mark Reynolds, Du Huynh, <span class="gm-name">Ghulam Mubashar Hassan</span> and Sharron Biermann</div>
+      <div class="grant-funder">WA Main Roads</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $124,500</div><div class="grant-year">2019–2020</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"More Accurate Neurosurgical Navigation Through Computation of Brain Deformation"</div>
+      <div class="grant-authors">Adam Wittek, <span class="gm-name">Ghulam Mubashar Hassan</span>, Elena Pasternak, Arcady Dyskin, Karol Miller and Simon Warfield</div>
+      <div class="grant-funder">UWA Research Income Growth Grant</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $20,000</div><div class="grant-year">2018–2019</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Smart Material, Smart Construction, Smart Structures"</div>
+      <div class="grant-authors">Arcady Dyskin, Elena Pasternak, Yuxia Hu and <span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">UWA Research Income Growth Grant</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $10,000</div><div class="grant-year">2018–2019</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Developing Technological Leaders"</div>
+      <div class="grant-authors">Sally Male, Santiago Perez, <span class="gm-name">Ghulam Mubashar Hassan</span>, et al.</div>
+      <div class="grant-funder">UWA Community of Practice Initiative</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $20,000</div><div class="grant-year">2018–2019</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"VR Safety in Design"</div>
+      <div class="grant-authors">Sally Male, Andrew Guzzomi and <span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">UWA Education Futures</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $10,000</div><div class="grant-year">2017–2018</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Ezone 4D Environment"</div>
+      <div class="grant-authors">Sally Male, Andrew Guzzomi and <span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">UWA Education Futures</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $10,000</div><div class="grant-year">2017–2018</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"UWA Summer School"</div>
+      <div class="grant-authors"><span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">UWA Education Futures</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $10,000</div><div class="grant-year">2017–2018</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"Photogrammetric Method of Distant Reconstruction of Displacement Fields in Deformable Solids"</div>
+      <div class="grant-authors"><span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">International Mining for Developing Countries — IM4DC</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $10,000</div><div class="grant-year">2014–2015</div></div>
+  </div>
+
+  <div class="grant-item">
+    <div>
+      <div class="grant-title">"UWA Postgraduate Travel"</div>
+      <div class="grant-authors"><span class="gm-name">Ghulam Mubashar Hassan</span></div>
+      <div class="grant-funder">UWA Graduate Research School</div>
+    </div>
+    <div class="grant-right"><div class="grant-amount">AUD $1,850</div><div class="grant-year">2015–2016</div></div>
+  </div>
+
+</div>
+</body>
+</html>

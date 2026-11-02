@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Admin — Dr. Hassan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0F1C3F; --blue: #2E5BA8; --gold: #C4922A;
+  --bg: #F7F5F0; --bg-alt: #EFEDE8; --text: #1A1A1A;
+  --text-mid: #3C3C3C; --text-muted: #6B6B6B; --border: #D8D5CE;
+  --red: #C0392B; --green: #27AE60;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; font-size: 14px; background: var(--bg); color: var(--text); }
+
+/* LOGIN */
+#login-screen {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: var(--navy);
+}
+.login-box {
+  background: white; border-radius: 8px; padding: 2.5rem 2rem; width: 340px; text-align: center;
+}
+.login-box h1 { font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--navy); }
+.login-box p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+.login-box input {
+  width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border);
+  border-radius: 4px; font-size: 0.88rem; margin-bottom: 0.75rem; outline: none;
+}
+.login-box input:focus { border-color: var(--blue); }
+.login-box button {
+  width: 100%; padding: 0.7rem; background: var(--navy); color: #fff;
+  border: none; border-radius: 4px; font-size: 0.88rem; font-weight: 600; cursor: pointer;
+}
+.login-box button:hover { background: var(--blue); }
+.login-error { color: var(--red); font-size: 0.78rem; margin-top: 0.5rem; display: none; }
+
+/* ADMIN LAYOUT */
+#admin-screen { display: none; min-height: 100vh; }
+
+.admin-header {
+  background: var(--navy); color: #fff; padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between; height: 56px;
+  position: sticky; top: 0; z-index: 100;
+}
+.admin-header h1 { font-size: 0.88rem; font-weight: 600; }
+.admin-header-right { display: flex; gap: 0.5rem; align-items: center; }
+.btn {
+  padding: 0.45rem 1rem; border-radius: 3px; font-size: 0.78rem;
+  font-weight: 600; cursor: pointer; border: none; transition: background 0.15s;
+}
+.btn-gold { background: var(--gold); color: #fff; }
+.btn-gold:hover { background: #a87820; }
+.btn-outline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.25); }
+.btn-outline:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.btn-green { background: var(--green); color: #fff; }
+.btn-green:hover { background: #219a52; }
+.btn-red { background: var(--red); color: #fff; }
+.btn-red:hover { background: #a93226; }
+
+.admin-body { display: grid; grid-template-columns: 200px 1fr; min-height: calc(100vh - 56px); }
+
+.admin-nav {
+  background: var(--bg-alt); border-right: 1px solid var(--border);
+  padding: 1.25rem 0; position: sticky; top: 56px; height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+.admin-nav-label {
+  font-size: 0.65rem; font-weight: 600; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.1em; padding: 0 1rem; margin-bottom: 0.5rem;
+}
+.admin-nav a {
+  display: block; padding: 0.5rem 1rem; font-size: 0.8rem; color: var(--text-mid);
+  text-decoration: none; border-left: 3px solid transparent; transition: all 0.12s;
+}
+.admin-nav a:hover, .admin-nav a.active {
+  background: white; color: var(--navy); border-left-color: var(--gold);
+}
+
+.admin-content { padding: 2rem; max-width: 860px; }
+
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--gold);
+}
+.section-header h2 { font-size: 1.1rem; color: var(--navy); }
+
+/* FIELDS */
+.field-group { margin-bottom: 1.25rem; }
+.field-label {
+  display: block; font-size: 0.72rem; font-weight: 600; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem;
+}
+.field-input, .field-textarea, .field-select {
+  width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--border);
+  border-radius: 3px; font-size: 0.85rem; font-family: inherit; background: white;
+  color: var(--text); outline: none; transition: border-color 0.12s;
+}
+.field-input:focus, .field-textarea:focus { border-color: var(--blue); }
+.field-textarea { min-height: 80px; resize: vertical; line-height: 1.5; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.field-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
+
+/* LIST ITEMS */
+.list-item {
+  background: white; border: 1px solid var(--border); border-radius: 4px;
+  padding: 0.75rem 1rem; margin-bottom: 0.5rem; display: flex;
+  align-items: flex-start; gap: 0.75rem;
+}
+.list-item-content { flex: 1; }
+.list-item-actions { display: flex; flex-direction: column; gap: 0.3rem; flex-shrink: 0; }
+.btn-sm {
+  padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 600;
+  border: none; border-radius: 2px; cursor: pointer;
+}
+.btn-sm-red { background: #fde8e8; color: var(--red); }
+.btn-sm-red:hover { background: var(--red); color: white; }
+.btn-sm-up, .btn-sm-down { background: var(--bg-alt); color: var(--text-muted); }
+.btn-sm-up:hover, .btn-sm-down:hover { background: var(--border); color: var(--text); }
+
+.add-row {
+  display: flex; gap: 0.5rem; margin-top: 0.5rem; align-items: flex-start;
+}
+.add-row .field-input { flex: 1; }
+.add-row .field-textarea { flex: 1; min-height: 60px; }
+
+/* TABS */
+.tab-bar { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; }
+.tab-btn {
+  padding: 0.55rem 1.1rem; font-size: 0.8rem; font-weight: 500; cursor: pointer;
+  border: none; background: transparent; color: var(--text-muted);
+  border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.12s;
+}
+.tab-btn.active { color: var(--navy); border-bottom-color: var(--gold); font-weight: 600; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* GRANT / PUB ITEM EDITOR */
+.card-editor {
+  background: white; border: 1px solid var(--border); border-radius: 4px;
+  padding: 1rem; margin-bottom: 0.75rem;
+}
+.card-editor-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 0.75rem; cursor: pointer;
+}
+.card-editor-title { font-size: 0.82rem; font-weight: 600; color: var(--navy); }
+.card-editor-body { display: none; }
+.card-editor.open .card-editor-body { display: block; }
+.card-editor-toggle { font-size: 0.72rem; color: var(--text-muted); }
+
+/* TOAST */
+.toast {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--green);
+  color: white; padding: 0.75rem 1.25rem; border-radius: 4px; font-size: 0.82rem;
+  font-weight: 600; z-index: 9999; opacity: 0; transition: opacity 0.3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; }
+
+/* JSON EXPORT */
+.json-box {
+  background: #1e1e2e; color: #cdd6f4; font-family: 'Courier New', monospace;
+  font-size: 0.75rem; padding: 1rem; border-radius: 4px; white-space: pre-wrap;
+  word-break: break-all; max-height: 400px; overflow-y: auto; margin-top: 1rem;
+}
+
+.hint { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.3rem; font-style: italic; }
+
+.section-panel { display: none; }
+.section-panel.active { display: block; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-box">
+    <h1>Site Admin</h1>
+    <p>Dr. Ghulam Mubashar Hassan — Academic Website</p>
+    <input type="password" id="pwd-input" placeholder="Enter password" />
+    <button onclick="tryLogin()">Sign In</button>
+    <div class="login-error" id="login-error">Incorrect password. Try again.</div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="admin-screen">
+  <header class="admin-header">
+    <h1>⚙️ Site Content Admin</h1>
+    <div class="admin-header-right">
+      <button class="btn btn-gold" onclick="showExport()">⬇ Export JSON</button>
+      <button class="btn btn-outline" onclick="logout()">Sign Out</button>
+    </div>
+  </header>
+
+  <div class="admin-body">
+    <nav class="admin-nav">
+      <div class="admin-nav-label">Sections</div>
+      <a href="#" class="active" onclick="showSection('profile')">Profile & Bio</a>
+      <a href="#" onclick="showSection('awards')">Awards</a>
+      <a href="#" onclick="showSection('memberships')">Memberships</a>
+      <a href="#" onclick="showSection('education')">Education</a>
+      <a href="#" onclick="showSection('grants')">Grants</a>
+      <a href="#" onclick="showSection('publications')">Publications</a>
+      <a href="#" onclick="showSection('teaching')">Teaching</a>
+      <a href="#" onclick="showSection('team')">Research Team</a>
+      <div class="admin-nav-label" style="margin-top:1rem">Tools</div>
+      <a href="#" onclick="showSection('export')">Export / Instructions</a>
+    </nav>
+
+    <div class="admin-content">
+
+      <!-- PROFILE -->
+      <div class="section-panel active" id="panel-profile">
+        <div class="section-header"><h2>Profile & Bio</h2></div>
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Full Name</label><input class="field-input" id="p-name" /></div>
+          <div class="field-group"><label class="field-label">Title</label><input class="field-input" id="p-title" /></div>
+        </div>
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Department</label><input class="field-input" id="p-dept" /></div>
+          <div class="field-group"><label class="field-label">University</label><input class="field-input" id="p-uni" /></div>
+        </div>
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Email</label><input class="field-input" id="p-email" /></div>
+          <div class="field-group"><label class="field-label">Phone</label><input class="field-input" id="p-phone" /></div>
+        </div>
+        <div class="field-group"><label class="field-label">Short Bio (shown in hero)</label><textarea class="field-textarea" id="p-bio"></textarea></div>
+        <div class="field-group">
+          <label class="field-label">Research Areas (one per line)</label>
+          <textarea class="field-textarea" id="p-research" style="min-height:120px"></textarea>
+          <p class="hint">Each line becomes a tag on the homepage.</p>
+        </div>
+        <button class="btn btn-gold" onclick="saveProfile()">Save Profile</button>
+      </div>
+
+      <!-- AWARDS -->
+      <div class="section-panel" id="panel-awards">
+        <div class="section-header">
+          <h2>Awards & Recognition</h2>
+          <span style="font-size:0.75rem;color:var(--text-muted)">Drag not supported — use ↑↓ buttons</span>
+        </div>
+        <div id="awards-list"></div>
+        <div class="add-row">
+          <input class="field-input" id="award-new" placeholder="New award text…" />
+          <button class="btn btn-green" onclick="addAward()">+ Add</button>
+        </div>
+      </div>
+
+      <!-- MEMBERSHIPS -->
+      <div class="section-panel" id="panel-memberships">
+        <div class="section-header"><h2>Professional Memberships</h2></div>
+        <div id="memberships-list"></div>
+        <div class="add-row">
+          <input class="field-input" id="membership-new" placeholder="New membership…" />
+          <button class="btn btn-green" onclick="addMembership()">+ Add</button>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section-panel" id="panel-education">
+        <div class="section-header"><h2>Education</h2></div>
+        <div id="education-list"></div>
+        <button class="btn btn-green" onclick="addEducation()" style="margin-top:0.5rem">+ Add Qualification</button>
+      </div>
+
+      <!-- GRANTS -->
+      <div class="section-panel" id="panel-grants">
+        <div class="section-header"><h2>Grants</h2></div>
+        <div class="field-row" style="margin-bottom:1.25rem">
+          <div class="field-group">
+            <label class="field-label">Total Funding (displayed on page)</label>
+            <input class="field-input" id="grants-total" />
+          </div>
+        </div>
+        <div id="grants-list"></div>
+        <button class="btn btn-green" onclick="addGrant()" style="margin-top:0.5rem">+ Add Grant</button>
+        <p class="hint" style="margin-top:0.5rem">Use <strong>[GM]</strong> as a placeholder for "Ghulam Mubashar Hassan" in the authors field — it will render in gold on the website.</p>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="section-panel" id="panel-publications">
+        <div class="section-header"><h2>Publications</h2></div>
+        <p class="hint" style="margin-bottom:1rem">Use <strong>[GM]</strong> as a placeholder for "Ghulam Mubashar Hassan". Use <strong>&lt;em&gt;...&lt;/em&gt;</strong> for italics (journal names etc).</p>
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="pubTab('bookChapters',this)">Book Chapters</button>
+          <button class="tab-btn" onclick="pubTab('datasets',this)">Datasets</button>
+          <button class="tab-btn" onclick="pubTab('journalPapers',this)">Journal Papers</button>
+          <button class="tab-btn" onclick="pubTab('conferencePapers',this)">Conference Papers</button>
+        </div>
+        <div id="pub-list"></div>
+        <div class="add-row">
+          <textarea class="field-textarea" id="pub-new" placeholder="New publication entry…"></textarea>
+          <button class="btn btn-green" onclick="addPub()" style="align-self:flex-end">+ Add</button>
+        </div>
+      </div>
+
+      <!-- TEACHING -->
+      <div class="section-panel" id="panel-teaching">
+        <div class="section-header"><h2>Teaching</h2></div>
+        <div id="teaching-list"></div>
+        <button class="btn btn-green" onclick="addTeaching()" style="margin-top:0.5rem">+ Add Teaching Role</button>
+      </div>
+
+      <!-- RESEARCH TEAM -->
+      <div class="section-panel" id="panel-team">
+        <div class="section-header"><h2>Research Team</h2></div>
+        <h3 style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Current PhD Students</h3>
+        <div id="current-phd-list"></div>
+        <div class="add-row">
+          <input class="field-input" id="phd-new" placeholder="Student name…" />
+          <button class="btn btn-green" onclick="addCurrentPhD()">+ Add</button>
+        </div>
+        <h3 style="font-size:0.85rem;color:var(--text-muted);margin:1.5rem 0 0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">PhD Alumni</h3>
+        <div id="alumni-list"></div>
+        <button class="btn btn-green" onclick="addAlumni()" style="margin-top:0.5rem">+ Add Alumni</button>
+      </div>
+
+      <!-- EXPORT -->
+      <div class="section-panel" id="panel-export">
+        <div class="section-header"><h2>Export & Update Instructions</h2></div>
+
+        <div style="background:white;border:1px solid var(--border);border-radius:4px;padding:1.25rem;margin-bottom:1.5rem">
+          <h3 style="font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:0.75rem">Option 1 — Edit here, then ask Claude to update</h3>
+          <ol style="padding-left:1.25rem;font-size:0.82rem;color:var(--text-mid);line-height:2">
+            <li>Make your edits in any section on the left</li>
+            <li>Click <strong>Export JSON</strong> (top right) to download your updated content file</li>
+            <li>Open a conversation with Claude and say:<br>
+              <code style="background:var(--bg-alt);padding:0.2rem 0.5rem;border-radius:2px;font-size:0.75rem">
+                "Here is my updated content.json — please update the three website pages"
+              </code>
+            </li>
+            <li>Paste or attach the JSON file — Claude will rebuild and republish all three pages</li>
+          </ol>
+        </div>
+
+        <div style="background:white;border:1px solid var(--border);border-radius:4px;padding:1.25rem;margin-bottom:1.5rem">
+          <h3 style="font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:0.75rem">Option 2 — Edit here, copy JSON, tell Claude to update</h3>
+          <ol style="padding-left:1.25rem;font-size:0.82rem;color:var(--text-mid);line-height:2">
+            <li>Make your edits in any section on the left</li>
+            <li>Click <strong>Show JSON</strong> below to see the current content</li>
+            <li>Copy the entire JSON</li>
+            <li>Paste it to Claude with the instruction above</li>
+          </ol>
+        </div>
+
+        <div style="background:white;border:1px solid var(--border);border-radius:4px;padding:1.25rem">
+          <h3 style="font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:0.75rem">Quick edits — tell Claude directly</h3>
+          <p style="font-size:0.82rem;color:var(--text-mid);line-height:1.7">For simple additions you can just tell Claude without the JSON:<br>
+          <em>"Add a new grant: title X, authors Y, funder Z, amount $W, year 2025"</em><br>
+          <em>"Add this journal paper to the publications list: ..."</em><br>
+          <em>"Add [name] to current PhD students"</em>
+          </p>
+        </div>
+
+        <div style="margin-top:1.5rem">
+          <button class="btn btn-gold" onclick="showJsonBelow()">Show current JSON</button>
+          <button class="btn btn-outline" style="background:var(--navy);color:#fff;margin-left:0.5rem" onclick="downloadJson()">⬇ Download JSON</button>
+        </div>
+        <div id="json-display" style="display:none">
+          <div class="json-box" id="json-content"></div>
+        </div>
+      </div>
+
+    </div><!-- /admin-content -->
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ─── PASSWORD ───
+const PASSWORD = 'gmjally2024';
+
+function tryLogin() {
+  const v = document.getElementById('pwd-input').value;
+  if (v === PASSWORD) {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('admin-screen').style.display = 'block';
+    initAdmin();
+  } else {
+    document.getElementById('login-error').style.display = 'block';
+  }
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && document.getElementById('login-screen').style.display !== 'none') tryLogin();
+});
+
+function logout() {
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('admin-screen').style.display = 'none';
+  document.getElementById('pwd-input').value = '';
+}
+
+// ─── CONTENT STATE ───
+let C = null;
+let currentPubCategory = 'bookChapters';
+
+const DEFAULT_CONTENT = {
+  profile: {
+    name: "Dr. Ghulam Mubashar Hassan", title: "Senior Lecturer",
+    department: "Department of Computer Science & Software Engineering",
+    university: "University of Western Australia",
+    departmentUrl: "http://web.csse.uwa.edu.au/", universityUrl: "https://www.uwa.edu.au/",
+    email: "ghulam.hassan@uwa.edu.au", phone: "(+61) 6448-7228",
+    bio: "Senior Lecturer in the Department of Computer Science & Software Engineering at the University of Western Australia. UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.",
+    researchAreas: ["Artificial Intelligence","Machine Learning","Optimization","Digital Image Processing","Computer Vision","Engineering Education"]
+  },
+  awards: ["UWA Early Career Research Award Commendations 2025"],
+  memberships: ["IEEE"],
+  education: [],
+  grants: { total: "AUD $2,448,923", items: [] },
+  publications: { bookChapters: [], datasets: [], journalPapers: [], conferencePapers: [] },
+  teaching: [],
+  researchTeam: { currentPhD: [], phdAlumni: [] }
+};
+
+function initAdmin() {
+  const saved = localStorage.getItem('gmjally_content');
+  C = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(DEFAULT_CONTENT));
+  renderAll();
+}
+
+function save() {
+  localStorage.setItem('gmjally_content', JSON.stringify(C));
+  showToast('Saved ✓');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ─── NAVIGATION ───
+function showSection(id) {
+  document.querySelectorAll('.section-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.admin-nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  event.target.classList.add('active');
+  return false;
+}
+
+// ─── RENDER ALL ───
+function renderAll() {
+  renderProfile(); renderList('awards'); renderList('memberships');
+  renderEducation(); renderGrants(); renderPubs(); renderTeaching(); renderTeam();
+}
+
+// ─── PROFILE ───
+function renderProfile() {
+  const p = C.profile;
+  document.getElementById('p-name').value = p.name || '';
+  document.getElementById('p-title').value = p.title || '';
+  document.getElementById('p-dept').value = p.department || '';
+  document.getElementById('p-uni').value = p.university || '';
+  document.getElementById('p-email').value = p.email || '';
+  document.getElementById('p-phone').value = p.phone || '';
+  document.getElementById('p-bio').value = p.bio || '';
+  document.getElementById('p-research').value = (p.researchAreas || []).join('\n');
+}
+
+function saveProfile() {
+  C.profile.name = document.getElementById('p-name').value;
+  C.profile.title = document.getElementById('p-title').value;
+  C.profile.department = document.getElementById('p-dept').value;
+  C.profile.university = document.getElementById('p-uni').value;
+  C.profile.email = document.getElementById('p-email').value;
+  C.profile.phone = document.getElementById('p-phone').value;
+  C.profile.bio = document.getElementById('p-bio').value;
+  C.profile.researchAreas = document.getElementById('p-research').value.split('\n').map(s=>s.trim()).filter(Boolean);
+  save();
+}
+
+// ─── SIMPLE STRING LISTS ───
+function renderList(key) {
+  const el = document.getElementById(key + '-list');
+  el.innerHTML = '';
+  (C[key] || []).forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'list-item';
+    div.innerHTML = `
+      <div class="list-item-content">
+        <input class="field-input" value="${escH(item)}" onchange="updateListItem('${key}',${i},this.value)" />
+      </div>
+      <div class="list-item-actions">
+        <button class="btn-sm btn-sm-up" onclick="moveItem('${key}',${i},-1)">↑</button>
+        <button class="btn-sm btn-sm-down" onclick="moveItem('${key}',${i},1)">↓</button>
+        <button class="btn-sm btn-sm-red" onclick="removeItem('${key}',${i})">✕</button>
+      </div>`;
+    el.appendChild(div);
+  });
+}
+
+function updateListItem(key, i, val) { C[key][i] = val; save(); }
+function moveItem(key, i, dir) {
+  const arr = C[key]; const j = i + dir;
+  if (j < 0 || j >= arr.length) return;
+  [arr[i], arr[j]] = [arr[j], arr[i]];
+  save(); renderList(key);
+}
+function removeItem(key, i) { C[key].splice(i, 1); save(); renderList(key); }
+
+function addAward() {
+  const v = document.getElementById('award-new').value.trim();
+  if (!v) return; C.awards.push(v); document.getElementById('award-new').value = '';
+  save(); renderList('awards');
+}
+function addMembership() {
+  const v = document.getElementById('membership-new').value.trim();
+  if (!v) return; C.memberships.push(v); document.getElementById('membership-new').value = '';
+  save(); renderList('memberships');
+}
+
+// ─── EDUCATION ───
+function renderEducation() {
+  const el = document.getElementById('education-list');
+  el.innerHTML = '';
+  (C.education || []).forEach((edu, i) => {
+    const d = document.createElement('div'); d.className = 'card-editor open';
+    d.innerHTML = `
+      <div class="card-editor-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="card-editor-title">${escH(edu.degree || 'New Qualification')}</span>
+        <span class="card-editor-toggle">▾ click to collapse</span>
+      </div>
+      <div class="card-editor-body">
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Degree</label><input class="field-input" value="${escH(edu.degree||'')}" onchange="C.education[${i}].degree=this.value;save()" /></div>
+          <div class="field-group"><label class="field-label">Badge (e.g. Valedictorian)</label><input class="field-input" value="${escH(edu.badge||'')}" onchange="C.education[${i}].badge=this.value;save()" /></div>
+        </div>
+        <div class="field-group"><label class="field-label">Field of Study</label><input class="field-input" value="${escH(edu.field||'')}" onchange="C.education[${i}].field=this.value;save()" /></div>
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Institution</label><input class="field-input" value="${escH(edu.institution||'')}" onchange="C.education[${i}].institution=this.value;save()" /></div>
+          <div class="field-group"><label class="field-label">Location</label><input class="field-input" value="${escH(edu.location||'')}" onchange="C.education[${i}].location=this.value;save()" /></div>
+        </div>
+        <div class="field-group"><label class="field-label">Institution URL</label><input class="field-input" value="${escH(edu.institutionUrl||'')}" onchange="C.education[${i}].institutionUrl=this.value;save()" /></div>
+        <button class="btn btn-red btn-sm" onclick="C.education.splice(${i},1);save();renderEducation()">Remove</button>
+      </div>`;
+    el.appendChild(d);
+  });
+}
+function addEducation() {
+  C.education.push({ degree:'', field:'', institution:'', institutionUrl:'', location:'', badge:'' });
+  save(); renderEducation();
+}
+
+// ─── GRANTS ───
+function renderGrants() {
+  document.getElementById('grants-total').value = C.grants.total || '';
+  const el = document.getElementById('grants-list'); el.innerHTML = '';
+  (C.grants.items || []).forEach((g, i) => {
+    const d = document.createElement('div'); d.className = 'card-editor';
+    const preview = (g.title || 'New Grant').replace(/"/g,'').substring(0,55);
+    d.innerHTML = `
+      <div class="card-editor-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="card-editor-title">${escH(preview)}${preview.length>=55?'…':''}</span>
+        <span class="card-editor-toggle">▾</span>
+      </div>
+      <div class="card-editor-body">
+        <div class="field-group"><label class="field-label">Title</label><textarea class="field-textarea" style="min-height:55px" onchange="C.grants.items[${i}].title=this.value;save()">${escH(g.title||'')}</textarea></div>
+        <div class="field-group"><label class="field-label">Authors (use [GM] for your name)</label><textarea class="field-textarea" style="min-height:55px" onchange="C.grants.items[${i}].authors=this.value;save()">${escH(g.authors||'')}</textarea></div>
+        <div class="field-group"><label class="field-label">Funder</label><input class="field-input" value="${escH(g.funder||'')}" onchange="C.grants.items[${i}].funder=this.value;save()" /></div>
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Amount</label><input class="field-input" value="${escH(g.amount||'')}" onchange="C.grants.items[${i}].amount=this.value;save()" /></div>
+          <div class="field-group"><label class="field-label">Years</label><input class="field-input" value="${escH(g.years||'')}" onchange="C.grants.items[${i}].years=this.value;save()" /></div>
+        </div>
+        <div style="display:flex;gap:0.5rem;margin-top:0.5rem">
+          <button class="btn-sm btn-sm-up" onclick="moveGrant(${i},-1)">↑ Move up</button>
+          <button class="btn-sm btn-sm-down" onclick="moveGrant(${i},1)">↓ Move down</button>
+          <button class="btn-sm btn-sm-red" onclick="C.grants.items.splice(${i},1);save();renderGrants()">✕ Remove</button>
+        </div>
+      </div>`;
+    el.appendChild(d);
+  });
+}
+function moveGrant(i, dir) {
+  const arr = C.grants.items; const j = i+dir;
+  if (j<0||j>=arr.length) return;
+  [arr[i],arr[j]]=[arr[j],arr[i]]; save(); renderGrants();
+}
+function addGrant() {
+  C.grants.items.unshift({title:'',authors:'',funder:'',amount:'',years:''});
+  save(); renderGrants();
+  document.getElementById('grants-list').firstChild.classList.add('open');
+}
+document.addEventListener('change', e => {
+  if (e.target.id === 'grants-total') { C.grants.total = e.target.value; save(); }
+});
+
+// ─── PUBLICATIONS ───
+function pubTab(cat, btn) {
+  currentPubCategory = cat;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPubs();
+}
+
+function renderPubs() {
+  const el = document.getElementById('pub-list'); el.innerHTML = '';
+  const arr = C.publications[currentPubCategory] || [];
+  arr.forEach((pub, i) => {
+    const d = document.createElement('div'); d.className = 'list-item'; d.style.alignItems='flex-start';
+    d.innerHTML = `
+      <div class="list-item-content">
+        <textarea class="field-textarea" style="min-height:65px;font-size:0.78rem" onchange="C.publications['${currentPubCategory}'][${i}]=this.value;save()">${escH(pub)}</textarea>
+      </div>
+      <div class="list-item-actions">
+        <button class="btn-sm btn-sm-up" onclick="movePub(${i},-1)">↑</button>
+        <button class="btn-sm btn-sm-down" onclick="movePub(${i},1)">↓</button>
+        <button class="btn-sm btn-sm-red" onclick="removePub(${i})">✕</button>
+      </div>`;
+    el.appendChild(d);
+  });
+}
+function movePub(i, dir) {
+  const arr = C.publications[currentPubCategory]; const j=i+dir;
+  if(j<0||j>=arr.length) return;
+  [arr[i],arr[j]]=[arr[j],arr[i]]; save(); renderPubs();
+}
+function removePub(i) { C.publications[currentPubCategory].splice(i,1); save(); renderPubs(); }
+function addPub() {
+  const v = document.getElementById('pub-new').value.trim();
+  if(!v) return;
+  C.publications[currentPubCategory].unshift(v);
+  document.getElementById('pub-new').value = '';
+  save(); renderPubs();
+}
+
+// ─── TEACHING ───
+function renderTeaching() {
+  const el = document.getElementById('teaching-list'); el.innerHTML = '';
+  (C.teaching || []).forEach((t, i) => {
+    const d = document.createElement('div'); d.className = 'card-editor';
+    d.innerHTML = `
+      <div class="card-editor-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="card-editor-title">${escH(t.role||'New Role')} — ${escH(t.institution||'')}</span>
+        <span class="card-editor-toggle">▾</span>
+      </div>
+      <div class="card-editor-body">
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Role</label><input class="field-input" value="${escH(t.role||'')}" onchange="C.teaching[${i}].role=this.value;save();renderTeaching()" /></div>
+          <div class="field-group"><label class="field-label">Institution</label><input class="field-input" value="${escH(t.institution||'')}" onchange="C.teaching[${i}].institution=this.value;save();renderTeaching()" /></div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">Courses (one per line)</label>
+          <textarea class="field-textarea" onchange="C.teaching[${i}].courses=this.value.split('\\n').map(s=>s.trim()).filter(Boolean);save()">${escH((t.courses||[]).join('\n'))}</textarea>
+        </div>
+        <button class="btn-sm btn-sm-red" onclick="C.teaching.splice(${i},1);save();renderTeaching()">✕ Remove</button>
+      </div>`;
+    el.appendChild(d);
+  });
+}
+function addTeaching() { C.teaching.push({role:'',institution:'',courses:[]}); save(); renderTeaching(); }
+
+// ─── TEAM ───
+function renderTeam() {
+  const cur = document.getElementById('current-phd-list'); cur.innerHTML = '';
+  (C.researchTeam.currentPhD || []).forEach((name, i) => {
+    const d = document.createElement('div'); d.className = 'list-item';
+    d.innerHTML = `
+      <div class="list-item-content"><input class="field-input" value="${escH(name)}" onchange="C.researchTeam.currentPhD[${i}]=this.value;save()" /></div>
+      <div class="list-item-actions">
+        <button class="btn-sm btn-sm-up" onclick="moveTeam('currentPhD',${i},-1)">↑</button>
+        <button class="btn-sm btn-sm-down" onclick="moveTeam('currentPhD',${i},1)">↓</button>
+        <button class="btn-sm btn-sm-red" onclick="C.researchTeam.currentPhD.splice(${i},1);save();renderTeam()">✕</button>
+      </div>`;
+    cur.appendChild(d);
+  });
+  const alum = document.getElementById('alumni-list'); alum.innerHTML = '';
+  (C.researchTeam.phdAlumni || []).forEach((a, i) => {
+    const d = document.createElement('div'); d.className = 'card-editor';
+    d.innerHTML = `
+      <div class="card-editor-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="card-editor-title">${escH(a.name||'New Alumni')}</span><span class="card-editor-toggle">▾</span>
+      </div>
+      <div class="card-editor-body">
+        <div class="field-group"><label class="field-label">Name</label><input class="field-input" value="${escH(a.name||'')}" onchange="C.researchTeam.phdAlumni[${i}].name=this.value;save()" /></div>
+        <div class="field-group"><label class="field-label">Thesis Title</label><textarea class="field-textarea" style="min-height:55px" onchange="C.researchTeam.phdAlumni[${i}].thesis=this.value;save()">${escH(a.thesis||'')}</textarea></div>
+        <button class="btn-sm btn-sm-red" onclick="C.researchTeam.phdAlumni.splice(${i},1);save();renderTeam()">✕ Remove</button>
+      </div>`;
+    alum.appendChild(d);
+  });
+}
+function moveTeam(key, i, dir) {
+  const arr = C.researchTeam[key]; const j=i+dir;
+  if(j<0||j>=arr.length) return;
+  [arr[i],arr[j]]=[arr[j],arr[i]]; save(); renderTeam();
+}
+function addCurrentPhD() {
+  const v = document.getElementById('phd-new').value.trim();
+  if(!v) return; C.researchTeam.currentPhD.push(v); document.getElementById('phd-new').value='';
+  save(); renderTeam();
+}
+function addAlumni() { C.researchTeam.phdAlumni.push({name:'',thesis:''}); save(); renderTeam(); }
+
+// ─── EXPORT ───
+function getJson() { return JSON.stringify(C, null, 2); }
+
+function showExport() { showSection('export'); showJsonBelow(); }
+
+function showJsonBelow() {
+  document.getElementById('json-display').style.display = 'block';
+  document.getElementById('json-content').textContent = getJson();
+}
+
+function downloadJson() {
+  const blob = new Blob([getJson()], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'content.json'; a.click();
+}
+
+// ─── UTIL ───
+function escH(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Load saved content into admin from localStorage on init
+window.addEventListener('load', () => {
+  // Try to load from storage
+  const saved = localStorage.getItem('gmjally_content');
+  if (!saved) {
+    // Pre-populate with the built-in content.json data
+    fetch('content.json')
+      .then(r => r.json())
+      .then(data => { C = data; localStorage.setItem('gmjally_content', JSON.stringify(C)); renderAll(); })
+      .catch(() => { C = JSON.parse(JSON.stringify(DEFAULT_CONTENT)); renderAll(); });
+  }
+});
+</script>
+</body>
+</html>
