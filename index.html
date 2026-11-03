@@ -184,6 +184,64 @@
     background: radial-gradient(circle, rgba(196,146,42,0.12) 0%, transparent 70%);
   }
 
+  .hero-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-text { flex: 1; min-width: 0; }
+
+  .hero-photo-wrap {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(196,146,42,0.6);
+    display: block;
+  }
+
+  .hero-photo-placeholder {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px dashed rgba(196,146,42,0.5);
+    background: rgba(255,255,255,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 1rem;
+    line-height: 1.4;
+  }
+
+  .hero-photo-placeholder svg {
+    width: 36px; height: 36px;
+    opacity: 0.4;
+  }
+
+  .hero-photo-hint {
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    max-width: 160px;
+    line-height: 1.4;
+  }
+
   .hero-eyebrow {
     font-size: 0.72rem;
     font-weight: 600;
@@ -581,6 +639,9 @@
     .main { margin-left: 0; }
 
     .hero { padding: 4rem 2rem 3rem; }
+    .hero-inner { flex-direction: column-reverse; gap: 1.75rem; align-items: center; }
+    .hero-text { text-align: center; }
+    .research-areas { justify-content: center; }
 
     .section { padding: 3rem 2rem; }
 
@@ -649,18 +710,38 @@
 
   <!-- HERO / ABOUT -->
   <section class="hero" id="about">
-    <div class="hero-eyebrow">University of Western Australia</div>
-    <h1 class="hero-name">Dr. Ghulam<br>Mubashar Hassan</h1>
-    <p class="hero-role">
-      Senior Lecturer in the <a href="http://web.csse.uwa.edu.au/" target="_blank">Department of Computer Science &amp; Software Engineering</a> at the <a href="https://www.uwa.edu.au/" target="_blank">University of Western Australia</a>. UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.
-    </p>
-    <div class="research-areas">
-      <span class="research-tag">Artificial Intelligence</span>
-      <span class="research-tag">Machine Learning</span>
-      <span class="research-tag">Optimization</span>
-      <span class="research-tag">Digital Image Processing</span>
-      <span class="research-tag">Computer Vision</span>
-      <span class="research-tag">Engineering Education</span>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">University of Western Australia</div>
+        <h1 class="hero-name">Dr. Ghulam<br>Mubashar Hassan</h1>
+        <p class="hero-role">
+          Senior Lecturer in the <a href="http://web.csse.uwa.edu.au/" target="_blank">Department of Computer Science &amp; Software Engineering</a> at the <a href="https://www.uwa.edu.au/" target="_blank">University of Western Australia</a>. UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.
+        </p>
+        <div class="research-areas">
+          <span class="research-tag">Artificial Intelligence</span>
+          <span class="research-tag">Machine Learning</span>
+          <span class="research-tag">Optimization</span>
+          <span class="research-tag">Digital Image Processing</span>
+          <span class="research-tag">Computer Vision</span>
+          <span class="research-tag">Engineering Education</span>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <!--
+          TO ADD YOUR PHOTO:
+          1. Save your photo as "photo.jpg" in the same folder as index.html
+          2. Delete the <div class="hero-photo-placeholder">...</div> block below
+          3. Uncomment the <img> tag below it
+        -->
+        <div class="hero-photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          Your photo here
+        </div>
+        <!-- <img src="photo.jpg" alt="Dr. Ghulam Mubashar Hassan" class="hero-photo" /> -->
+        <p class="hero-photo-hint">Replace with photo.jpg in the same folder</p>
+      </div>
     </div>
   </section>
 
@@ -827,7 +908,7 @@
     </div>
   </section>
 
-    <a href="grants.html" class="full-list-link">
+    <a href="https://claude.ai/artifact/EL57hYhBNyqbU1Z5duWJgc" target="_blank" class="full-list-link">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg>
       View complete grants list
     </a>
@@ -895,7 +976,7 @@
     <div class="pub-item">
       Hassan and M. Reynolds, "Genetic algorithms for scheduling and optimization of ore train network," <em>GCAI 2018</em>, EPiC Series in Computing, Vol. 55, pp. 81–92.
     </div>
-    <a href="publications.html" class="full-list-link">
+    <a href="https://claude.ai/artifact/5G84p6SZPCkoXpBidyS7YF" target="_blank" class="full-list-link">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg>
       View complete publications list
     </a>
