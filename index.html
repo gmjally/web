@@ -253,10 +253,11 @@
 
   .hero-name {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-size: clamp(1.6rem, 3.2vw, 2.8rem);
     color: #fff;
     line-height: 1.1;
     margin-bottom: 1.25rem;
+    white-space: nowrap;
   }
 
   .hero-role {
@@ -651,7 +652,7 @@
   }
 
   @media (max-width: 600px) {
-    .hero-name { font-size: 2rem; }
+    .hero-name { font-size: clamp(1.3rem, 5vw, 1.8rem); white-space: normal; }
     .grants-total { font-size: 2rem; }
   }
 
@@ -713,7 +714,7 @@
     <div class="hero-inner">
       <div class="hero-text">
         <div class="hero-eyebrow">University of Western Australia</div>
-        <h1 class="hero-name">Dr. Ghulam<br>Mubashar Hassan</h1>
+        <h1 class="hero-name">Ghulam Mubashar Hassan</h1>
         <p class="hero-role">
           Senior Lecturer in the <a href="http://web.csse.uwa.edu.au/" target="_blank">Department of Computer Science &amp; Software Engineering</a> at the <a href="https://www.uwa.edu.au/" target="_blank">University of Western Australia</a>. UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.
         </p>
