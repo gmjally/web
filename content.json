@@ -220,9 +220,18 @@
       "[GM], \"Computational Thinking\", <em>CA ANZ Risk and Technology</em>, Wrightbooks – John Wiley &amp; Sons Australia Ltd, pp. 207–230, ISBN: 9780730391272, 2021."
     ],
     "datasets": [
-      "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"OpenBoltRF: An open-source workflow to analyse load transfer for geometrically imperfect bolted ring-flanges in offshore wind turbines,\" 2024. doi: 10.5281/ZENODO.8287222",
-      "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Finite Element Method Numerical Simulation results for analysis of Segment Model of Bolted Ring Flange,\" 2022. doi: 10.26182/31hp-td58",
-      "Z. M. Malakan, S. Anwar, [GM] and A. Mian, \"Sequential storytelling image dataset (SSID),\" 2023. doi: 10.21227/dbr9-dq51"
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"OpenBoltRF: An open-source workflow to analyse load transfer for geometrically imperfect bolted ring-flanges in offshore wind turbines,\" 2024. doi: 10.5281/ZENODO.8287222",
+        "featured": true
+      },
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Finite Element Method Numerical Simulation results for analysis of Segment Model of Bolted Ring Flange,\" 2022. doi: 10.26182/31hp-td58",
+        "featured": true
+      },
+      {
+        "text": "Z. M. Malakan, S. Anwar, [GM] and A. Mian, \"Sequential storytelling image dataset (SSID),\" 2023. doi: 10.21227/dbr9-dq51",
+        "featured": true
+      }
     ],
     "journalPapers": [
       "D. Ali, A. Mian, N. Akhtar and [GM], \"DRBD-Mamba for robust and efficient brain tumor segmentation with analytical insights,\" <em>Brain Informatics</em>, 2026.",
@@ -298,11 +307,23 @@
     ],
     "conferencePapers": [
       "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Challenges and Lessons from Integrating Digital Technologies in Slurry Pumping for the Mining Industry,\" <em>CIM CONNECT 2026</em>, May 2026.",
-      "S. Grundy, M. Belkina, S. Nikolic, S. Lyden, R. Haque, P. Neal, S. Daniel, [GM], \"Practical Strategies for Integrating GenAI in the Classroom,\" <em>AAEE 2025</em>, December 2025. ★ Best Practice Paper Award",
-      "D. Ali, A. Mian, N. Akhtar and [GM], \"Attention-Guided Vector Quantized Variational Autoencoder for Brain Tumor Segmentation,\" <em>MICCAI 2025</em>, Springer, 2026.",
-      "V. Mutiawani, N. Sharif, N. Morlet, S. Manners and [GM], \"Generalized Visual Field Pattern Discovery Using Archetypal Analysis,\" <em>MICCAI 2025 Workshop on Ophthalmic Medical Image Analysis</em>, Springer, 2026.",
+      {
+        "text": "S. Grundy, M. Belkina, S. Nikolic, S. Lyden, R. Haque, P. Neal, S. Daniel, [GM], \"Practical Strategies for Integrating GenAI in the Classroom,\" <em>AAEE 2025</em>, December 2025. ★ Best Practice Paper Award",
+        "featured": true
+      },
+      {
+        "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"Attention-Guided Vector Quantized Variational Autoencoder for Brain Tumor Segmentation,\" <em>MICCAI 2025</em>, Springer, 2026.",
+        "featured": true
+      },
+      {
+        "text": "V. Mutiawani, N. Sharif, N. Morlet, S. Manners and [GM], \"Generalized Visual Field Pattern Discovery Using Archetypal Analysis,\" <em>MICCAI 2025 Workshop on Ophthalmic Medical Image Analysis</em>, Springer, 2026.",
+        "featured": true
+      },
       "A. Varghese, J. Xiang, P. Mikkonen, E. Lessing, [GM] and A. Karrech, \"Remote Monitoring of Slurry Pumps in Mining and Mineral Processing,\" <em>APCOM 2025</em>, August 2025.",
-      "K. Nguyen, [GM] and A. Mian, \"Occlusion-aware Text-Image-Point Cloud Pretraining for Open-World 3D Object Recognition,\" <em>CVPR 2025</em>, June 2025.",
+      {
+        "text": "K. Nguyen, [GM] and A. Mian, \"Occlusion-aware Text-Image-Point Cloud Pretraining for Open-World 3D Object Recognition,\" <em>CVPR 2025</em>, June 2025.",
+        "featured": true
+      },
       "M. Belkina, P. Neal, S. Grundy, [GM] et al., \"Systematic Literature Review of GenAI Integration in Higher Education,\" <em>AAEE 2024</em>, December 2024.",
       "H. Fernando, F. Tahmasebinia, X. Wu et al. and [GM], \"Piloting Implementation of Strategic Guidelines for AI use within an Engineering Design-Thinking Project,\" <em>AAEE 2024</em>, December 2024.",
       "S. Daniel, S. Nikolic, C. Sandison, R. Haque, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"Engineering Assessment in the Age of Generative Artificial Intelligence: A Critical Analysis,\" <em>IEEE WEEF-GEDC</em>, December 2024.",
@@ -327,7 +348,10 @@
       "S. Zahan, [GM] and A. Mian, \"Modeling human skeleton joint dynamics for fall detection,\" <em>DICTA 2021</em>, December 2021.",
       "J. Jung, N. Akhtar and [GM], \"Analysing adversarial examples for deep learning,\" <em>VISIGRAPP 2021</em>, pp. 585–592.",
       "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Predicting bolt stress under uncertainty in offshore wind turbine structural connections using a Gaussian process surrogate model,\" <em>ISOPE 2021</em>, June 2021.",
-      "H. Satnani, M. Marinelli, S. Male and [GM], \"Engineering graduates working in maintenance within the mining industry in Australia,\" <em>AAEE 2020</em>. ★ Best Student Paper Award",
+      {
+        "text": "H. Satnani, M. Marinelli, S. Male and [GM], \"Engineering graduates working in maintenance within the mining industry in Australia,\" <em>AAEE 2020</em>. ★ Best Student Paper Award",
+        "featured": true
+      },
       "H. Almutairi, [GM] and A. Datta, \"Detection of obstructive sleep apnoea by ECG signals using deep learning architectures,\" <em>EUSIPCO 2020</em>, pp. 1382–1386.",
       "B. Lee, S.Z. Gilani, [GM] and A. Mian, \"Facial gender classification — analysis using convolutional neural network,\" <em>IEEE DICTA 2019</em>, pp. 1–8.",
       "S. Male, P. Kenworthy, [GM], A. Guzzomi and T. French, \"Teaching safety in design in large classes using VR,\" <em>AAEE 2018</em>.",
