@@ -78,218 +78,364 @@
         "authors": "Donna Geddes, Debbie Palmer, Mark Nicol, Mary Sharp, [GM], Sharon Perrella, Lisa Stinson",
         "funder": "Stan Perron Charitable Foundation",
         "amount": "AUD $1,305,695",
-        "years": "2025–2029"
+        "years": "2025–2029",
+        "featured": true
       },
       {
         "title": "\"Clinical Evaluation of Deep Learning for Identification and Prognosis in Metastatic Prostate Cancer\"",
         "authors": "Jake Kendrick, Martin Ebert, [GM], Nathaniel Barry, Pejman Rowshan Farzad, Branimir Rusanov, Jeremy Ong, Mikaela Dell'Oro",
         "funder": "Department of Health (Western Australia)",
         "amount": "AUD $361,146",
-        "years": "2025–2026"
+        "years": "2025–2026",
+        "featured": true
       },
       {
         "title": "\"Accelerating Clinical Translation: An Open-Source Framework for Robust, Automated Development of Radiomics Models in Glioblastoma\"",
         "authors": "N. Barry, M. Bynevelt, J. Kendrick, M. Ebert, [GM], P. Rowshan Farzad",
         "funder": "Royal Perth Hospital",
         "amount": "AUD $80,000",
-        "years": "2025–2026"
+        "years": "2025–2026",
+        "featured": true
       },
       {
         "title": "\"Matariki Funding Application (Deepfakes)\"",
         "authors": "[GM], T. Reed, M. Farhad, M. Hardey, L.S. Scharnick-Udemans, Y. Watanabe, W. Ahmed, K. Sharma, R. Das",
         "funder": "The Matariki Network of Universities (MNU)",
         "amount": "AUD $8,314",
-        "years": "2025–2026"
+        "years": "2025–2026",
+        "featured": true
       },
       {
         "title": "\"AI Adoption in WA Volunteering Sector\"",
         "authors": "R. Das, S. Roy, [GM], T. Reed, M. Loyola",
         "funder": "Volunteer Centre of Western Australia INC",
         "amount": "AUD $20,000",
-        "years": "2025–2026"
+        "years": "2025–2026",
+        "featured": true
       },
       {
         "title": "\"Investigation of Integrating Generative AI into the Learning and Assessment of Engineering across Australasian Universities\"",
         "authors": "Peter Neal, Marina Belkina, Sarah Grundy, [GM], Rezwanul Haque, Scott Daniel, Sasha Nikolic, Sarah Lyden",
         "funder": "Australasian Association for Engineering Education",
         "amount": "AUD $20,000",
-        "years": "2024"
+        "years": "2024",
+        "featured": true
       },
       {
         "title": "\"Conversion between Brain Cancer Imaging Modalities using Generative AI\"",
         "authors": "Martin Ebert, Nathaniel Barry, Branimir Rusanov, Jake Kendrick, Saima Safdar, Pejman Rowshan Farzad, [GM]",
         "funder": "Innovation Challenge 2023 — Generative AI Applications, Department of Health (Western Australia)",
         "amount": "AUD $38,805",
-        "years": "2023–2024"
+        "years": "2023–2024",
+        "featured": true
       },
       {
         "title": "\"Radiomics for Survival Prediction in Prostate Cancer Patients\"",
         "authors": "Jake Kendrick and [GM]",
         "funder": "UWA Data Institute Summer Research Project Grant",
         "amount": "AUD $8,000",
-        "years": "2023–2024"
+        "years": "2023–2024",
+        "featured": true
       },
       {
         "title": "Workshop in AAEE2023 \"ChatGPT vs Engineering Education: A Pathway to Becoming an Everyday Tool\"",
         "authors": "[GM]",
         "funder": "UWA Data Institute Travel Grant",
         "amount": "AUD $2,927",
-        "years": "2023"
+        "years": "2023",
+        "featured": false
       },
       {
         "title": "\"Smart Roadside Barriers with Enhanced Sustainability and Impact Resistance\"",
         "authors": "Mohamed Elchalakani, [GM], Adam Wittak and Thomas Braunl",
         "funder": "Road Safety Innovation Funds, Department of Infrastructure, Transport, Regional Development and Communications",
         "amount": "AUD $300,500",
-        "years": "2021–2023"
+        "years": "2021–2023",
+        "featured": true
       },
       {
         "title": "\"Digitization of Centrifugal Slurry Pumps\"",
         "authors": "Ali Karrech, [GM] and Mohamed Elchalakani",
         "funder": "Metso Sweden",
         "amount": "AUD $66,500",
-        "years": "2021–2024"
+        "years": "2021–2024",
+        "featured": true
       },
       {
         "title": "\"Drone Video Analytics for Short-Term Traffic Prediction\"",
         "authors": "Chao Sun, Mark Reynolds, Du Huynh, [GM] and Sharron Biermann",
         "funder": "WA Main Roads",
         "amount": "AUD $124,500",
-        "years": "2019–2020"
+        "years": "2019–2020",
+        "featured": true
       },
       {
         "title": "\"More Accurate Neurosurgical Navigation Through Computation of Brain Deformation\"",
         "authors": "Adam Wittek, [GM], Elena Pasternak, Arcady Dyskin, Karol Miller and Simon Warfield",
         "funder": "UWA Research Income Growth Grant",
         "amount": "AUD $20,000",
-        "years": "2018–2019"
+        "years": "2018–2019",
+        "featured": true
       },
       {
         "title": "\"Smart Material, Smart Construction, Smart Structures\"",
         "authors": "Arcady Dyskin, Elena Pasternak, Yuxia Hu and [GM]",
         "funder": "UWA Research Income Growth Grant",
         "amount": "AUD $10,000",
-        "years": "2018–2019"
+        "years": "2018–2019",
+        "featured": false
       },
       {
         "title": "\"Developing Technological Leaders\"",
         "authors": "Sally Male, Santiago Perez, [GM], et al.",
         "funder": "UWA Community of Practice Initiative",
         "amount": "AUD $20,000",
-        "years": "2018–2019"
+        "years": "2018–2019",
+        "featured": false
       },
       {
         "title": "\"VR Safety in Design\"",
         "authors": "Sally Male, Andrew Guzzomi and [GM]",
         "funder": "UWA Education Futures",
         "amount": "AUD $10,000",
-        "years": "2017–2018"
+        "years": "2017–2018",
+        "featured": false
       },
       {
         "title": "\"Ezone 4D Environment\"",
         "authors": "Sally Male, Andrew Guzzomi and [GM]",
         "funder": "UWA Education Futures",
         "amount": "AUD $10,000",
-        "years": "2017–2018"
+        "years": "2017–2018",
+        "featured": false
       },
       {
         "title": "\"UWA Summer School\"",
         "authors": "[GM]",
         "funder": "UWA Education Futures",
         "amount": "AUD $10,000",
-        "years": "2017–2018"
+        "years": "2017–2018",
+        "featured": false
       },
       {
         "title": "\"Photogrammetric Method of Distant Reconstruction of Displacement Fields in Deformable Solids\"",
         "authors": "[GM]",
         "funder": "International Mining for Developing Countries — IM4DC",
         "amount": "AUD $10,000",
-        "years": "2014–2015"
+        "years": "2014–2015",
+        "featured": false
       },
       {
         "title": "\"UWA Postgraduate Travel\"",
         "authors": "[GM]",
         "funder": "UWA Graduate Research School",
         "amount": "AUD $1,850",
-        "years": "2015–2016"
+        "years": "2015–2016",
+        "featured": false
       }
     ]
   },
   "publications": {
     "bookChapters": [
-      "[GM], \"Computational Thinking\", <em>CA ANZ Risk and Technology</em>, Wrightbooks – John Wiley & Sons Australia Ltd, pp. 207–230, ISBN: 9780730391272, 2021."
+      {
+        "text": "[GM], \"Computational Thinking\", <em>CA ANZ Risk and Technology</em>, Wrightbooks – John Wiley & Sons Australia Ltd, pp. 207–230, ISBN: 9780730391272, 2021.",
+        "featured": true
+      }
     ],
     "datasets": [
-      "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"OpenBoltRF: An open-source workflow to analyse load transfer for geometrically imperfect bolted ring-flanges in offshore wind turbines,\" 2024. doi: 10.5281/ZENODO.8287222",
-      "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Finite Element Method Numerical Simulation results for analysis of Segment Model of Bolted Ring Flange,\" 2022. doi: 10.26182/31hp-td58",
-      "Z. M. Malakan, S. Anwar, [GM] and A. Mian, \"Sequential storytelling image dataset (SSID),\" 2023. doi: 10.21227/dbr9-dq51"
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"OpenBoltRF: An open-source workflow to analyse load transfer for geometrically imperfect bolted ring-flanges in offshore wind turbines,\" 2024. doi: 10.5281/ZENODO.8287222",
+        "featured": true
+      },
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Finite Element Method Numerical Simulation results for analysis of Segment Model of Bolted Ring Flange,\" 2022. doi: 10.26182/31hp-td58",
+        "featured": false
+      },
+      {
+        "text": "Z. M. Malakan, S. Anwar, [GM] and A. Mian, \"Sequential storytelling image dataset (SSID),\" 2023. doi: 10.21227/dbr9-dq51",
+        "featured": true
+      }
     ],
     "journalPapers": [
-      "D. Ali, A. Mian, N. Akhtar and [GM], \"DRBD-Mamba for robust and efficient brain tumor segmentation,\" <em>Brain Informatics</em>, 2026.",
-      "Juwita, [GM] and A. Datta, \"3D-SCUMamba: An Abdominal Tumor Segmentation model,\" <em>IEEE Access</em>, 2025.",
-      "M. Belkina, S. Daniel, S. Nikolic, R. Haque, S. Lyden, P. Neal, S. Grundy and [GM], \"Implementing generative AI (GenAI) in higher education: A systematic review,\" <em>Computers and Education: AI</em>, 2025.",
-      "S. Nikolic, C. Sandison, R. Haque, S. Daniel, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"ChatGPT, Copilot, Gemini, SciSpace and Wolfram versus higher education assessments,\" <em>Australasian Journal of Engineering Education</em>, Vol. 28, 2024. ★ Most-read & 3rd most-cited; Best Article 2023",
-      "S. Nikolic, S. Daniel, R. Haque, M. Belkina, [GM], S. Grundy, S. Lyden, P. Neal and C. Sandison, \"ChatGPT versus engineering education assessment,\" <em>European Journal of Engineering Education</em>, Vol. 48, 2023. ★ 2nd most-read & most-cited; Best Article 2023",
-      "B. Rusanov, [GM], M. Reynolds, M. Sabet, P. Rowshanfarzad, N. Bucknell, S. Gill, J. Dass and M. Ebert, \"Transformer CycleGAN with uncertainty estimation for CBCT based synthetic CT in adaptive radiotherapy,\" <em>Physics in Medicine and Biology</em>, Vol. 69(3), 2024.",
-      "Y. Zhang, M. Reynolds, A. Lugmayr, K. Damjanov, [GM], \"A Visual Data Storytelling Framework,\" <em>Journal of Informatics</em>, Vol. 9(73), 2022. ★ Editor's Choice",
-      "[GM], \"Deformation measurement in the presence of discontinuities with digital image correlation: A review,\" <em>Optics and Lasers in Engineering</em>, Vol. 137, 2021."
+      {
+        "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"DRBD-Mamba for robust and efficient brain tumor segmentation,\" <em>Brain Informatics</em>, 2026.",
+        "featured": true
+      },
+      {
+        "text": "Juwita, [GM] and A. Datta, \"3D-SCUMamba: An Abdominal Tumor Segmentation model,\" <em>IEEE Access</em>, 2025.",
+        "featured": true
+      },
+      {
+        "text": "M. Belkina, S. Daniel, S. Nikolic, R. Haque, S. Lyden, P. Neal, S. Grundy and [GM], \"Implementing generative AI (GenAI) in higher education: A systematic review,\" <em>Computers and Education: AI</em>, 2025.",
+        "featured": true
+      },
+      {
+        "text": "S. Nikolic, C. Sandison, R. Haque, S. Daniel, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"ChatGPT, Copilot, Gemini, SciSpace and Wolfram versus higher education assessments,\" <em>Australasian Journal of Engineering Education</em>, Vol. 28, 2024. ★ Most-read & 3rd most-cited; Best Article 2023",
+        "featured": true
+      },
+      {
+        "text": "S. Nikolic, S. Daniel, R. Haque, M. Belkina, [GM], S. Grundy, S. Lyden, P. Neal and C. Sandison, \"ChatGPT versus engineering education assessment,\" <em>European Journal of Engineering Education</em>, Vol. 48, 2023. ★ 2nd most-read & most-cited; Best Article 2023",
+        "featured": true
+      },
+      {
+        "text": "B. Rusanov, [GM], M. Reynolds, M. Sabet, P. Rowshanfarzad, N. Bucknell, S. Gill, J. Dass and M. Ebert, \"Transformer CycleGAN with uncertainty estimation for CBCT based synthetic CT in adaptive radiotherapy,\" <em>Physics in Medicine and Biology</em>, Vol. 69(3), 2024.",
+        "featured": true
+      },
+      {
+        "text": "Y. Zhang, M. Reynolds, A. Lugmayr, K. Damjanov, [GM], \"A Visual Data Storytelling Framework,\" <em>Journal of Informatics</em>, Vol. 9(73), 2022. ★ Editor's Choice",
+        "featured": true
+      },
+      {
+        "text": "[GM], \"Deformation measurement in the presence of discontinuities with digital image correlation: A review,\" <em>Optics and Lasers in Engineering</em>, Vol. 137, 2021.",
+        "featured": true
+      }
     ],
     "conferencePapers": [
-      "K. Nguyen, [GM] and A. Mian, \"Occlusion-aware Text-Image-Point Cloud Pretraining for Open-World 3D Object Recognition,\" <em>CVPR 2025</em>.",
-      "D. Ali, A. Mian, N. Akhtar and [GM], \"Attention-Guided VQVAE for Brain Tumor Segmentation,\" <em>MICCAI 2025</em>.",
-      "J. Vo, N. Sharif and [GM], \"MNA-net: Multimodal Neuroimaging Attention for Cognitive Decline Prediction,\" <em>MICCAI 2024 Workshop</em>. ★ Best Paper Award",
-      "S. Grundy, M. Belkina et al. and [GM], \"Practical Strategies for Integrating GenAI in the Classroom,\" <em>AAEE 2025</em>. ★ Best Practice Paper Award",
-      "[GM] and M. Reynolds, \"Genetic algorithms for scheduling and optimization of ore train network,\" <em>GCAI 2018</em>, EPiC Series in Computing, Vol. 55, pp. 81–92."
+      {
+        "text": "K. Nguyen, [GM] and A. Mian, \"Occlusion-aware Text-Image-Point Cloud Pretraining for Open-World 3D Object Recognition,\" <em>CVPR 2025</em>.",
+        "featured": true
+      },
+      {
+        "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"Attention-Guided VQVAE for Brain Tumor Segmentation,\" <em>MICCAI 2025</em>.",
+        "featured": true
+      },
+      {
+        "text": "J. Vo, N. Sharif and [GM], \"MNA-net: Multimodal Neuroimaging Attention for Cognitive Decline Prediction,\" <em>MICCAI 2024 Workshop</em>. ★ Best Paper Award",
+        "featured": true
+      },
+      {
+        "text": "S. Grundy, M. Belkina et al. and [GM], \"Practical Strategies for Integrating GenAI in the Classroom,\" <em>AAEE 2025</em>. ★ Best Practice Paper Award",
+        "featured": true
+      },
+      {
+        "text": "[GM] and M. Reynolds, \"Genetic algorithms for scheduling and optimization of ore train network,\" <em>GCAI 2018</em>, EPiC Series in Computing, Vol. 55, pp. 81–92.",
+        "featured": true
+      }
     ]
   },
   "teaching": [
     {
       "role": "Unit Coordinator / Lecturer",
       "institution": "University of Western Australia",
-      "courses": ["Computer Analysis & Visualization", "Problem Solving & Programming", "Computational Thinking with Python", "Software Requirements and Design", "Software Engineering Design Project"]
+      "courses": [
+        "Computer Analysis & Visualization",
+        "Problem Solving & Programming",
+        "Computational Thinking with Python",
+        "Software Requirements and Design",
+        "Software Engineering Design Project"
+      ]
     },
     {
       "role": "Unit Coordinator / Lecturer",
       "institution": "University of Engineering & Technology, Peshawar",
-      "courses": ["Control Systems", "Microprocessor Based System Design", "Database Management Systems", "Advanced Project Planning and Management", "Data Structures", "Microprocessor Design", "Object Oriented Programming", "Programming with Java"]
+      "courses": [
+        "Control Systems",
+        "Microprocessor Based System Design",
+        "Database Management Systems",
+        "Advanced Project Planning and Management",
+        "Data Structures",
+        "Microprocessor Design",
+        "Object Oriented Programming",
+        "Programming with Java"
+      ]
     },
     {
       "role": "Head Tutor",
       "institution": "University of Western Australia",
-      "courses": ["Computer Analysis & Visualization"]
+      "courses": [
+        "Computer Analysis & Visualization"
+      ]
     },
     {
       "role": "Teaching Assistant / Tutor",
       "institution": "University of Western Australia",
-      "courses": ["Object Oriented Programming and Software Engineering", "Computer Analysis & Visualization", "Problem Solving and Programming"]
+      "courses": [
+        "Object Oriented Programming and Software Engineering",
+        "Computer Analysis & Visualization",
+        "Problem Solving and Programming"
+      ]
     },
     {
       "role": "Teaching Assistant",
       "institution": "Oklahoma State University",
-      "courses": ["Experimental Method-II"]
+      "courses": [
+        "Experimental Method-II"
+      ]
     }
   ],
   "researchTeam": {
     "currentPhD": [
-      "Branimir Rusanov", "Alan Varghese", "Lucie Ketelsen", "Azani Hasibuan",
-      "Pasa Ciceklidag", "Shahin Hakemi", "Khanh Nguyen", "Danish Ali",
-      "Suning (Juliet) Li", "Viska Mutiawani", "Brendan Wright", "Kaylee Molin", "Rizal Alfaridzi"
+      "Branimir Rusanov",
+      "Alan Varghese",
+      "Lucie Ketelsen",
+      "Azani Hasibuan",
+      "Pasa Ciceklidag",
+      "Shahin Hakemi",
+      "Khanh Nguyen",
+      "Danish Ali",
+      "Suning (Juliet) Li",
+      "Viska Mutiawani",
+      "Brendan Wright",
+      "Kaylee Molin",
+      "Rizal Alfaridzi"
     ],
     "phdAlumni": [
-      {"name": "Dr. Juwita", "thesis": "Automatic small abdominal organ and tumor (SAOT) segmentation from CT scans"},
-      {"name": "Dr. Asmaa Abdullah Shati", "thesis": "AI-based approaches for respiratory disease detection using audio signals and imaging data"},
-      {"name": "Dr. Jack Jorgensen", "thesis": "Fatigue analysis under uncertainty of bolted ring-flanges in offshore wind turbine support structures using surrogate models"},
-      {"name": "Dr. Nathaniel Barry", "thesis": "Augmenting the clinical approach to glioblastoma: automatic segmentation and radiomics"},
-      {"name": "Dr. Xin Lyu", "thesis": "Investigation of high strength rubberised concrete for roadside barriers"},
-      {"name": "Dr. Afsah Saleem", "thesis": "Machine Learning for Computer-Aided Diagnostics from Complex Medical Images"},
-      {"name": "Dr. Abdullah Alelyani", "thesis": "Cloud Computing Efficiency: Optimizing Resource Utilization using Intelligent Algorithms"},
-      {"name": "Dr. Rini Anggrainingsih", "thesis": "Rumour Detection and Classification on Microblogging Platforms"},
-      {"name": "Dr. Sania Zahan", "thesis": "Human Motion Analysis"},
-      {"name": "Dr. Haifa Almutairi", "thesis": "Automated Classification of Sleep Stages and Detection of Sleep Disorders"},
-      {"name": "Dr. Jake Kendrick", "thesis": "Towards a Quantitative Management of Metastatic Prostate Cancer using PSMA PET images"},
-      {"name": "Dr. Zainy M. Malakan Aljawy", "thesis": "Automatic Generation of a Coherent Story from a Set of Images"},
-      {"name": "Dr. Hezam Albaqami", "thesis": "Leveraging Machine Learning for Enhanced Detection and Classification of Brain Pathologies Using EEG"},
-      {"name": "Dr. Yangjinbo Zhang", "thesis": "Development of a Visual Data Storytelling Framework"}
+      {
+        "name": "Dr. Juwita",
+        "thesis": "Automatic small abdominal organ and tumor (SAOT) segmentation from CT scans"
+      },
+      {
+        "name": "Dr. Asmaa Abdullah Shati",
+        "thesis": "AI-based approaches for respiratory disease detection using audio signals and imaging data"
+      },
+      {
+        "name": "Dr. Jack Jorgensen",
+        "thesis": "Fatigue analysis under uncertainty of bolted ring-flanges in offshore wind turbine support structures using surrogate models"
+      },
+      {
+        "name": "Dr. Nathaniel Barry",
+        "thesis": "Augmenting the clinical approach to glioblastoma: automatic segmentation and radiomics"
+      },
+      {
+        "name": "Dr. Xin Lyu",
+        "thesis": "Investigation of high strength rubberised concrete for roadside barriers"
+      },
+      {
+        "name": "Dr. Afsah Saleem",
+        "thesis": "Machine Learning for Computer-Aided Diagnostics from Complex Medical Images"
+      },
+      {
+        "name": "Dr. Abdullah Alelyani",
+        "thesis": "Cloud Computing Efficiency: Optimizing Resource Utilization using Intelligent Algorithms"
+      },
+      {
+        "name": "Dr. Rini Anggrainingsih",
+        "thesis": "Rumour Detection and Classification on Microblogging Platforms"
+      },
+      {
+        "name": "Dr. Sania Zahan",
+        "thesis": "Human Motion Analysis"
+      },
+      {
+        "name": "Dr. Haifa Almutairi",
+        "thesis": "Automated Classification of Sleep Stages and Detection of Sleep Disorders"
+      },
+      {
+        "name": "Dr. Jake Kendrick",
+        "thesis": "Towards a Quantitative Management of Metastatic Prostate Cancer using PSMA PET images"
+      },
+      {
+        "name": "Dr. Zainy M. Malakan Aljawy",
+        "thesis": "Automatic Generation of a Coherent Story from a Set of Images"
+      },
+      {
+        "name": "Dr. Hezam Albaqami",
+        "thesis": "Leveraging Machine Learning for Enhanced Detection and Classification of Brain Pathologies Using EEG"
+      },
+      {
+        "name": "Dr. Yangjinbo Zhang",
+        "thesis": "Development of a Visual Data Storytelling Framework"
+      }
     ]
   }
 }
