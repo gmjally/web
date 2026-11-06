@@ -686,8 +686,8 @@
 
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
-    <a href="#about" class="sidebar-brand-name">Dr. Ghulam Mubashar Hassan</a>
-    <span class="sidebar-brand-sub">Senior Lecturer · UWA Computer Science</span>
+    <a href="#about" class="sidebar-brand-name" id="sidebar-name">Dr. Ghulam Mubashar Hassan</a>
+    <span class="sidebar-brand-sub" id="sidebar-sub">Senior Lecturer · UWA Computer Science</span>
   </div>
   <nav>
     <ul class="sidebar-nav">
@@ -702,8 +702,8 @@
     </ul>
   </nav>
   <div class="sidebar-contact">
-    <a href="mailto:ghulam.hassan@uwa.edu.au">ghulam.hassan@uwa.edu.au</a>
-    <a href="tel:+61644487228">(+61) 6448-7228</a>
+    <a href="#" id="sidebar-email"></a>
+    <a href="#" id="sidebar-phone"></a>
   </div>
 </aside>
 
@@ -713,7 +713,7 @@
   <section class="hero" id="about">
     <div class="hero-inner">
       <div class="hero-text" id="hero-text">
-        <div class="hero-eyebrow">University of Western Australia</div>
+        <div class="hero-eyebrow" id="hero-eyebrow">University of Western Australia</div>
         <h1 class="hero-name" id="hero-name">Ghulam Mubashar Hassan</h1>
         <p class="hero-role" id="hero-role">Senior Lecturer, Department of Computer Science &amp; Software Engineering, University of Western Australia.</p>
         <div class="research-areas" id="research-areas"></div>
@@ -738,81 +738,13 @@
     <ul class="edu-list" id="education-list"><li style="color:var(--text-muted);font-size:0.85rem;padding:1rem 0">Loading…</li></ul>
   </section>
 
-  <script>
-  // ── PROFILE, AWARDS, MEMBERSHIPS, EDUCATION ─────────────────────────────
-  (function() {
-    function esc(s) {
-      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    }
-
-    function render(data) {
-      const p = data.profile || {};
-
-      // Hero name
-      const nameEl = document.getElementById('hero-name');
-      if (nameEl && p.name) nameEl.textContent = p.name;
-
-      // Bio
-      const roleEl = document.getElementById('hero-role');
-      if (roleEl && p.bio) roleEl.innerHTML = esc(p.bio)
-        .replace(esc(p.department||''), `<a href="${p.departmentUrl||'#'}" target="_blank">${esc(p.department)}</a>`)
-        .replace(esc(p.university||''), `<a href="${p.universityUrl||'#'}" target="_blank">${esc(p.university)}</a>`);
-
-      // Research area tags
-      const areasEl = document.getElementById('research-areas');
-      if (areasEl && p.researchAreas) {
-        areasEl.innerHTML = (p.researchAreas||[])
-          .map(a => `<span class="research-tag">${esc(a)}</span>`).join('');
-      }
-
-      // Awards
-      const awardsEl = document.getElementById('awards-grid');
-      if (awardsEl && data.awards) {
-        awardsEl.innerHTML = (data.awards||[])
-          .map(a => `<div class="award-item">${esc(a)}</div>`).join('');
-      }
-
-      // Memberships
-      const membEl = document.getElementById('memberships-list');
-      if (membEl && data.memberships) {
-        membEl.innerHTML = (data.memberships||[])
-          .map(m => `<li>${esc(m)}</li>`).join('');
-      }
-
-      // Education
-      const eduEl = document.getElementById('education-list');
-      if (eduEl && data.education) {
-        eduEl.innerHTML = (data.education||[]).map(e => `
-          <li class="edu-item">
-            <div>
-              <div class="edu-degree">${esc(e.degree)}</div>
-              <div class="edu-field">${esc(e.field)}</div>
-              <div class="edu-uni">
-                ${e.institutionUrl
-                  ? `<a href="${e.institutionUrl}" target="_blank">${esc(e.institution)}</a>`
-                  : esc(e.institution)}
-                ${e.location ? ' · ' + esc(e.location) : ''}
-              </div>
-            </div>
-            ${e.badge ? `<span class="edu-badge">${esc(e.badge)}</span>` : ''}
-          </li>`).join('');
-      }
-    }
-
-    fetch('content.json')
-      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-      .then(data => render(data))
-      .catch(() => {/* keep static fallback text already in HTML */});
-  })();
-  </script>
-
   <!-- GRANTS -->
   <section class="section" id="grants">
     <h2 class="section-title">Research Grants</h2>
     <div class="grants-total" id="grants-total-display">—</div>
     <div class="grants-total-label">Total funding awarded</div>
     <div id="featured-grants-container">
-      <div style="color:var(--text-muted);font-size:0.85rem;margin-top:1rem">Loading featured grants…</div>
+      <div style="color:var(--text-muted);font-size:0.85rem;margin-top:1rem">Loading…</div>
     </div>
     <a href="grants.html" class="full-list-link" style="margin-top:1.75rem">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg>
@@ -820,54 +752,11 @@
     </a>
   </section>
 
-  <script>
-  (function() {
-    function gmName(text) {
-      return text.replace(/\[GM\]/g, '<span class="gm-name">Ghulam Mubashar Hassan</span>');
-    }
-
-    function renderFeaturedGrants(data) {
-      const grants = data.grants || {};
-      document.getElementById('grants-total-display').textContent = grants.total || '';
-      const items = (grants.items || []).filter(g => g.featured);
-
-      let html = '';
-      if (items.length === 0) {
-        html = '<p style="color:var(--text-muted);font-size:0.83rem;padding:0.5rem 0 0">No featured grants selected yet. Use the admin panel to tick ⭐ on grants to show here.</p>';
-      } else {
-        items.forEach(g => {
-          html += `
-          <div class="grant-item">
-            <div>
-              <div class="grant-title">${g.title || ''}</div>
-              <div class="grant-info">${gmName(g.authors || '')} · ${g.funder || ''}</div>
-            </div>
-            <div>
-              <div class="grant-amount">${g.amount || ''}</div>
-              <div class="grant-year">${g.years || ''}</div>
-            </div>
-          </div>`;
-        });
-      }
-      document.getElementById('featured-grants-container').innerHTML = html;
-    }
-
-    fetch('content.json')
-      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-      .then(data => renderFeaturedGrants(data))
-      .catch(() => {
-        document.getElementById('featured-grants-container').innerHTML =
-          '<p style="color:var(--text-muted);font-size:0.83rem">Could not load grants. Please ensure content.json is in the same folder.</p>';
-      });
-  })();
-  </script>
-
-
   <!-- PUBLICATIONS -->
   <section class="section section-alt" id="publications">
     <h2 class="section-title">Publications</h2>
     <div id="featured-pubs-container">
-      <div style="color:var(--text-muted);font-size:0.85rem">Loading featured publications…</div>
+      <div style="color:var(--text-muted);font-size:0.85rem">Loading…</div>
     </div>
     <a href="publications.html" class="full-list-link" style="margin-top:1.75rem">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg>
@@ -875,148 +764,20 @@
     </a>
   </section>
 
-  <script>
-  (function() {
-    function gmName(text) {
-      return text.replace(/\[GM\]/g, '<span class="gm-name">Ghulam Mubashar Hassan</span>');
-    }
-
-    function renderFeatured(data) {
-      const pubs = data.publications || {};
-      const categories = [
-        { key: 'bookChapters',     label: 'Book Chapters' },
-        { key: 'datasets',         label: 'Datasets' },
-        { key: 'journalPapers',    label: 'Journal Papers' },
-        { key: 'conferencePapers', label: 'Conference Papers' }
-      ];
-
-      let html = '';
-      let totalFeatured = 0;
-
-      categories.forEach(({ key, label }) => {
-        const items = (pubs[key] || []).filter(p =>
-          typeof p === 'object' ? p.featured : false
-        );
-        if (items.length === 0) return;
-        totalFeatured += items.length;
-        html += `<div class="pub-category">${label}</div>`;
-        items.forEach(p => {
-          const text = typeof p === 'object' ? p.text : p;
-          html += `<div class="pub-item">${gmName(text)}</div>`;
-        });
-      });
-
-      if (totalFeatured === 0) {
-        html = '<p style="color:var(--text-muted);font-size:0.83rem;padding:0.5rem 0">No featured publications selected yet. Use the admin panel to tick ⭐ on publications to show here.</p>';
-      }
-
-      document.getElementById('featured-pubs-container').innerHTML = html;
-    }
-
-    fetch('content.json')
-      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-      .then(data => renderFeatured(data))
-      .catch(() => {
-        document.getElementById('featured-pubs-container').innerHTML =
-          '<p style="color:var(--text-muted);font-size:0.83rem">Could not load publications. Please ensure content.json is in the same folder.</p>';
-      });
-  })();
-  </script>
-
   <!-- TEACHING -->
   <section class="section" id="teaching">
     <h2 class="section-title">Teaching</h2>
-
-    <div class="teaching-block">
-      <div class="teaching-role">Unit Coordinator / Lecturer</div>
-      <div class="teaching-inst">University of Western Australia</div>
-      <ul class="teaching-courses">
-        <li>Computer Analysis &amp; Visualization</li>
-        <li>Problem Solving &amp; Programming</li>
-        <li>Computational Thinking with Python</li>
-        <li>Software Requirements and Design</li>
-        <li>Software Engineering Design Project</li>
-      </ul>
-    </div>
-
-    <div class="teaching-block">
-      <div class="teaching-role">Unit Coordinator / Lecturer</div>
-      <div class="teaching-inst">University of Engineering &amp; Technology, Peshawar</div>
-      <ul class="teaching-courses">
-        <li>Control Systems</li>
-        <li>Microprocessor Based System Design</li>
-        <li>Database Management Systems</li>
-        <li>Advanced Project Planning and Management</li>
-        <li>Data Structures</li>
-        <li>Microprocessor Design</li>
-        <li>Object Oriented Programming</li>
-        <li>Programming with Java</li>
-      </ul>
-    </div>
-
-    <div class="teaching-block">
-      <div class="teaching-role">Head Tutor</div>
-      <div class="teaching-inst">University of Western Australia</div>
-      <ul class="teaching-courses">
-        <li>Computer Analysis &amp; Visualization</li>
-      </ul>
-    </div>
-
-    <div class="teaching-block">
-      <div class="teaching-role">Teaching Assistant / Tutor</div>
-      <div class="teaching-inst">University of Western Australia</div>
-      <ul class="teaching-courses">
-        <li>Object Oriented Programming and Software Engineering</li>
-        <li>Computer Analysis &amp; Visualization</li>
-        <li>Problem Solving and Programming</li>
-      </ul>
-    </div>
-
-    <div class="teaching-block">
-      <div class="teaching-role">Teaching Assistant</div>
-      <div class="teaching-inst">Oklahoma State University</div>
-      <ul class="teaching-courses">
-        <li>Experimental Method-II</li>
-      </ul>
+    <div id="teaching-container">
+      <div style="color:var(--text-muted);font-size:0.85rem">Loading…</div>
     </div>
   </section>
 
   <!-- RESEARCH TEAM -->
   <section class="section section-alt" id="research-team">
     <h2 class="section-title">Research Team</h2>
-
-    <div class="pub-category" style="margin-top:0">Current PhD Students</div>
-    <div class="team-grid">
-      <div class="team-name">Branimir Rusanov</div>
-      <div class="team-name">Alan Varghese</div>
-      <div class="team-name">Lucie Ketelsen</div>
-      <div class="team-name">Azani Hasibuan</div>
-      <div class="team-name">Pasa Ciceklidag</div>
-      <div class="team-name">Shahin Hakemi</div>
-      <div class="team-name">Khanh Nguyen</div>
-      <div class="team-name">Danish Ali</div>
-      <div class="team-name">Suning (Juliet) Li</div>
-      <div class="team-name">Viska Mutiawani</div>
-      <div class="team-name">Brendan Wright</div>
-      <div class="team-name">Kaylee Molin</div>
-      <div class="team-name">Rizal Alfaridzi</div>
+    <div id="research-team-container">
+      <div style="color:var(--text-muted);font-size:0.85rem">Loading…</div>
     </div>
-
-    <div class="pub-category">PhD Alumni</div>
-    <div class="past-member"><strong>Dr. Juwita</strong> — Automatic small abdominal organ and tumor (SAOT) segmentation from CT scans</div>
-    <div class="past-member"><strong>Dr. Asmaa Abdullah Shati</strong> — AI-based approaches for respiratory disease detection using audio signals and imaging data</div>
-    <div class="past-member"><strong>Dr. Jack Jorgensen</strong> — Fatigue analysis under uncertainty of bolted ring-flanges in offshore wind turbine support structures using surrogate models</div>
-    <div class="past-member"><strong>Dr. Nathaniel Barry</strong> — Augmenting the clinical approach to glioblastoma: automatic segmentation and radiomics</div>
-    <div class="past-member"><strong>Dr. Xin Lyu</strong> — Investigation of high strength rubberised concrete for roadside barriers</div>
-    <div class="past-member"><strong>Dr. Afsah Saleem</strong> — Machine Learning for Computer-Aided Diagnostics from Complex Medical Images</div>
-    <div class="past-member"><strong>Dr. Abdullah Alelyani</strong> — Cloud Computing Efficiency: Optimizing Resource Utilization using Intelligent Algorithms</div>
-    <div class="past-member"><strong>Dr. Rini Anggrainingsih</strong> — Rumour Detection and Classification on Microblogging Platforms</div>
-    <div class="past-member"><strong>Dr. Sania Zahan</strong> — Human Motion Analysis</div>
-    <div class="past-member"><strong>Dr. Haifa Almutairi</strong> — Automated Classification of Sleep Stages and Detection of Sleep Disorders</div>
-    <div class="past-member"><strong>Dr. Jake Kendrick</strong> — Towards a Quantitative Management of Metastatic Prostate Cancer using PSMA PET images</div>
-    <div class="past-member"><strong>Dr. Zainy M. Malakan Aljawy</strong> — Automatic Generation of a Coherent Story from a Set of Images</div>
-    <div class="past-member"><strong>Dr. Hezam Albaqami</strong> — Leveraging Machine Learning for Enhanced Detection and Classification of Brain Pathologies Using EEG</div>
-    <div class="past-member"><strong>Dr. Yangjinbo Zhang</strong> — Development of a Visual Data Storytelling Framework</div>
   </section>
 
   <!-- STUDENTS -->
@@ -1027,62 +788,172 @@
     </div>
   </section>
 
-  <script>
-  (function() {
-    function renderStudents(data) {
-      const years = data.supervisedStudents || [];
-      let html = '';
-      years.forEach(y => {
-        html += `<div class="students-year"><div class="students-year-label">${y.year}</div>`;
-        (y.cohorts || []).forEach(c => {
-          html += `<div class="students-type">${c.type}</div>
-                   <div class="students-names">${c.names}</div>`;
-        });
-        html += `</div>`;
-      });
-      document.getElementById('students-container').innerHTML = html ||
-        '<p style="color:var(--text-muted);font-size:0.83rem">No student data found.</p>';
-    }
-
-    fetch('content.json')
-      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-      .then(data => renderStudents(data))
-      .catch(() => renderStudents(STUDENTS_FALLBACK));
-
-    const STUDENTS_FALLBACK = { supervisedStudents: [
-      { year:"2024", cohorts:[{type:"Honours",names:"Jonathan Lim · Jordon Lu · Stephan Nio · Ri Nandiya"},{type:"Masters",names:"Fatema Khalil · Bronsen Lvulich · Keylene Chong · Seharsh Srivastava · Shu-Chi Liu"}]},
-      { year:"2023", cohorts:[{type:"Honours",names:"Jamie Vo · Lachlan Bassi"},{type:"Masters",names:"YiMing Liu · Yitong Yang · Boyu Cai · Matthew Walsh · Aditya Rao"}]},
-      { year:"2021", cohorts:[{type:"Masters",names:"Karolina Kucharska · William Feng · Matthew Rose · Edgar Poh · Mohammad Zaman Khan · Rao Tan · Zachary Browne · Andie Gell · Andie Sones · Geoff Buitendag · Haowei Xu · Justin Bardwell · Hamish Blanchard · Akhil Naseem · Mitchell Button · Yiheng Lyu · Henry Liu · Xiangxin Zend"}]},
-      { year:"2020", cohorts:[{type:"Masters",names:"Eddie Simpson · Rajvir Kaur · Jessica Jia Yong Khoo · Himanshi Satnani · Jewel Payne · Junhong Guo · Jeremiah Leo · Naradipa Adenan · Jason Jung · Mustafa Shahid · Huiyuan Liu Gao · Vigneshvar Thiruvengadam · Dylan Bell · Jake Kendrick · Paulus Angkodjojo"}]},
-      { year:"2019", cohorts:[{type:"Masters",names:"Rhys Collier · Jack Duncan · Nithin Parakash · Wesley Seet · James Luu · Kyle Rory Ludewick · Marcus Altmann · Daniel Nuyen · Chiyu Weng · Dawn Than · Bhagyashri · Kevin Yuan Leong · Gavy Dia · Anthony Joseph · Brendon Wright · Frank Ta"}]},
-      { year:"2018", cohorts:[{type:"Masters",names:"Jonathan Skotny · Vincent Chong · Liam Cummins · Alexander Emery · Michael Finn · Rhys Kessey · Zen Ly"}]},
-      { year:"2017", cohorts:[{type:"Masters",names:"Aaron Hurst · Ray Barker · Joel Frewin · Theodore Wilson"}]},
-      { year:"2015", cohorts:[{type:"Masters",names:"Nirusha Phillips · Hayden Crisp · David Hang · Ashley Day"}]},
-      { year:"2014", cohorts:[{type:"Masters",names:"Van Nghia Dinh · Gang Li"}]},
-      { year:"2011", cohorts:[{type:"Honours",names:"Aurang Zeb · Fawad Ali Khan"}]},
-      { year:"2006–2010", cohorts:[{type:"Earlier cohorts (UET Peshawar & OSU)",names:"Fahim Ullah · Mian Sanaullah · Saadia Wazir · Qamar Ul Ain · Amad Ibrahim Marwat · Salman Wahid · Fazal Kareem · Saeed Anwar · Wasim Iqbal · Asad Ullah · Shahid Khan · Rabia Javed · Beena · Umbreen Gul · Shah Mahmood · Anwar Kamal Afridi · Fazal Rabi · Shaukat Hayat · Sajid Hameed"}]}
-    ]};
-  })();
-  </script>
-
   <!-- CONTACT -->
   <section class="section section-alt" id="contact">
     <h2 class="section-title">Contact</h2>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="contact-label">Email</div>
-        <div class="contact-value"><a href="mailto:ghulam.hassan@uwa.edu.au">ghulam.hassan@uwa.edu.au</a></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">Phone</div>
-        <div class="contact-value">(+61) 6448-7228</div>
-      </div>
-      <div class="contact-item" style="grid-column: span 1;">
-        <div class="contact-label">Department</div>
-        <div class="contact-value"><a href="http://web.csse.uwa.edu.au/" target="_blank">Computer Science &amp; Software Engineering, UWA</a></div>
-      </div>
+    <div class="contact-grid" id="contact-grid">
+      <div style="color:var(--text-muted);font-size:0.85rem">Loading…</div>
     </div>
   </section>
+
+  <!-- SINGLE UNIFIED DATA FETCH -->
+  <script>
+  (function() {
+    function esc(s) {
+      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+    function gmName(s) {
+      return String(s||'').replace(/\[GM\]/g,'<span class="gm-name">Ghulam Mubashar Hassan</span>');
+    }
+
+    function renderAll(data) {
+      const p = data.profile || {};
+
+      // ── Sidebar ──────────────────────────────────────────────────────────
+      const sn = document.getElementById('sidebar-name');
+      if (sn && p.name) sn.textContent = 'Dr. ' + p.name;
+      const ss = document.getElementById('sidebar-sub');
+      if (ss && p.title) ss.textContent = p.title + ' · UWA';
+      const se = document.getElementById('sidebar-email');
+      if (se && p.email) { se.href = 'mailto:' + p.email; se.textContent = p.email; }
+      const sp = document.getElementById('sidebar-phone');
+      if (sp && p.phone) { sp.href = 'tel:' + p.phone.replace(/[^+\d]/g,''); sp.textContent = p.phone; }
+
+      // ── Hero ─────────────────────────────────────────────────────────────
+      const ey = document.getElementById('hero-eyebrow');
+      if (ey && p.university) ey.textContent = p.university;
+      const nm = document.getElementById('hero-name');
+      if (nm && p.name) nm.textContent = p.name;
+      const rl = document.getElementById('hero-role');
+      if (rl && p.bio) rl.innerHTML = esc(p.bio)
+        .replace(esc(p.department||''), `<a href="${p.departmentUrl||'#'}" target="_blank">${esc(p.department)}</a>`)
+        .replace(esc(p.university||''), `<a href="${p.universityUrl||'#'}" target="_blank">${esc(p.university)}</a>`);
+      const ar = document.getElementById('research-areas');
+      if (ar) ar.innerHTML = (p.researchAreas||[]).map(a=>`<span class="research-tag">${esc(a)}</span>`).join('');
+
+      // ── Awards ───────────────────────────────────────────────────────────
+      const aw = document.getElementById('awards-grid');
+      if (aw) aw.innerHTML = (data.awards||[]).map(a=>`<div class="award-item">${esc(a)}</div>`).join('');
+
+      // ── Memberships ──────────────────────────────────────────────────────
+      const mb = document.getElementById('memberships-list');
+      if (mb) mb.innerHTML = (data.memberships||[]).map(m=>`<li>${esc(m)}</li>`).join('');
+
+      // ── Education ────────────────────────────────────────────────────────
+      const ed = document.getElementById('education-list');
+      if (ed) ed.innerHTML = (data.education||[]).map(e=>`
+        <li class="edu-item">
+          <div>
+            <div class="edu-degree">${esc(e.degree)}</div>
+            <div class="edu-field">${esc(e.field)}</div>
+            <div class="edu-uni">
+              ${e.institutionUrl ? `<a href="${e.institutionUrl}" target="_blank">${esc(e.institution)}</a>` : esc(e.institution)}
+              ${e.location ? ' · '+esc(e.location) : ''}
+            </div>
+          </div>
+          ${e.badge ? `<span class="edu-badge">${esc(e.badge)}</span>` : ''}
+        </li>`).join('');
+
+      // ── Grants (featured) ────────────────────────────────────────────────
+      const gr = data.grants || {};
+      const gtd = document.getElementById('grants-total-display');
+      if (gtd) gtd.textContent = gr.total || '';
+      const gfc = document.getElementById('featured-grants-container');
+      if (gfc) {
+        const featured = (gr.items||[]).filter(g=>g.featured);
+        gfc.innerHTML = featured.length ? featured.map(g=>`
+          <div class="grant-item">
+            <div>
+              <div class="grant-title">${esc(g.title||'')}</div>
+              <div class="grant-info">${gmName(g.authors||'')} · ${esc(g.funder||'')}</div>
+            </div>
+            <div>
+              <div class="grant-amount">${esc(g.amount||'')}</div>
+              <div class="grant-year">${esc(g.years||'')}</div>
+            </div>
+          </div>`).join('')
+        : '<p style="color:var(--text-muted);font-size:0.83rem;padding:0.5rem 0 0">No featured grants yet — tick ⭐ in the admin panel.</p>';
+      }
+
+      // ── Publications (featured) ──────────────────────────────────────────
+      const pfc = document.getElementById('featured-pubs-container');
+      if (pfc) {
+        const cats = [
+          {key:'bookChapters',label:'Book Chapters'},
+          {key:'datasets',label:'Datasets'},
+          {key:'journalPapers',label:'Journal Papers'},
+          {key:'conferencePapers',label:'Conference Papers'}
+        ];
+        let pubHtml = '';
+        cats.forEach(({key,label}) => {
+          const items = ((data.publications||{})[key]||[]).filter(p=>typeof p==='object' ? p.featured : false);
+          if (!items.length) return;
+          pubHtml += `<div class="pub-category">${label}</div>`;
+          items.forEach(p => { pubHtml += `<div class="pub-item">${gmName(typeof p==='object'?p.text:p)}</div>`; });
+        });
+        pfc.innerHTML = pubHtml || '<p style="color:var(--text-muted);font-size:0.83rem;padding:0.5rem 0">No featured publications yet — tick ⭐ in the admin panel.</p>';
+      }
+
+      // ── Teaching ─────────────────────────────────────────────────────────
+      const tc = document.getElementById('teaching-container');
+      if (tc) tc.innerHTML = (data.teaching||[]).map(t=>`
+        <div class="teaching-block">
+          <div class="teaching-role">${esc(t.role)}</div>
+          <div class="teaching-inst">${esc(t.institution)}</div>
+          <ul class="teaching-courses">
+            ${(t.courses||[]).map(c=>`<li>${esc(c)}</li>`).join('')}
+          </ul>
+        </div>`).join('');
+
+      // ── Research Team ────────────────────────────────────────────────────
+      const rt = document.getElementById('research-team-container');
+      if (rt) {
+        const team = data.researchTeam || {};
+        const cur = team.currentPhD || [];
+        const alum = team.phdAlumni || [];
+        rt.innerHTML =
+          (cur.length ? `<div class="pub-category" style="margin-top:0">Current PhD Students</div>
+            <div class="team-grid">${cur.map(n=>`<div class="team-name">${esc(n)}</div>`).join('')}</div>` : '') +
+          (alum.length ? `<div class="pub-category">PhD Alumni</div>
+            ${alum.map(a=>`<div class="past-member"><strong>${esc(a.name)}</strong>${a.thesis?' — '+esc(a.thesis):''}</div>`).join('')}` : '') ||
+          '<p style="color:var(--text-muted);font-size:0.83rem">No team data found.</p>';
+      }
+
+      // ── Students ─────────────────────────────────────────────────────────
+      const sc = document.getElementById('students-container');
+      if (sc) {
+        sc.innerHTML = (data.supervisedStudents||[]).map(y=>`
+          <div class="students-year">
+            <div class="students-year-label">${esc(y.year)}</div>
+            ${(y.cohorts||[]).map(c=>`
+              <div class="students-type">${esc(c.type)}</div>
+              <div class="students-names">${esc(c.names)}</div>`).join('')}
+          </div>`).join('') || '<p style="color:var(--text-muted);font-size:0.83rem">No student data found.</p>';
+      }
+
+      // ── Contact ──────────────────────────────────────────────────────────
+      const ct = document.getElementById('contact-grid');
+      if (ct && p.email) ct.innerHTML = `
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:${esc(p.email)}">${esc(p.email)}</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">${esc(p.phone||'')}</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Department</div>
+          <div class="contact-value"><a href="${p.departmentUrl||'#'}" target="_blank">${esc(p.department)}, ${esc(p.university)}</a></div>
+        </div>`;
+    }
+
+    fetch('content.json')
+      .then(r => { if (!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+      .then(data => renderAll(data))
+      .catch(err => console.warn('content.json could not be loaded:', err.message));
+  })();
+  </script>
 
 </main>
 
