@@ -10,10 +10,10 @@
     "phone": "(+61) 6448-7228",
     "bio": "Senior Lecturer in the Department of Computer Science & Software Engineering at the University of Western Australia. UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.",
     "researchAreas": [
-      "Artificial Intelligence",
+      "Medical Artificial Intelligence",
       "Machine Learning",
       "Optimization",
-      "Digital Image Processing",
+      "Medical Image Processing",
       "Computer Vision",
       "Engineering Education"
     ]
@@ -37,8 +37,9 @@
     "SUN Microsystems Certified Programmer for Java"
   ],
   "memberships": [
+    "AI Augmentation in Modern Medicine (A^2M^2)",
     "Australian Centre for Quantitative Imaging (ACQI)",
-    "IEEE",
+    "the Institute of Electrical and Electronics Engineers (IEEE)",
     "Australian Association of Engineering Educators (AAEE)",
     "Higher Education Academy UK",
     "Engineers Australia (EA)",
@@ -715,7 +716,9 @@
         "Problem Solving & Programming",
         "Computational Thinking with Python",
         "Software Requirements and Design",
-        "Software Engineering Design Project"
+        "Software Engineering Design Project",
+        "Computational Data Analysis",
+        "Introduction to Data Science"
       ]
     },
     {
@@ -770,7 +773,8 @@
       "Viska Mutiawani",
       "Brendan Wright",
       "Kaylee Molin",
-      "Rizal Alfaridzi"
+      "Rizal Alfaridzi",
+      "Bandar Salem Alsaadi"
     ],
     "phdAlumni": [
       {
