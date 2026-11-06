@@ -1,6 +1,6 @@
 {
   "profile": {
-    "name": "Dr. Ghulam Mubashar Hassan",
+    "name": "Ghulam Mubashar Hassan",
     "title": "Senior Lecturer",
     "department": "Department of Computer Science & Software Engineering",
     "university": "University of Western Australia",
@@ -8,13 +8,14 @@
     "universityUrl": "https://www.uwa.edu.au/",
     "email": "ghulam.hassan@uwa.edu.au",
     "phone": "(+61) 6448-7228",
-    "bio": "Senior Lecturer in the Department of Computer Science & Software Engineering at The University of Western Australia (UWA). UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.",
+    "bio": "Senior Lecturer in the Department of Computer Science & Software Engineering at the University of Western Australia (UWA) . UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.",
     "researchAreas": [
       "Medical Artificial Intelligence",
       "Machine Learning",
-      "Optimization",
+      "Medical Image Analysis",
       "Digital Image Processing",
       "Computer Vision",
+      "Optimization",
       "Engineering Education"
     ]
   },
@@ -37,8 +38,10 @@
     "SUN Microsystems Certified Programmer for Java"
   ],
   "memberships": [
+    "AI Augmentation in Modern Medicine (A2M2)",
     "Australian Centre for Quantitative Imaging (ACQI)",
-    "IEEE",
+    "Institute of Electrical and Electronics Engineers (IEEE)",
+    "Australasian Artificial Intelligence in Engineering Education Centre (AAIEEC)",
     "Australian Association of Engineering Educators (AAEE)",
     "Higher Education Academy UK",
     "Engineers Australia (EA)",
