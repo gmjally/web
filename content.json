@@ -763,6 +763,19 @@
   ],
   "supervisedStudents": [
     {
+      "year": "2025",
+      "cohorts": [
+        {
+          "type": "Honours",
+          "names": "Theresa Needham · Martin Evans · Emily Martin"
+        },
+        {
+          "type": "Masters",
+          "names": "Ahmad Shaheer · MD Faraz K Khan"
+        }
+      ]
+    },
+    {
       "year": "2024",
       "cohorts": [
         {
@@ -873,18 +886,18 @@
   "researchTeam": {
     "currentPhD": [
       "Danish Ali",
-      "Branimir Rusanov",
+      "Viska Mutiawani",
+      "Khanh Nguyen",
+      "Shahin Hakemi",
+      "Kaylee Molin",
+      "Brendan Wright",
+      "Rizal Alfaridzi",
       "Alan Varghese",
       "Lucie Ketelsen",
-      "Azani Hasibuan",
       "Pasa Ciceklidag",
-      "Shahin Hakemi",
-      "Khanh Nguyen",
       "Suning (Juliet) Li",
-      "Viska Mutiawani",
-      "Brendan Wright",
-      "Kaylee Molin",
-      "Rizal Alfaridzi"
+      "Branimir Rusanov",
+      "Azani Hasibuan"
     ],
     "phdAlumni": [
       {
