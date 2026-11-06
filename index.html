@@ -712,28 +712,13 @@
   <!-- HERO / ABOUT -->
   <section class="hero" id="about">
     <div class="hero-inner">
-      <div class="hero-text">
+      <div class="hero-text" id="hero-text">
         <div class="hero-eyebrow">University of Western Australia</div>
-        <h1 class="hero-name">Ghulam Mubashar Hassan</h1>
-        <p class="hero-role">
-          Senior Lecturer in the <a href="http://web.csse.uwa.edu.au/" target="_blank">Department of Computer Science &amp; Software Engineering</a> at the <a href="https://www.uwa.edu.au/" target="_blank">University of Western Australia</a>. UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.
-        </p>
-        <div class="research-areas">
-          <span class="research-tag">Artificial Intelligence</span>
-          <span class="research-tag">Machine Learning</span>
-          <span class="research-tag">Optimization</span>
-          <span class="research-tag">Digital Image Processing</span>
-          <span class="research-tag">Computer Vision</span>
-          <span class="research-tag">Engineering Education</span>
-        </div>
+        <h1 class="hero-name" id="hero-name">Ghulam Mubashar Hassan</h1>
+        <p class="hero-role" id="hero-role">Senior Lecturer, Department of Computer Science &amp; Software Engineering, University of Western Australia.</p>
+        <div class="research-areas" id="research-areas"></div>
       </div>
       <div class="hero-photo-wrap">
-        <!--
-          TO ADD YOUR PHOTO:
-          1. Save your photo as "photo.jpg" in the same folder as index.html
-          2. Delete the <div class="hero-photo-placeholder">...</div> block below
-          3. Uncomment the <img> tag below it
-        -->
         <img src="photo.jpg" alt="Dr. Ghulam Mubashar Hassan" class="hero-photo" />
       </div>
     </div>
@@ -742,66 +727,84 @@
   <!-- AWARDS (part of about) -->
   <section class="section" id="awards">
     <h2 class="section-title">Awards &amp; Recognition</h2>
-    <div class="awards-grid">
-      <div class="award-item">UWA Early Career Research Award Commendations 2025</div>
-      <div class="award-item">Early Career Research Award — Physics, Mathematics &amp; Computing 2025</div>
-      <div class="award-item">AAEE Award for Engineering Education Research Design 2023</div>
-      <div class="award-item">Early Career Research Award Commendations — Physics, Mathematics &amp; Computing 2023</div>
-      <div class="award-item">Fellowship of the Higher Education Academy UK 2022</div>
-      <div class="award-item"><a href="https://research-repository.uwa.edu.au/en/prizes/aaee-award-for-engineering-education-research-design" target="_blank">AAEE Award for Engineering Education Research Design 2021</a></div>
-      <div class="award-item"><a href="https://www.news.uwa.edu.au/archive/2019090411592/2019-uwa-excellence-teaching-awards/" target="_blank">UWA Excellence in Teaching — Outstanding Contributions to Student Learning 2018/2019</a></div>
-      <div class="award-item">UWA EMS Best Teaching Award 2018/2019</div>
-      <div class="award-item">UWA GUILD Student Choice Award — Semester 1 2019</div>
-      <div class="award-item">UWA GUILD Student Choice Award — Semester 2 2018</div>
-      <div class="award-item">UWA EMS Best Teaching Award Commendations 2017/2018</div>
-      <div class="award-item"><a href="https://youtu.be/G2yqi7qGbFM" target="_blank">UWA Valedictorian September 2016</a></div>
-      <div class="award-item"><a href="http://www.research.uwa.edu.au/__data/assets/pdf_file/0003/2790282/uwa-research-awards-and-honours-winners-2015.pdf" target="_blank">UWA Entrepreneurship Award 2015</a></div>
-      <div class="award-item">Australian Postgraduate Award · Bruce &amp; Betty Award · Merit Top-Up Award</div>
-      <div class="award-item">AAEE Early Career Academy Membership 2018–2021</div>
-      <div class="award-item">SUN Microsystems Certified Programmer for Java</div>
-    </div>
-
+    <div class="awards-grid" id="awards-grid"><div style="color:var(--text-muted);font-size:0.85rem">Loading…</div></div>
     <h2 class="section-title" style="margin-top:2.5rem;">Professional Memberships</h2>
-    <ul class="orgs-list">
-      <li>Australian Centre for Quantitative Imaging (ACQI)</li>
-      <li>IEEE</li>
-      <li>Australian Association of Engineering Educators (AAEE)</li>
-      <li>Higher Education Academy UK</li>
-      <li>Engineers Australia (EA)</li>
-      <li>Pakistan Engineering Council (PEC)</li>
-    </ul>
+    <ul class="orgs-list" id="memberships-list"><li style="color:var(--text-muted);font-size:0.85rem">Loading…</li></ul>
   </section>
 
   <!-- EDUCATION -->
   <section class="section section-alt" id="education">
     <h2 class="section-title">Education</h2>
-    <ul class="edu-list">
-      <li class="edu-item">
-        <div>
-          <div class="edu-degree">Doctor of Philosophy (PhD)</div>
-          <div class="edu-field">Joint Schools of Computer Science &amp; Software Engineering, and Civil &amp; Resource Engineering</div>
-          <div class="edu-uni"><a href="https://www.uwa.edu.au/" target="_blank">University of Western Australia</a> · Perth, Australia</div>
-        </div>
-        <span class="edu-badge">Valedictorian</span>
-      </li>
-      <li class="edu-item">
-        <div>
-          <div class="edu-degree">Master of Science</div>
-          <div class="edu-field">Electrical &amp; Computer Engineering</div>
-          <div class="edu-uni"><a href="http://go.okstate.edu/" target="_blank">Oklahoma State University</a> · Oklahoma, USA</div>
-        </div>
-        <span class="edu-badge">CGPA 4.0/4.0</span>
-      </li>
-      <li class="edu-item">
-        <div>
-          <div class="edu-degree">Bachelor of Science</div>
-          <div class="edu-field">Electrical &amp; Electronics Engineering</div>
-          <div class="edu-uni"><a href="http://nwfpuet.edu.pk/" target="_blank">University of Engineering &amp; Technology</a> · Peshawar, Pakistan</div>
-        </div>
-        <span class="edu-badge">A+ with Honours</span>
-      </li>
-    </ul>
+    <ul class="edu-list" id="education-list"><li style="color:var(--text-muted);font-size:0.85rem;padding:1rem 0">Loading…</li></ul>
   </section>
+
+  <script>
+  // ── PROFILE, AWARDS, MEMBERSHIPS, EDUCATION ─────────────────────────────
+  (function() {
+    function esc(s) {
+      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function render(data) {
+      const p = data.profile || {};
+
+      // Hero name
+      const nameEl = document.getElementById('hero-name');
+      if (nameEl && p.name) nameEl.textContent = p.name;
+
+      // Bio
+      const roleEl = document.getElementById('hero-role');
+      if (roleEl && p.bio) roleEl.innerHTML = esc(p.bio)
+        .replace(esc(p.department||''), `<a href="${p.departmentUrl||'#'}" target="_blank">${esc(p.department)}</a>`)
+        .replace(esc(p.university||''), `<a href="${p.universityUrl||'#'}" target="_blank">${esc(p.university)}</a>`);
+
+      // Research area tags
+      const areasEl = document.getElementById('research-areas');
+      if (areasEl && p.researchAreas) {
+        areasEl.innerHTML = (p.researchAreas||[])
+          .map(a => `<span class="research-tag">${esc(a)}</span>`).join('');
+      }
+
+      // Awards
+      const awardsEl = document.getElementById('awards-grid');
+      if (awardsEl && data.awards) {
+        awardsEl.innerHTML = (data.awards||[])
+          .map(a => `<div class="award-item">${esc(a)}</div>`).join('');
+      }
+
+      // Memberships
+      const membEl = document.getElementById('memberships-list');
+      if (membEl && data.memberships) {
+        membEl.innerHTML = (data.memberships||[])
+          .map(m => `<li>${esc(m)}</li>`).join('');
+      }
+
+      // Education
+      const eduEl = document.getElementById('education-list');
+      if (eduEl && data.education) {
+        eduEl.innerHTML = (data.education||[]).map(e => `
+          <li class="edu-item">
+            <div>
+              <div class="edu-degree">${esc(e.degree)}</div>
+              <div class="edu-field">${esc(e.field)}</div>
+              <div class="edu-uni">
+                ${e.institutionUrl
+                  ? `<a href="${e.institutionUrl}" target="_blank">${esc(e.institution)}</a>`
+                  : esc(e.institution)}
+                ${e.location ? ' · ' + esc(e.location) : ''}
+              </div>
+            </div>
+            ${e.badge ? `<span class="edu-badge">${esc(e.badge)}</span>` : ''}
+          </li>`).join('');
+      }
+    }
+
+    fetch('content.json')
+      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+      .then(data => render(data))
+      .catch(() => {/* keep static fallback text already in HTML */});
+  })();
+  </script>
 
   <!-- GRANTS -->
   <section class="section" id="grants">
