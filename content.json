@@ -1,6 +1,6 @@
 {
   "profile": {
-    "name": "Dr. Ghulam Mubashar Hassan",
+    "name": "Ghulam Mubashar Hassan",
     "title": "Senior Lecturer",
     "department": "Department of Computer Science & Software Engineering",
     "university": "University of Western Australia",
@@ -10,9 +10,9 @@
     "phone": "(+61) 6448-7228",
     "bio": "Senior Lecturer in the Department of Computer Science & Software Engineering at the University of Western Australia. UWA Valedictorian (2016) · Fellow of the Higher Education Academy UK.",
     "researchAreas": [
-      "Artificial Intelligence",
+      "Medical Artificial Intelligence",
       "Machine Learning",
-      "Optimization",
+      "Medical Image Processing",
       "Digital Image Processing",
       "Computer Vision",
       "Engineering Education"
@@ -78,174 +78,154 @@
         "authors": "Donna Geddes, Debbie Palmer, Mark Nicol, Mary Sharp, [GM], Sharon Perrella, Lisa Stinson",
         "funder": "Stan Perron Charitable Foundation",
         "amount": "AUD $1,305,695",
-        "years": "2025–2029",
-        "featured": true
+        "years": "2025–2029"
       },
       {
         "title": "\"Clinical Evaluation of Deep Learning for Identification and Prognosis in Metastatic Prostate Cancer\"",
         "authors": "Jake Kendrick, Martin Ebert, [GM], Nathaniel Barry, Pejman Rowshan Farzad, Branimir Rusanov, Jeremy Ong, Mikaela Dell'Oro",
         "funder": "Department of Health (Western Australia)",
         "amount": "AUD $361,146",
-        "years": "2025–2026",
-        "featured": true
+        "years": "2025–2026"
       },
       {
-        "title": "\"Accelerating Clinical Translation: An Open-Source Framework for Robust, Automated Development of Radiomics Models in Glioblastoma\"",
+        "title": "\"Accelerating Clinical Translation: Radiomics Models in Glioblastoma\"",
         "authors": "N. Barry, M. Bynevelt, J. Kendrick, M. Ebert, [GM], P. Rowshan Farzad",
         "funder": "Royal Perth Hospital",
         "amount": "AUD $80,000",
-        "years": "2025–2026",
-        "featured": true
+        "years": "2025–2026"
       },
       {
         "title": "\"Matariki Funding Application (Deepfakes)\"",
         "authors": "[GM], T. Reed, M. Farhad, M. Hardey, L.S. Scharnick-Udemans, Y. Watanabe, W. Ahmed, K. Sharma, R. Das",
         "funder": "The Matariki Network of Universities (MNU)",
         "amount": "AUD $8,314",
-        "years": "2025–2026",
-        "featured": true
+        "years": "2025–2026"
       },
       {
         "title": "\"AI Adoption in WA Volunteering Sector\"",
         "authors": "R. Das, S. Roy, [GM], T. Reed, M. Loyola",
         "funder": "Volunteer Centre of Western Australia INC",
         "amount": "AUD $20,000",
-        "years": "2025–2026",
-        "featured": true
+        "years": "2025–2026"
       },
       {
-        "title": "\"Investigation of Integrating Generative AI into the Learning and Assessment of Engineering across Australasian Universities\"",
+        "title": "\"Investigation of Integrating Generative AI into Engineering across Australasian Universities\"",
         "authors": "Peter Neal, Marina Belkina, Sarah Grundy, [GM], Rezwanul Haque, Scott Daniel, Sasha Nikolic, Sarah Lyden",
         "funder": "Australasian Association for Engineering Education",
         "amount": "AUD $20,000",
-        "years": "2024",
-        "featured": true
+        "years": "2024"
       },
       {
         "title": "\"Conversion between Brain Cancer Imaging Modalities using Generative AI\"",
         "authors": "Martin Ebert, Nathaniel Barry, Branimir Rusanov, Jake Kendrick, Saima Safdar, Pejman Rowshan Farzad, [GM]",
-        "funder": "Innovation Challenge 2023 — Generative AI Applications, Department of Health (Western Australia)",
+        "funder": "Innovation Challenge 2023, Department of Health (WA)",
         "amount": "AUD $38,805",
-        "years": "2023–2024",
-        "featured": true
+        "years": "2023–2024"
       },
       {
         "title": "\"Radiomics for Survival Prediction in Prostate Cancer Patients\"",
         "authors": "Jake Kendrick and [GM]",
         "funder": "UWA Data Institute Summer Research Project Grant",
         "amount": "AUD $8,000",
-        "years": "2023–2024",
-        "featured": true
+        "years": "2023–2024"
       },
       {
-        "title": "Workshop in AAEE2023 \"ChatGPT vs Engineering Education: A Pathway to Becoming an Everyday Tool\"",
+        "title": "Workshop AAEE2023 \"ChatGPT vs Engineering Education\"",
         "authors": "[GM]",
         "funder": "UWA Data Institute Travel Grant",
         "amount": "AUD $2,927",
-        "years": "2023",
-        "featured": false
+        "years": "2023"
       },
       {
         "title": "\"Smart Roadside Barriers with Enhanced Sustainability and Impact Resistance\"",
         "authors": "Mohamed Elchalakani, [GM], Adam Wittak and Thomas Braunl",
-        "funder": "Road Safety Innovation Funds, Department of Infrastructure, Transport, Regional Development and Communications",
+        "funder": "Road Safety Innovation Funds, Department of Infrastructure",
         "amount": "AUD $300,500",
-        "years": "2021–2023",
-        "featured": true
+        "years": "2021–2023"
       },
       {
         "title": "\"Digitization of Centrifugal Slurry Pumps\"",
         "authors": "Ali Karrech, [GM] and Mohamed Elchalakani",
         "funder": "Metso Sweden",
         "amount": "AUD $66,500",
-        "years": "2021–2024",
-        "featured": true
+        "years": "2021–2024"
       },
       {
         "title": "\"Drone Video Analytics for Short-Term Traffic Prediction\"",
         "authors": "Chao Sun, Mark Reynolds, Du Huynh, [GM] and Sharron Biermann",
         "funder": "WA Main Roads",
         "amount": "AUD $124,500",
-        "years": "2019–2020",
-        "featured": true
+        "years": "2019–2020"
       },
       {
         "title": "\"More Accurate Neurosurgical Navigation Through Computation of Brain Deformation\"",
         "authors": "Adam Wittek, [GM], Elena Pasternak, Arcady Dyskin, Karol Miller and Simon Warfield",
         "funder": "UWA Research Income Growth Grant",
         "amount": "AUD $20,000",
-        "years": "2018–2019",
-        "featured": true
+        "years": "2018–2019"
       },
       {
         "title": "\"Smart Material, Smart Construction, Smart Structures\"",
         "authors": "Arcady Dyskin, Elena Pasternak, Yuxia Hu and [GM]",
         "funder": "UWA Research Income Growth Grant",
         "amount": "AUD $10,000",
-        "years": "2018–2019",
-        "featured": false
+        "years": "2018–2019"
       },
       {
         "title": "\"Developing Technological Leaders\"",
         "authors": "Sally Male, Santiago Perez, [GM], et al.",
         "funder": "UWA Community of Practice Initiative",
         "amount": "AUD $20,000",
-        "years": "2018–2019",
-        "featured": false
+        "years": "2018–2019"
       },
       {
         "title": "\"VR Safety in Design\"",
         "authors": "Sally Male, Andrew Guzzomi and [GM]",
         "funder": "UWA Education Futures",
         "amount": "AUD $10,000",
-        "years": "2017–2018",
-        "featured": false
+        "years": "2017–2018"
       },
       {
         "title": "\"Ezone 4D Environment\"",
         "authors": "Sally Male, Andrew Guzzomi and [GM]",
         "funder": "UWA Education Futures",
         "amount": "AUD $10,000",
-        "years": "2017–2018",
-        "featured": false
+        "years": "2017–2018"
       },
       {
         "title": "\"UWA Summer School\"",
         "authors": "[GM]",
         "funder": "UWA Education Futures",
         "amount": "AUD $10,000",
-        "years": "2017–2018",
-        "featured": false
+        "years": "2017–2018"
       },
       {
-        "title": "\"Photogrammetric Method of Distant Reconstruction of Displacement Fields in Deformable Solids\"",
+        "title": "\"Photogrammetric Method of Distant Reconstruction of Displacement Fields\"",
         "authors": "[GM]",
         "funder": "International Mining for Developing Countries — IM4DC",
         "amount": "AUD $10,000",
-        "years": "2014–2015",
-        "featured": false
+        "years": "2014–2015"
       },
       {
         "title": "\"UWA Postgraduate Travel\"",
         "authors": "[GM]",
         "funder": "UWA Graduate Research School",
         "amount": "AUD $1,850",
-        "years": "2015–2016",
-        "featured": false
+        "years": "2015–2016"
       }
     ]
   },
   "publications": {
     "bookChapters": [
       {
-        "text": "[GM], \"Computational Thinking\", <em>CA ANZ Risk and Technology</em>, Wrightbooks – John Wiley & Sons Australia Ltd, pp. 207–230, ISBN: 9780730391272, 2021.",
-        "featured": true
+        "text": "[GM], \"Computational Thinking\", <em>CA ANZ Risk and Technology</em>, Wrightbooks – John Wiley &amp; Sons Australia Ltd, pp. 207–230, ISBN: 9780730391272, 2021.",
+        "featured": false
       }
     ],
     "datasets": [
       {
         "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"OpenBoltRF: An open-source workflow to analyse load transfer for geometrically imperfect bolted ring-flanges in offshore wind turbines,\" 2024. doi: 10.5281/ZENODO.8287222",
-        "featured": true
+        "featured": false
       },
       {
         "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Finite Element Method Numerical Simulation results for analysis of Segment Model of Bolted Ring Flange,\" 2022. doi: 10.26182/31hp-td58",
@@ -253,63 +233,471 @@
       },
       {
         "text": "Z. M. Malakan, S. Anwar, [GM] and A. Mian, \"Sequential storytelling image dataset (SSID),\" 2023. doi: 10.21227/dbr9-dq51",
-        "featured": true
+        "featured": false
       }
     ],
     "journalPapers": [
       {
-        "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"DRBD-Mamba for robust and efficient brain tumor segmentation,\" <em>Brain Informatics</em>, 2026.",
-        "featured": true
+        "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"DRBD-Mamba for robust and efficient brain tumor segmentation with analytical insights,\" <em>Brain Informatics</em>, 2026.",
+        "featured": false
+      },
+      {
+        "text": "K. Molin, J. Li, N. Barry, J. Ong, A. Iravani, M. Hofman, [GM], M. Ebert and J. Kendrick, \"Pre-therapeutic PSMA PET Imaging Biomarkers Demonstrate Prognostic Value,\" <em>Clinical Genitourinary Cancer</em>, 2026.",
+        "featured": false
+      },
+      {
+        "text": "B. Wright, M. Ebert, J. Kendrick and [GM], \"Robust optimisation for photon radiotherapy: A scoping review,\" <em>Radiotherapy and Oncology</em>, 2026.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, P. Huggett, E. Lessing, [GM] and A. Karrech, \"Design, development and testing of a digitally instrumented slurry pump test rig,\" <em>HardwareX</em>, Vol. 26, 2026.",
+        "featured": false
+      },
+      {
+        "text": "A. Alelyani, A. Datta and [GM], \"A machine learning technique for optimizing virtual machine placement in data-centres,\" <em>Journal of Cloud Computing</em>, 2026.",
+        "featured": false
+      },
+      {
+        "text": "J. Kendrick, R. Francis, [GM], J.S.L. Ong, R. Jeraj, N. Barry and M. Ebert, \"Deep learning-based PSMA PET segmentation repeatability,\" <em>La Radiologia Medica</em>, 2026.",
+        "featured": false
+      },
+      {
+        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM] et al., \"The long and winding road of radiomics: learnings from two meta-analyses of the radiomics quality score,\" <em>Physics in Medicine and Biology</em>, 71(3), 2026.",
+        "featured": false
+      },
+      {
+        "text": "J. Li, J. Kendrick, M. Ebert, [GM], N. Barry et al., \"Auto-segmentation, radiomic reproducibility, and comparison of radiomics for coronary arteries in cardiac [18F]NaF PET/CT images,\" <em>EJNMMI Physics</em>, Vol. 10(1), 2025.",
+        "featured": false
+      },
+      {
+        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM] et al., \"Correction: Evaluating the impact of the radiomics quality score,\" <em>European Radiology</em>, Vol. 35(10), 2025.",
+        "featured": false
+      },
+      {
+        "text": "K. Molin, J.S.L. Ong, R. Francis, [GM], M. Ebert and J. Kendrick, \"RECIP 1.0 more predictive of overall survival than PSMA PET progression criteria,\" <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2025.",
+        "featured": false
+      },
+      {
+        "text": "X. Jin, C.T. Lai, S.L. Perrella, Z. Gridneva, J.L. McEachran, [GM], N. Taylor and D. Geddes, \"Defining Low Milk Supply: A Data-Driven Diagnostic Framework,\" <em>Nutrients</em>, 17(22), 2025.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"A systematic review on the sustainability of slurry pumps in the mining industry,\" <em>Minerals Engineering</em>, Vol. 234, 2025.",
+        "featured": false
       },
       {
         "text": "Juwita, [GM] and A. Datta, \"3D-SCUMamba: An Abdominal Tumor Segmentation model,\" <em>IEEE Access</em>, 2025.",
-        "featured": true
+        "featured": false
       },
       {
-        "text": "M. Belkina, S. Daniel, S. Nikolic, R. Haque, S. Lyden, P. Neal, S. Grundy and [GM], \"Implementing generative AI (GenAI) in higher education: A systematic review,\" <em>Computers and Education: AI</em>, 2025.",
-        "featured": true
+        "text": "Juwita, [GM], N. Akhtar and A. Datta, \"MMPU-Net: A parameter-efficient network for pancreas and pancreas-tumor segmentation on CT scans,\" <em>Biomedical Signal Processing and Control</em>, Vol. 110, 2025.",
+        "featured": false
       },
       {
-        "text": "S. Nikolic, C. Sandison, R. Haque, S. Daniel, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"ChatGPT, Copilot, Gemini, SciSpace and Wolfram versus higher education assessments,\" <em>Australasian Journal of Engineering Education</em>, Vol. 28, 2024. ★ Most-read & 3rd most-cited; Best Article 2023",
-        "featured": true
+        "text": "Juwita, [GM] and A. Datta, \"Pancreas segmentation in CT scans: A novel MOMUNet based workflow,\" <em>Computers in Biology and Medicine</em>, Vol. 193, 2025.",
+        "featured": false
       },
       {
-        "text": "S. Nikolic, S. Daniel, R. Haque, M. Belkina, [GM], S. Grundy, S. Lyden, P. Neal and C. Sandison, \"ChatGPT versus engineering education assessment,\" <em>European Journal of Engineering Education</em>, Vol. 48, 2023. ★ 2nd most-read & most-cited; Best Article 2023",
-        "featured": true
+        "text": "M. Belkina, S. Daniel, S. Nikolic, R. Haque, S. Lyden, P. Neal, S. Grundy and [GM], \"Implementing generative AI (GenAI) in higher education: A systematic review of case studies,\" <em>Computers and Education: Artificial Intelligence</em>, Vol. 8, 2025.",
+        "featured": false
       },
       {
-        "text": "B. Rusanov, [GM], M. Reynolds, M. Sabet, P. Rowshanfarzad, N. Bucknell, S. Gill, J. Dass and M. Ebert, \"Transformer CycleGAN with uncertainty estimation for CBCT based synthetic CT in adaptive radiotherapy,\" <em>Physics in Medicine and Biology</em>, Vol. 69(3), 2024.",
-        "featured": true
+        "text": "N. Barry, J. Kendrick, P. Rowshanfarzad, [GM] et al., \"An External, Independent Validation of an [18F]-FET PET Automatic Segmentation Network in Glioblastoma,\" <em>Journal of Nuclear Medicine</em>, 2025.",
+        "featured": false
+      },
+      {
+        "text": "R. Anggrainingsih, [GM] and A. Datta, \"Evaluating BERT-based language models for detecting misinformation,\" <em>Neural Computing &amp; Applications</em>, 2025.",
+        "featured": false
+      },
+      {
+        "text": "A. Shati, [GM] and A. Datta, \"A comprehensive fusion model for improved pneumonia prediction based on KNN-wavelet-GLCM and a residual network,\" <em>Journal of Intelligent Systems with Applications</em>, 2025.",
+        "featured": false
+      },
+      {
+        "text": "S. Nikolic, T. Suesse, S. Grundy, R. Haque, S. Lyden, S. Lal, [GM], S. Daniel and M. Belkina, \"Assessment integrity and validity in the teaching laboratory: adapting to GenAI,\" <em>European Journal of Engineering Education</em>, 2025.",
+        "featured": false
+      },
+      {
+        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM] et al., \"Evaluating the impact of the Radiomics Quality Score: a systematic review and meta-analysis,\" <em>European Radiology</em>, 2025.",
+        "featured": false
+      },
+      {
+        "text": "X. Jin, C. Lai, S. Perrella, X. Zhou, [GM] et al., \"Milk composition is predictive of low milk supply using machine learning approaches,\" <em>Diagnostics</em>, Vol. 15(2), 2025.",
+        "featured": false
+      },
+      {
+        "text": "K. Molin, N. Barry, S. Gill, [GM] et al., \"Evaluating the prognostic value of radiomics in metastatic prostate cancer using [68Ga]Ga-PSMA-11 PET/CT,\" <em>Physical and Engineering Sciences in Medicine</em>, 2025.",
+        "featured": false
+      },
+      {
+        "text": "R. Anggrainingsih, [GM] and A. Datta, \"Transformer-based models for combating rumours on microblogging platforms: a review,\" <em>Artificial Intelligence Review</em>, Vol. 57(212), 2024.",
+        "featured": false
+      },
+      {
+        "text": "S. Nikolic, T. Suesse, S. Grundy, R. Haque, S. Lyden, [GM] et al., \"Laboratory learning objectives: ranking objectives across cognitive, psychomotor and affective domains,\" <em>European Journal of Engineering Education</em>, Vol. 49(3), 2024.",
+        "featured": false
+      },
+      {
+        "text": "S. Nikolic, C. Sandison, R. Haque, S. Daniel, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"ChatGPT, Copilot, Gemini, SciSpace and Wolfram versus higher education assessments,\" <em>Australasian Journal of Engineering Education</em>, Vol. 28, 2024. ★ Most-read &amp; 3rd most-cited; Best Article 2023",
+        "featured": false
+      },
+      {
+        "text": "X. Lyu, H. Ran, M. Elchalakani, A. Wittek, [GM] et al., \"Dynamic responses of rubberised concrete: F-shape barriers subjected to pendulum impact,\" <em>Journal of Building Engineering</em>, Vol. 95, 2024.",
+        "featured": false
+      },
+      {
+        "text": "S. Zahan, [GM] and A. Mian, \"Learning Sparse Temporal Video Mapping for Action Quality Assessment in Floor Gymnastics,\" <em>IEEE Transactions on Instrumentation and Measurement</em>, Vol. 73, 2024.",
+        "featured": false
+      },
+      {
+        "text": "A. Alelyani, A. Datta and [GM], \"Optimizing Cloud Performance: A Microservice Scheduling Strategy for Enhanced Fault-Tolerance,\" <em>IEEE Access</em>, 2024.",
+        "featured": false
+      },
+      {
+        "text": "B. Rusanov, [GM], M. Reynolds, M. Sabet, J. Kendrick, P. Rowshanfarzad and M. Ebert, \"Transformer CycleGAN with uncertainty estimation for CBCT based synthetic CT in adaptive radiotherapy,\" <em>Physics in Medicine and Biology</em>, Vol. 69(3), 2024.",
+        "featured": false
+      },
+      {
+        "text": "H. Almutairi, [GM] and A. Datta, \"Machine Learning Based Approaches for Sleep Stage Classification: A Systematic Review,\" <em>Applied Sciences</em>, Vol. 13(24), 2023.",
+        "featured": false
+      },
+      {
+        "text": "J. Kendrick, R. Francis, [GM] et al., \"Quantitative [68Ga]Ga-PSMA-11 PET Biomarkers for Lesion-level Progression in Biochemically Recurrent Prostate Cancer,\" <em>Scientific Reports</em>, Vol. 13, 2023.",
+        "featured": false
+      },
+      {
+        "text": "J. Kendrick, R. Francis, [GM] et al., \"Prospective inter- and intra-tracer repeatability analysis of radiomics features in PSMA PET scans,\" <em>The British Journal of Radiology</em>, 2023.",
+        "featured": false
+      },
+      {
+        "text": "R. Anggrainingsih, [GM] and A. Datta, \"CE-BERT: Concise And Efficient BERT-based Model for Detecting Rumours on Twitter,\" <em>IEEE Access</em>, Vol. 11, 2023.",
+        "featured": false
+      },
+      {
+        "text": "N. Barry, R.J. Francis, M.A. Ebert, E.S. Koh, P. Rowshanfarzad, [GM] et al., \"Delineation and agreement of FET PET biological volumes in glioblastoma,\" <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2023.",
+        "featured": false
+      },
+      {
+        "text": "A. Alelyani, A. Datta and [GM], \"DAScheduler: Dependency-Aware Scheduling Algorithm for Containerized Dependent Jobs,\" <em>Journal of Grid Computing</em>, Vol. 21(46), 2023.",
+        "featured": false
+      },
+      {
+        "text": "J. Kendrick, R.J. Francis, [GM] et al., \"Prognostic utility of RECIP 1.0 with manual and AI-based segmentations in biochemically recurrent prostate cancer,\" <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2023.",
+        "featured": false
+      },
+      {
+        "text": "Z. M. Malakan, S. Anwar, [GM] and A. Mian, \"Sequential Vision to Language as Story: A Storytelling Dataset and Benchmarking,\" <em>IEEE Access</em>, Vol. 11, 2023.",
+        "featured": false
+      },
+      {
+        "text": "H. Albaqami, [GM] and A. Datta, \"Automatic Detection of Abnormal EEG Signals Using WaveNet and LSTM,\" <em>Journal of Sensors</em>, 2023.",
+        "featured": false
+      },
+      {
+        "text": "S. Nikolic, S. Daniel, R. Haque, M. Belkina, [GM] et al., \"ChatGPT versus engineering education assessment: a multidisciplinary benchmarking and analysis,\" <em>European Journal of Engineering Education</em>, Vol. 48, 2023. ★ 2nd most-read &amp; most-cited; Best Article 2023",
+        "featured": false
+      },
+      {
+        "text": "H. Albaqami, [GM], A. Subasi and A. Datta, \"MP-SeizNet: A Multi-Path CNN Bi-LSTM Network for Seizure-Type Classification Using EEG,\" <em>Biomedical Signal Processing and Control</em>, Vol. 84, 2023.",
+        "featured": false
+      },
+      {
+        "text": "M. Marinelli, S.A. Male, A. Valentine, T. van der Veen and [GM], \"Using VR to teach safety in design: what and how do engineering students learn?,\" <em>European Journal of Engineering Education</em>, 2023.",
+        "featured": false
+      },
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Requirements for the application of the Digital Twin Paradigm to offshore wind turbine structures,\" <em>Computers in Industry</em>, 2023.",
+        "featured": false
+      },
+      {
+        "text": "S. Zahan, [GM] and A. Mian, \"SDFA: Structure Aware Discriminative Feature Aggregation for Efficient Human Fall Detection in Video,\" <em>IEEE Transactions on Industrial Informatics</em>, 2022.",
+        "featured": false
       },
       {
         "text": "Y. Zhang, M. Reynolds, A. Lugmayr, K. Damjanov, [GM], \"A Visual Data Storytelling Framework,\" <em>Journal of Informatics</em>, Vol. 9(73), 2022. ★ Editor's Choice",
-        "featured": true
+        "featured": false
+      },
+      {
+        "text": "J. Kendrick, R. Francis, [GM] et al., \"Fully Automatic Prognostic Biomarker Extraction from Metastatic Prostate Lesion Segmentations,\" <em>European Journal of Nuclear Medicine and Molecular Imaging</em>, 2022.",
+        "featured": false
+      },
+      {
+        "text": "B. Rusanov, [GM], M. Reynolds, M. Sabet, J. Kendrick, P. Rowshanfarzad and M. Ebert, \"Deep learning methods for enhancing cone-beam CT image quality toward adaptive radiation therapy,\" <em>Medical Physics</em>, 2022.",
+        "featured": false
+      },
+      {
+        "text": "H. Albaqami, [GM] and A. Datta, \"Wavelet-based multi-class seizure type classification system,\" <em>Journal of Applied Sciences</em>, Vol. 12, 2022.",
+        "featured": false
+      },
+      {
+        "text": "F. Salami, A. Bozorgi-Amiri, [GM], R.T. Moghaddam and A. Datta, \"Designing a clinical decision support system for Alzheimer's diagnosis on OASIS-3 data set,\" <em>Biomedical Signal Processing and Control</em>, Vol. 74, 2022.",
+        "featured": false
+      },
+      {
+        "text": "J. Kendrick, R. Francis, [GM] et al., \"Radiomics for Identification and Prediction in Metastatic Prostate Cancer: A Review of Studies,\" <em>Frontiers in Oncology</em>, 2021.",
+        "featured": false
+      },
+      {
+        "text": "B. Rusanov, M. Ebert, G. Mukwada, [GM] and M. Sabet, \"A convolutional neural network for estimating cone-beam CT intensity deviations from virtual CT projections,\" <em>Physics in Medicine &amp; Biology</em>, 2021.",
+        "featured": false
+      },
+      {
+        "text": "H. Albaqami, [GM], A. Subasi and A. Datta, \"Automatic detection of abnormal EEG signals using wavelet feature extraction and gradient boosting decision tree,\" <em>Biomedical Signal Processing and Control</em>, Vol. 70, 2021.",
+        "featured": false
+      },
+      {
+        "text": "H. Almutairi, [GM] and A. Datta, \"Classification of Obstructive Sleep Apnoea from single-lead ECG signals using CNN and LSTM networks,\" <em>Biomedical Signal Processing and Control</em>, Vol. 69, 2021.",
+        "featured": false
+      },
+      {
+        "text": "R. Kaur, K. Bekki, [GM] and A. Datta, \"Estimating galaxy masses from kinematics of globular cluster systems: a new method based on deep learning,\" <em>Monthly Notices of the Royal Astronomical Society</em>, 2021.",
+        "featured": false
+      },
+      {
+        "text": "A. Valentine, T.V.D. Veen, P. Kenworthy, [GM], A. Guzzomi, R.N. Khan and S. Male, \"Using head mounted display virtual reality simulations in large engineering classes,\" <em>Australasian Journal of Educational Technology</em>, Vol. 37(3), 2021.",
+        "featured": false
       },
       {
         "text": "[GM], \"Deformation measurement in the presence of discontinuities with digital image correlation: A review,\" <em>Optics and Lasers in Engineering</em>, Vol. 137, 2021.",
-        "featured": true
+        "featured": false
+      },
+      {
+        "text": "B. Wright, [GM], G. Mukwada, M. Ebert, S. Goodall, M. Sabet and P.R. Farzad, \"Comprehensive investigation into the stability of Varian and Elekta kV imaging systems during arc delivery,\" <em>Biomedical Physics and Engineering Express</em>, Vol. 6(6), 2020.",
+        "featured": false
+      },
+      {
+        "text": "A. Valentine, S. Lowenhoff, M. Marinelli, S. Male and [GM], \"Building students' nascent understanding of ethics in engineering education,\" <em>European Journal of Engineering Education</em>, Vol. 45(6), 2020.",
+        "featured": false
+      },
+      {
+        "text": "[GM], \"Digital Image Correlation for discontinuous displacement measurement using subset segmentation,\" <em>Optics and Lasers in Engineering</em>, Vol. 115, 2019.",
+        "featured": false
+      },
+      {
+        "text": "[GM], \"Discontinuous and pattern matching algorithm to measure deformation having discontinuities,\" <em>Engineering Applications of Artificial Intelligence</em>, Vol. 81, 2019.",
+        "featured": false
+      },
+      {
+        "text": "[GM], A.V. Dyskin, C. MacNish, E. Pasternak and I. Shufrin, \"Discontinuous Digital Image Correlation to reconstruct displacement and strain fields with discontinuities,\" <em>Engineering Fracture Mechanics</em>, Vol. 189, 2017.",
+        "featured": false
+      },
+      {
+        "text": "[GM], C. MacNish, A.V. Dyskin and I. Shufrin, \"Digital Image Correlation with Dynamic Subset Selection,\" <em>Optics and Lasers in Engineering</em>, Vol. 84, 2016.",
+        "featured": false
+      },
+      {
+        "text": "[GM], A.V. Dyskin and C. MacNish, \"A Comparative Study of Techniques of Distant Reconstruction of Displacement and Strain Fields using the DISTRESS Simulator,\" <em>Optik</em>, Vol. 127(23), 2016.",
+        "featured": false
+      },
+      {
+        "text": "E. Pasternak, A.V. Dyskin, M. Esim, [GM] and C. MacNish, \"Rotations and Pattern Formation in Granular Materials under Loading,\" <em>Philosophical Magazine</em>, Vol. 95(28), 2015.",
+        "featured": false
+      },
+      {
+        "text": "[GM] and Saleh M. Al-Saqer, \"Support Vector Machine based Red Palm Weevil Recognition System,\" <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 7(1), 2012.",
+        "featured": false
+      },
+      {
+        "text": "[GM] and Saleh M. Al-Saqer, \"Pecan Weevil Recognition using Support Vector Machine Method,\" <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(4), 2011.",
+        "featured": false
+      },
+      {
+        "text": "Saleh M. Al-Saqer and [GM], \"Artificial Neural Network based Red Palm Weevil Recognition System,\" <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(3), 2011.",
+        "featured": false
+      },
+      {
+        "text": "Saleh M. Al-Saqer and [GM], \"Optimization of Solenoid Valve in Variable Rate Application Systems,\" <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(3), 2011.",
+        "featured": false
+      },
+      {
+        "text": "Saleh M. Al-Saqer and [GM], \"Red Palm Weevil Recognition by Image Processing Techniques,\" <em>American Journal of Agriculture and Biological Sciences</em>, Vol. 6(3), 2011.",
+        "featured": false
+      },
+      {
+        "text": "[GM], K.M. Yahya and I.U. Haq, \"Dynamic Feedback Controller for Leader-Follower approach for Unicycle Robots,\" <em>Journal of Engineering &amp; Applied Sciences</em>, Vol. 25(2), 2006.",
+        "featured": false
       }
     ],
     "conferencePapers": [
       {
-        "text": "K. Nguyen, [GM] and A. Mian, \"Occlusion-aware Text-Image-Point Cloud Pretraining for Open-World 3D Object Recognition,\" <em>CVPR 2025</em>.",
-        "featured": true
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Challenges and Lessons from Integrating Digital Technologies in Slurry Pumping for the Mining Industry,\" <em>CIM CONNECT 2026</em>, May 2026.",
+        "featured": false
       },
       {
-        "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"Attention-Guided VQVAE for Brain Tumor Segmentation,\" <em>MICCAI 2025</em>.",
-        "featured": true
+        "text": "S. Grundy, M. Belkina, S. Nikolic, S. Lyden, R. Haque, P. Neal, S. Daniel, [GM], \"Practical Strategies for Integrating GenAI in the Classroom,\" <em>AAEE 2025</em>, December 2025. ★ Best Practice Paper Award",
+        "featured": false
       },
       {
-        "text": "J. Vo, N. Sharif and [GM], \"MNA-net: Multimodal Neuroimaging Attention for Cognitive Decline Prediction,\" <em>MICCAI 2024 Workshop</em>. ★ Best Paper Award",
-        "featured": true
+        "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"Attention-Guided Vector Quantized Variational Autoencoder for Brain Tumor Segmentation,\" <em>MICCAI 2025</em>, Springer, 2026.",
+        "featured": false
       },
       {
-        "text": "S. Grundy, M. Belkina et al. and [GM], \"Practical Strategies for Integrating GenAI in the Classroom,\" <em>AAEE 2025</em>. ★ Best Practice Paper Award",
-        "featured": true
+        "text": "V. Mutiawani, N. Sharif, N. Morlet, S. Manners and [GM], \"Generalized Visual Field Pattern Discovery Using Archetypal Analysis,\" <em>MICCAI 2025 Workshop on Ophthalmic Medical Image Analysis</em>, Springer, 2026.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, J. Xiang, P. Mikkonen, E. Lessing, [GM] and A. Karrech, \"Remote Monitoring of Slurry Pumps in Mining and Mineral Processing,\" <em>APCOM 2025</em>, August 2025.",
+        "featured": false
+      },
+      {
+        "text": "K. Nguyen, [GM] and A. Mian, \"Occlusion-aware Text-Image-Point Cloud Pretraining for Open-World 3D Object Recognition,\" <em>CVPR 2025</em>, June 2025.",
+        "featured": false
+      },
+      {
+        "text": "M. Belkina, P. Neal, S. Grundy, [GM] et al., \"Systematic Literature Review of GenAI Integration in Higher Education,\" <em>AAEE 2024</em>, December 2024.",
+        "featured": false
+      },
+      {
+        "text": "H. Fernando, F. Tahmasebinia, X. Wu et al. and [GM], \"Piloting Implementation of Strategic Guidelines for AI use within an Engineering Design-Thinking Project,\" <em>AAEE 2024</em>, December 2024.",
+        "featured": false
+      },
+      {
+        "text": "S. Daniel, S. Nikolic, C. Sandison, R. Haque, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"Engineering Assessment in the Age of Generative Artificial Intelligence: A Critical Analysis,\" <em>IEEE WEEF-GEDC</em>, December 2024.",
+        "featured": false
+      },
+      {
+        "text": "P. Ciceklidag, M. Ibrahim, H. Wang, Y. Miao, J. Hong, [GM] and A. Mian, \"High-Definition 3D Point Cloud Mapping of the City of Subiaco,\" <em>DICTA 2024</em>, December 2024.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Digitalization of Centrifugal Slurry Pumps: Innovation, R&amp;D and Lessons Learned,\" <em>IMPC 2024</em>, October 2024.",
+        "featured": false
+      },
+      {
+        "text": "J. Vo, N. Sharif and [GM], \"MNA-net: Multimodal Neuroimaging Attention-Based Architecture for Cognitive Decline Prediction,\" <em>MICCAI 2024 Workshop (PRIME)</em>. ★ Best Paper Award",
+        "featured": false
+      },
+      {
+        "text": "P. Neal, S. Daniel, [GM] et al., \"Evaluating and transforming assessments in an age of generative AI,\" <em>SEFI 2024</em>, September 2024.",
+        "featured": false
+      },
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"An open-source analysis workflow for geometrically imperfect bolted ring-flanges in wind turbine support structures,\" <em>TORQUE 2024</em>, May 2024.",
+        "featured": false
+      },
+      {
+        "text": "Z.M. Malakan, [GM] and A. Mian, \"Sequential Image Storytelling Model Based on Transformer Attention Pooling,\" <em>IVCNZ 2023</em>, December 2023.",
+        "featured": false
+      },
+      {
+        "text": "A. Hasibuan, M. Reynolds, [GM] and S. Male, \"Role of Theory in Analysing the Dynamic of Self-regulated Learning Process,\" <em>ASCILITE 2023</em>, December 2023.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Slurry Pump Safety Considerations in Mineral Processing Plants,\" <em>Metplant 2023</em>, November 2023. ★ Runner Up Best Paper Award",
+        "featured": false
+      },
+      {
+        "text": "A. Shati, [GM] and A. Datta, \"COVID-19 Detection System: A Comparative Analysis Based on Acoustic Features of Cough Audio Signals,\" <em>TrustCom 2023</em>, November 2023.",
+        "featured": false
+      },
+      {
+        "text": "A. Saleem, Z. Ilyas, D. Suter, [GM] et al., \"SCOL: Supervised Contrastive Ordinal Loss for Abdominal Aortic Calcification Scoring,\" <em>MICCAI 2023</em>, Springer.",
+        "featured": false
+      },
+      {
+        "text": "M. McDougall, H. Albaqami, [GM] and A. Datta, \"Patient independent interictal Epileptiform Discharge Detection,\" <em>IEEE EMBC 2023</em>, July 2023.",
+        "featured": false
+      },
+      {
+        "text": "S. Zahan, Z. Gilani, [GM] and A. Mian, \"Human Gesture and Gait Analysis for Autism Detection,\" <em>CVPR 2023 Workshops</em>, June 2023.",
+        "featured": false
+      },
+      {
+        "text": "J. Bardwell, [GM], F. Salami and N. Akhtar, \"Cognitive impairment prediction by normal cognitive brain MRI scans using deep learning,\" <em>AJCAI 2022</em>, December 2022.",
+        "featured": false
+      },
+      {
+        "text": "Z. Malakan, [GM] and A. Mian, \"Vision Transformer Based Model for describing a Set of Images as a Story,\" <em>AJCAI 2022</em>, December 2022.",
+        "featured": false
+      },
+      {
+        "text": "S. Nikolic, T. Suesse, R. Haque, [GM] et al., \"An Australian University Comparison of Engineering Laboratory Learning Objectives Rankings,\" <em>AAEE 2022</em>, December 2022.",
+        "featured": false
+      },
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Probabilistic assessment of bolt pre-load loss over time in offshore wind turbine bolted ring-flanges,\" <em>OMAE 2022</em>, June 2022.",
+        "featured": false
+      },
+      {
+        "text": "H. Albaqami, [GM] and A. Datta, \"Comparison of WPD, DWT and DTCWT for multi-class seizure classification,\" <em>IEEE SPMB 2021</em>, December 2021.",
+        "featured": false
+      },
+      {
+        "text": "M.A. Hasibuan, M. Reynolds, S. Male, [GM] and T.F. Kusumasari, \"Assessing a Measurement Model of Self-regulated Learning in an Online Collaborative Learning Environment,\" <em>REES/AAEE 2021</em>, December 2021.",
+        "featured": false
+      },
+      {
+        "text": "S. Zahan, [GM] and A. Mian, \"Modeling human skeleton joint dynamics for fall detection,\" <em>DICTA 2021</em>, December 2021.",
+        "featured": false
+      },
+      {
+        "text": "J. Jung, N. Akhtar and [GM], \"Analysing adversarial examples for deep learning,\" <em>VISIGRAPP 2021</em>, pp. 585–592.",
+        "featured": false
+      },
+      {
+        "text": "J. Jorgensen, M. Hodkiewicz, E. Cripps and [GM], \"Predicting bolt stress under uncertainty in offshore wind turbine structural connections using a Gaussian process surrogate model,\" <em>ISOPE 2021</em>, June 2021.",
+        "featured": false
+      },
+      {
+        "text": "H. Satnani, M. Marinelli, S. Male and [GM], \"Engineering graduates working in maintenance within the mining industry in Australia,\" <em>AAEE 2020</em>. ★ Best Student Paper Award",
+        "featured": false
+      },
+      {
+        "text": "H. Almutairi, [GM] and A. Datta, \"Detection of obstructive sleep apnoea by ECG signals using deep learning architectures,\" <em>EUSIPCO 2020</em>, pp. 1382–1386.",
+        "featured": false
+      },
+      {
+        "text": "B. Lee, S.Z. Gilani, [GM] and A. Mian, \"Facial gender classification — analysis using convolutional neural network,\" <em>IEEE DICTA 2019</em>, pp. 1–8.",
+        "featured": false
+      },
+      {
+        "text": "S. Male, P. Kenworthy, [GM], A. Guzzomi and T. French, \"Teaching safety in design in large classes using VR,\" <em>AAEE 2018</em>.",
+        "featured": false
       },
       {
         "text": "[GM] and M. Reynolds, \"Genetic algorithms for scheduling and optimization of ore train network,\" <em>GCAI 2018</em>, EPiC Series in Computing, Vol. 55, pp. 81–92.",
-        "featured": true
+        "featured": false
+      },
+      {
+        "text": "N. Phillips, [GM], A. Dyskin, C. MacNish and E. Pasternak, \"Digital Image Correlation to analyze nonlinear elastic behavior of materials,\" <em>IEEE ICIP 2017</em>, pp. 4367–4371.",
+        "featured": false
+      },
+      {
+        "text": "[GM], D. Hang, C. MacNish and A. Dyskin, \"Characteristics of Color Digital Image Correlation for deformation measurement,\" <em>IEEE DICTA 2016</em>, pp. 1–8.",
+        "featured": false
+      },
+      {
+        "text": "C. MacNish, [GM], A. Dyskin and E. Pasternak, \"Towards affordable and robust remote photogrammetric sensing for early warning of fracturing,\" <em>IEEE IHTC 2015</em>, pp. 1–6.",
+        "featured": false
+      },
+      {
+        "text": "N.V. Dinh, [GM], A. Dyskin and C. MacNish, \"Digital Image Correlation for Small Strain Measurement in Deformable Solids,\" <em>IEEE ICIP 2015</em>, pp. 3324–3328.",
+        "featured": false
+      },
+      {
+        "text": "[GM], C. MacNish and A. Dyskin, \"Extending Digital Image Correlation to Reconstruct Displacement and Strain Fields around Discontinuities,\" <em>IEEE WACV 2015</em>, pp. 710–717.",
+        "featured": false
+      },
+      {
+        "text": "I. Ashraf, [GM], K.M. Yahya et al., \"Parameter Tuning of Evolutionary Algorithm by Meta-EAs for WCET Analysis,\" <em>IEEE ICET 2010</em>, pp. 7–10.",
+        "featured": false
+      },
+      {
+        "text": "S.A.A. Shah, K.M. Yahya, [GM] and A. Bais, \"Quantification and Visualization of MRI Cartilage of the Knee,\" <em>IEEE ICET 2010</em>, pp. 175–180.",
+        "featured": false
+      },
+      {
+        "text": "A. Bais, R. Sablatnig, J. Hu, K.M. Yahya, M. Usman, [GM] and M.T. Iqbal, \"Stereo Vision Based Self-Localization of Autonomous Mobile Robots,\" <em>Robot Vision Conference</em>, Springer, 2008, pp. 367–380.",
+        "featured": false
+      },
+      {
+        "text": "S. Ahmed, M.N. Karsiti and [GM], \"Feedback Linearization Techniques for Collaborative Robots,\" <em>IEEE ICCAS 2007</em>, pp. 1551–1556.",
+        "featured": false
+      },
+      {
+        "text": "[GM], K.M. Yahya and I.U. Haq, \"Leader-Follower Approach using Full-State Linearization via Dynamic Extension,\" <em>IEEE ICET 2006</em>, pp. 297–305.",
+        "featured": false
       }
     ]
   },
