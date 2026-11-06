@@ -1019,77 +1019,48 @@
   <!-- STUDENTS -->
   <section class="section" id="students">
     <h2 class="section-title">Supervised Students</h2>
-
-    <div class="students-year">
-      <div class="students-year-label">2024</div>
-      <div class="students-type">Honours</div>
-      <div class="students-names">Jonathan Lim · Jordon Lu · Stephan Nio · Ri Nandiya</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Fatema Khalil · Bronsen Lvulich · Keylene Chong · Seharsh Srivastava · Shu-Chi Liu</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2023</div>
-      <div class="students-type">Honours</div>
-      <div class="students-names">Jamie Vo · Lachlan Bassi</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">YiMing Liu · Yitong Yang · Boyu Cai · Matthew Walsh · Aditya Rao</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2021</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Karolina Kucharska · William Feng · Matthew Rose · Edgar Poh · Mohammad Zaman Khan · Rao Tan · Zachary Browne · Andie Gell · Andie Sones · Geoff Buitendag · Haowei Xu · Justin Bardwell · Hamish Blanchard · Akhil Naseem · Mitchell Button · Yiheng Lyu · Henry Liu · Xiangxin Zend</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2020</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Eddie Simpson · Rajvir Kaur · Jessica Jia Yong Khoo · Himanshi Satnani · Jewel Payne · Junhong Guo · Jeremiah Leo · Naradipa Adenan · Jason Jung · Mustafa Shahid · Huiyuan Liu Gao · Vigneshvar Thiruvengadam · Dylan Bell · Jake Kendrick · Paulus Angkodjojo</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2019</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Rhys Collier · Jack Duncan · Nithin Parakash · Wesley Seet · James Luu · Kyle Rory Ludewick · Marcus Altmann · Daniel Nuyen · Chiyu Weng · Dawn Than · Bhagyashri · Kevin Yuan Leong · Gavy Dia · Anthony Joseph · Brendon Wright · Frank Ta</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2018</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Jonathan Skotny · Vincent Chong · Liam Cummins · Alexander Emery · Michael Finn · Rhys Kessey · Zen Ly</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2017</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Aaron Hurst · Ray Barker · Joel Frewin · Theodore Wilson</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2015</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Nirusha Phillips · Hayden Crisp · David Hang · Ashley Day</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2014</div>
-      <div class="students-type">Masters</div>
-      <div class="students-names">Van Nghia Dinh · Gang Li</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2011</div>
-      <div class="students-type">Honours</div>
-      <div class="students-names">Aurang Zeb · Fawad Ali Khan</div>
-    </div>
-
-    <div class="students-year">
-      <div class="students-year-label">2006–2010</div>
-      <div class="students-type">Earlier cohorts (UET Peshawar &amp; OSU)</div>
-      <div class="students-names">Fahim Ullah · Mian Sanaullah · Saadia Wazir · Qamar Ul Ain · Amad Ibrahim Marwat · Salman Wahid · Fazal Kareem · Saeed Anwar · Wasim Iqbal · Asad Ullah · Shahid Khan · Rabia Javed · Beena · Umbreen Gul · Shah Mahmood · Anwar Kamal Afridi · Fazal Rabi · Shaukat Hayat · Sajid Hameed</div>
+    <div id="students-container">
+      <div style="color:var(--text-muted);font-size:0.85rem">Loading…</div>
     </div>
   </section>
+
+  <script>
+  (function() {
+    function renderStudents(data) {
+      const years = data.supervisedStudents || [];
+      let html = '';
+      years.forEach(y => {
+        html += `<div class="students-year"><div class="students-year-label">${y.year}</div>`;
+        (y.cohorts || []).forEach(c => {
+          html += `<div class="students-type">${c.type}</div>
+                   <div class="students-names">${c.names}</div>`;
+        });
+        html += `</div>`;
+      });
+      document.getElementById('students-container').innerHTML = html ||
+        '<p style="color:var(--text-muted);font-size:0.83rem">No student data found.</p>';
+    }
+
+    fetch('content.json')
+      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+      .then(data => renderStudents(data))
+      .catch(() => renderStudents(STUDENTS_FALLBACK));
+
+    const STUDENTS_FALLBACK = { supervisedStudents: [
+      { year:"2024", cohorts:[{type:"Honours",names:"Jonathan Lim · Jordon Lu · Stephan Nio · Ri Nandiya"},{type:"Masters",names:"Fatema Khalil · Bronsen Lvulich · Keylene Chong · Seharsh Srivastava · Shu-Chi Liu"}]},
+      { year:"2023", cohorts:[{type:"Honours",names:"Jamie Vo · Lachlan Bassi"},{type:"Masters",names:"YiMing Liu · Yitong Yang · Boyu Cai · Matthew Walsh · Aditya Rao"}]},
+      { year:"2021", cohorts:[{type:"Masters",names:"Karolina Kucharska · William Feng · Matthew Rose · Edgar Poh · Mohammad Zaman Khan · Rao Tan · Zachary Browne · Andie Gell · Andie Sones · Geoff Buitendag · Haowei Xu · Justin Bardwell · Hamish Blanchard · Akhil Naseem · Mitchell Button · Yiheng Lyu · Henry Liu · Xiangxin Zend"}]},
+      { year:"2020", cohorts:[{type:"Masters",names:"Eddie Simpson · Rajvir Kaur · Jessica Jia Yong Khoo · Himanshi Satnani · Jewel Payne · Junhong Guo · Jeremiah Leo · Naradipa Adenan · Jason Jung · Mustafa Shahid · Huiyuan Liu Gao · Vigneshvar Thiruvengadam · Dylan Bell · Jake Kendrick · Paulus Angkodjojo"}]},
+      { year:"2019", cohorts:[{type:"Masters",names:"Rhys Collier · Jack Duncan · Nithin Parakash · Wesley Seet · James Luu · Kyle Rory Ludewick · Marcus Altmann · Daniel Nuyen · Chiyu Weng · Dawn Than · Bhagyashri · Kevin Yuan Leong · Gavy Dia · Anthony Joseph · Brendon Wright · Frank Ta"}]},
+      { year:"2018", cohorts:[{type:"Masters",names:"Jonathan Skotny · Vincent Chong · Liam Cummins · Alexander Emery · Michael Finn · Rhys Kessey · Zen Ly"}]},
+      { year:"2017", cohorts:[{type:"Masters",names:"Aaron Hurst · Ray Barker · Joel Frewin · Theodore Wilson"}]},
+      { year:"2015", cohorts:[{type:"Masters",names:"Nirusha Phillips · Hayden Crisp · David Hang · Ashley Day"}]},
+      { year:"2014", cohorts:[{type:"Masters",names:"Van Nghia Dinh · Gang Li"}]},
+      { year:"2011", cohorts:[{type:"Honours",names:"Aurang Zeb · Fawad Ali Khan"}]},
+      { year:"2006–2010", cohorts:[{type:"Earlier cohorts (UET Peshawar & OSU)",names:"Fahim Ullah · Mian Sanaullah · Saadia Wazir · Qamar Ul Ain · Amad Ibrahim Marwat · Salman Wahid · Fazal Kareem · Saeed Anwar · Wasim Iqbal · Asad Ullah · Shahid Khan · Rabia Javed · Beena · Umbreen Gul · Shah Mahmood · Anwar Kamal Afridi · Fazal Rabi · Shaukat Hayat · Sajid Hameed"}]}
+    ]};
+  })();
+  </script>
 
   <!-- CONTACT -->
   <section class="section section-alt" id="contact">

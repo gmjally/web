@@ -239,6 +239,7 @@ body { font-family: 'Inter', sans-serif; font-size: 14px; background: var(--bg);
       <a href="#" onclick="showSection('publications')">Publications</a>
       <a href="#" onclick="showSection('teaching')">Teaching</a>
       <a href="#" onclick="showSection('team')">Research Team</a>
+      <a href="#" onclick="showSection('students')">Supervised Students</a>
       <div class="admin-nav-label" style="margin-top:1rem">Tools</div>
       <a href="#" onclick="showSection('export')">Export / Instructions</a>
     </nav>
@@ -349,6 +350,16 @@ body { font-family: 'Inter', sans-serif; font-size: 14px; background: var(--bg);
         <h3 style="font-size:0.85rem;color:var(--text-muted);margin:1.5rem 0 0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">PhD Alumni</h3>
         <div id="alumni-list"></div>
         <button class="btn btn-green" onclick="addAlumni()" style="margin-top:0.5rem">+ Add Alumni</button>
+      </div>
+
+      <!-- STUDENTS -->
+      <div class="section-panel" id="panel-students">
+        <div class="section-header">
+          <h2>Supervised Students</h2>
+          <button class="btn btn-green" onclick="addStudentYear()" style="font-size:0.78rem">+ Add Year Group</button>
+        </div>
+        <p class="hint" style="margin-bottom:1rem">Each year group has one or more cohort types (Honours, Masters, PhD, etc.) with student names separated by · (middle dot). Most recent year should be at the top.</p>
+        <div id="students-list"></div>
       </div>
 
       <!-- EXPORT -->
@@ -633,6 +644,19 @@ const DEFAULT_CONTENT = {
     { role:"Teaching Assistant / Tutor", institution:"University of Western Australia", courses:["Object Oriented Programming and Software Engineering","Computer Analysis & Visualization","Problem Solving and Programming"] },
     { role:"Teaching Assistant", institution:"Oklahoma State University", courses:["Experimental Method-II"] }
   ],
+  supervisedStudents: [
+    { year:"2024", cohorts:[{type:"Honours",names:"Jonathan Lim · Jordon Lu · Stephan Nio · Ri Nandiya"},{type:"Masters",names:"Fatema Khalil · Bronsen Lvulich · Keylene Chong · Seharsh Srivastava · Shu-Chi Liu"}]},
+    { year:"2023", cohorts:[{type:"Honours",names:"Jamie Vo · Lachlan Bassi"},{type:"Masters",names:"YiMing Liu · Yitong Yang · Boyu Cai · Matthew Walsh · Aditya Rao"}]},
+    { year:"2021", cohorts:[{type:"Masters",names:"Karolina Kucharska · William Feng · Matthew Rose · Edgar Poh · Mohammad Zaman Khan · Rao Tan · Zachary Browne · Andie Gell · Andie Sones · Geoff Buitendag · Haowei Xu · Justin Bardwell · Hamish Blanchard · Akhil Naseem · Mitchell Button · Yiheng Lyu · Henry Liu · Xiangxin Zend"}]},
+    { year:"2020", cohorts:[{type:"Masters",names:"Eddie Simpson · Rajvir Kaur · Jessica Jia Yong Khoo · Himanshi Satnani · Jewel Payne · Junhong Guo · Jeremiah Leo · Naradipa Adenan · Jason Jung · Mustafa Shahid · Huiyuan Liu Gao · Vigneshvar Thiruvengadam · Dylan Bell · Jake Kendrick · Paulus Angkodjojo"}]},
+    { year:"2019", cohorts:[{type:"Masters",names:"Rhys Collier · Jack Duncan · Nithin Parakash · Wesley Seet · James Luu · Kyle Rory Ludewick · Marcus Altmann · Daniel Nuyen · Chiyu Weng · Dawn Than · Bhagyashri · Kevin Yuan Leong · Gavy Dia · Anthony Joseph · Brendon Wright · Frank Ta"}]},
+    { year:"2018", cohorts:[{type:"Masters",names:"Jonathan Skotny · Vincent Chong · Liam Cummins · Alexander Emery · Michael Finn · Rhys Kessey · Zen Ly"}]},
+    { year:"2017", cohorts:[{type:"Masters",names:"Aaron Hurst · Ray Barker · Joel Frewin · Theodore Wilson"}]},
+    { year:"2015", cohorts:[{type:"Masters",names:"Nirusha Phillips · Hayden Crisp · David Hang · Ashley Day"}]},
+    { year:"2014", cohorts:[{type:"Masters",names:"Van Nghia Dinh · Gang Li"}]},
+    { year:"2011", cohorts:[{type:"Honours",names:"Aurang Zeb · Fawad Ali Khan"}]},
+    { year:"2006–2010", cohorts:[{type:"Earlier cohorts (UET Peshawar & OSU)",names:"Fahim Ullah · Mian Sanaullah · Saadia Wazir · Qamar Ul Ain · Amad Ibrahim Marwat · Salman Wahid · Fazal Kareem · Saeed Anwar · Wasim Iqbal · Asad Ullah · Shahid Khan · Rabia Javed · Beena · Umbreen Gul · Shah Mahmood · Anwar Kamal Afridi · Fazal Rabi · Shaukat Hayat · Sajid Hameed"}]}
+  ],
   researchTeam: {
     currentPhD: ["Branimir Rusanov","Alan Varghese","Lucie Ketelsen","Azani Hasibuan","Pasa Ciceklidag","Shahin Hakemi","Khanh Nguyen","Danish Ali","Suning (Juliet) Li","Viska Mutiawani","Brendan Wright","Kaylee Molin","Rizal Alfaridzi"],
     phdAlumni: [
@@ -678,6 +702,7 @@ function initAdmin() {
     if (!C.teaching || C.teaching.length === 0) C.teaching = JSON.parse(JSON.stringify(DEFAULT_CONTENT.teaching));
     if (!C.researchTeam || !C.researchTeam.currentPhD || C.researchTeam.currentPhD.length === 0) C.researchTeam = JSON.parse(JSON.stringify(DEFAULT_CONTENT.researchTeam));
     if (!C.memberships || C.memberships.length === 0) C.memberships = [...DEFAULT_CONTENT.memberships];
+    if (!C.supervisedStudents || C.supervisedStudents.length === 0) C.supervisedStudents = JSON.parse(JSON.stringify(DEFAULT_CONTENT.supervisedStudents));
   } else {
     C = JSON.parse(JSON.stringify(DEFAULT_CONTENT));
     migratePubs(C);
@@ -709,7 +734,7 @@ function showSection(id) {
 // ─── RENDER ALL ───
 function renderAll() {
   renderProfile(); renderList('awards'); renderList('memberships');
-  renderEducation(); renderGrants(); renderPubs(); renderTeaching(); renderTeam();
+  renderEducation(); renderGrants(); renderPubs(); renderTeaching(); renderTeam(); renderStudents();
 }
 
 // ─── PROFILE ───
@@ -1031,6 +1056,76 @@ function downloadJson() {
   const blob = new Blob([getJson()], {type:'application/json'});
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
   a.download = 'content.json'; a.click();
+}
+
+// ─── STUDENTS ───
+function renderStudents() {
+  const el = document.getElementById('students-list');
+  el.innerHTML = '';
+  (C.supervisedStudents || []).forEach((yr, i) => {
+    const d = document.createElement('div');
+    d.className = 'card-editor open';
+    const cohortsHtml = (yr.cohorts || []).map((c, ci) => `
+      <div style="display:grid;grid-template-columns:180px 1fr auto;gap:0.5rem;align-items:start;margin-bottom:0.5rem">
+        <input class="field-input" value="${escH(c.type||'')}" placeholder="e.g. Honours"
+          onchange="C.supervisedStudents[${i}].cohorts[${ci}].type=this.value;save()" />
+        <textarea class="field-textarea" style="min-height:55px;font-size:0.78rem"
+          placeholder="Names separated by · "
+          onchange="C.supervisedStudents[${i}].cohorts[${ci}].names=this.value;save()">${escH(c.names||'')}</textarea>
+        <button class="btn-sm btn-sm-red" style="margin-top:4px" onclick="removeCohort(${i},${ci})">✕</button>
+      </div>`).join('');
+
+    d.innerHTML = `
+      <div class="card-editor-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="card-editor-title">${escH(yr.year||'New Year')} — ${(yr.cohorts||[]).reduce((n,c)=>n+(c.names?c.names.split('·').length:0),0)} students</span>
+        <span class="card-editor-toggle">▾</span>
+      </div>
+      <div class="card-editor-body">
+        <div class="field-row" style="margin-bottom:0.75rem">
+          <div class="field-group">
+            <label class="field-label">Year / Period</label>
+            <input class="field-input" value="${escH(yr.year||'')}" placeholder="e.g. 2024 or 2006–2010"
+              onchange="C.supervisedStudents[${i}].year=this.value;save();renderStudents()" />
+          </div>
+        </div>
+        <label class="field-label" style="margin-bottom:0.5rem;display:block">Cohorts</label>
+        <div id="cohorts-${i}">${cohortsHtml}</div>
+        <div style="display:flex;gap:0.5rem;margin-top:0.5rem;flex-wrap:wrap">
+          <button class="btn btn-green btn-sm" onclick="addCohort(${i})">+ Add Cohort</button>
+          <button class="btn-sm btn-sm-up" onclick="moveStudentYear(${i},-1)">↑ Move up</button>
+          <button class="btn-sm btn-sm-down" onclick="moveStudentYear(${i},1)">↓ Move down</button>
+          <button class="btn-sm btn-sm-red" onclick="removeStudentYear(${i})">✕ Remove year</button>
+        </div>
+      </div>`;
+    el.appendChild(d);
+  });
+}
+
+function addStudentYear() {
+  if (!C.supervisedStudents) C.supervisedStudents = [];
+  C.supervisedStudents.unshift({ year: '', cohorts: [{ type: 'Masters', names: '' }] });
+  save(); renderStudents();
+  document.getElementById('students-list').firstChild.classList.add('open');
+}
+
+function removeStudentYear(i) {
+  C.supervisedStudents.splice(i, 1); save(); renderStudents();
+}
+
+function moveStudentYear(i, dir) {
+  const arr = C.supervisedStudents; const j = i + dir;
+  if (j < 0 || j >= arr.length) return;
+  [arr[i], arr[j]] = [arr[j], arr[i]]; save(); renderStudents();
+}
+
+function addCohort(i) {
+  if (!C.supervisedStudents[i].cohorts) C.supervisedStudents[i].cohorts = [];
+  C.supervisedStudents[i].cohorts.push({ type: '', names: '' });
+  save(); renderStudents();
+}
+
+function removeCohort(i, ci) {
+  C.supervisedStudents[i].cohorts.splice(ci, 1); save(); renderStudents();
 }
 
 // ─── UTIL ───
