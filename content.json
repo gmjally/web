@@ -640,20 +640,16 @@
         "featured": false
       },
       {
-        "text": "A. Bais, R. Sabtalnig, K.M. Yahya and [GM], “A Hybrid Approach towards Vision based Self-Localization of Autonomous Mobile Robots”, IEEE International Conference on Machine Vision <em>ICMV 2007</em>.",
-        "featured": false
-      },
-      {
-        "text": "M. F. Nazir, [GM], I.G. Chaudhry, S.A. Khan and K.M. Yahya, “To analyze customers’ willingness to change Mobile Service using MNP based on Quality Service parameters”, Asian Network for Quality Congress – 5th Asian Quality Congress, Page 960-968, 2007.",
-        "featured": false
-      },
-      {
         "text": "K. Nguyen, D. Edirimuni, [GM], A. Mian, \"RI-Mamba: Rotation-Invariant Mamba for Robust Text-to-Shape Retrieval\",  IEEE Conference on Computer Vision and Pattern Recognition, <em>CVPR 2026</em>.",
         "featured": true
       },
       {
+        "text": "A. Bais, R. Sabtalnig, K.M. Yahya and [GM], “A Hybrid Approach towards Vision based Self-Localization of Autonomous Mobile Robots”, IEEE International Conference on Machine Vision <em>ICMV 2007</em>.",
+        "featured": false
+      },
+      {
         "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Challenges and Lessons from Integrating Digital Technologies in Slurry Pumping for the Mining Industry\", <em>CIM CONNECT 2026</em>.",
-        "featured": true
+        "featured": false
       },
       {
         "text": "S. Grundy, M. Belkina, S. Nikolic, S. Lyden, R. Haque, P. Neal, S. Daniel, [GM], \"Practical Strategies for Integrating GenAI in the Classroom\", 36th Australasian Association for Engineering Education, <em>AAEE 2025</em>. ★ Best Practice Paper Award",
@@ -665,7 +661,7 @@
       },
       {
         "text": "V. Mutiawani, N. Sharif, N. Morlet, S. Manners and [GM], \"Generalized Visual Field Pattern Discovery Using Archetypal Analysis\", International Workshop on Ophthalmic Medical Image Analysis, <em>MICCAI 2025 (OMIA)</em>.",
-        "featured": true
+        "featured": false
       },
       {
         "text": "A. Varghese, J. Xiang, P. Mikkonen, E. Lessing, [GM] and A. Karrech, \"Remote Monitoring of Slurry Pumps in Mining and Mineral Processing\", Application of Computers and Operations Research in the Minerals Industry, <em>APCOM 2025</em>.",
@@ -684,7 +680,7 @@
         "featured": false
       },
       {
-        "text": "S. Daniel, S. Nikolic, C. Sandison, R. Haque, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"Engineering Assessment in the Age of Generative Artificial Intelligence: A Critical Analysis\", IEEE World Engineering Education Forum - Global Engineering Deans Council, <em>IEEE WEEF-GEDC</em>.",
+        "text": "S. Daniel, S. Nikolic, C. Sandison, R. Haque, S. Grundy, M. Belkina, S. Lyden, [GM] and P. Neal, \"Engineering Assessment in the Age of Generative Artificial Intelligence: A Critical Analysis\", IEEE World Engineering Education Forum - Global Engineering Deans Council, <em>IEEE WEEF-GEDC 2024</em>.",
         "featured": false
       },
       {
@@ -697,7 +693,7 @@
       },
       {
         "text": "J. Vo, N. Sharif and [GM], \"MNA-net: Multimodal Neuroimaging Attention-Based Architecture for Cognitive Decline Prediction\", International Workshop on PRedictive Intelligence In MEdicine, <em>MICCAI 2024 (PRIME)</em>. ★ Best Paper Award",
-        "featured": false
+        "featured": true
       },
       {
         "text": "P. Neal, S. Daniel, [GM] et al., \"Evaluating and transforming assessments in an age of generative AI\", 52nd Annual Conference of the European Society for Engineering Education, <em>SEFI 2024</em>.",
@@ -712,11 +708,11 @@
         "featured": false
       },
       {
-        "text": "A. Hasibuan, M. Reynolds, [GM] and S. Male, \"Role of Theory in Analysing the Dynamic of Self-regulated Learning Process,\" <em>ASCILITE 2023</em>.",
+        "text": "A. Hasibuan, M. Reynolds, [GM] and S. Male, \"Role of Theory in Analysing the Dynamic of Self-regulated Learning Process\", <em>ASCILITE 2023</em>.",
         "featured": false
       },
       {
-        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Slurry Pump Safety Considerations in Mineral Processing Plants,\" <em>Metplant 2023</em>. ★ Runner Up Best Paper Award",
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Slurry Pump Safety Considerations in Mineral Processing Plants\", <em>Metplant 2023</em>. ★ Runner Up Best Paper Award",
         "featured": false
       },
       {
@@ -724,7 +720,7 @@
         "featured": false
       },
       {
-        "text": "A. Saleem, Z. Ilyas, D. Suter, [GM] et al., \"SCOL: Supervised Contrastive Ordinal Loss for Abdominal Aortic Calcification Scoring,\" Medical Image Computing and Computer Assisted Intervention, LNCS Springer, <em>MICCAI 2023</em>.",
+        "text": "A. Saleem, Z. Ilyas, D. Suter, [GM] et al., \"SCOL: Supervised Contrastive Ordinal Loss for Abdominal Aortic Calcification Scoring\", Medical Image Computing and Computer Assisted Intervention, LNCS Springer, <em>MICCAI 2023</em>.",
         "featured": false
       },
       {
@@ -732,7 +728,7 @@
         "featured": false
       },
       {
-        "text": "S. Zahan, Z. Gilani, [GM] and A. Mian, \"Human Gesture and Gait Analysis for Autism Detection,\" IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops, <em>CVPR 2023</em>.",
+        "text": "S. Zahan, Z. Gilani, [GM] and A. Mian, \"Human Gesture and Gait Analysis for Autism Detection\", IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops, <em>CVPR 2023 Workshop</em>.",
         "featured": false
       },
       {
@@ -764,7 +760,7 @@
         "featured": false
       },
       {
-        "text": "J. Jung, N. Akhtar and [GM], \"Analysing adversarial examples for deep learning, 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications, <em>VISIGRAPP 2021</em>.",
+        "text": "J. Jung, N. Akhtar and [GM], \"Analysing adversarial examples for deep learning\", 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications, <em>VISIGRAPP 2021</em>.",
         "featured": false
       },
       {
@@ -772,7 +768,7 @@
         "featured": false
       },
       {
-        "text": "H. Satnani, M. Marinelli, S. Male and [GM], \"Engineering graduates working in maintenance within the mining industry in Australia,\" 31st Australasian Association for Engineering Education, <em>AAEE 2020</em>. ★ Best Student Paper Award",
+        "text": "H. Satnani, M. Marinelli, S. Male and [GM], \"Engineering graduates working in maintenance within the mining industry in Australia\", 31st Australasian Association for Engineering Education, <em>AAEE 2020</em>. ★ Best Student Paper Award",
         "featured": false
       },
       {
@@ -780,7 +776,7 @@
         "featured": false
       },
       {
-        "text": "B. Lee, S.Z. Gilani, [GM] and A. Mian, \"Facial gender classification — analysis using convolutional neural network\", IEEE International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2019</em>.",
+        "text": "B. Lee, S.Z. Gilani, [GM] and A. Mian, \"Facial gender classification - analysis using convolutional neural network\", IEEE International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2019</em>.",
         "featured": false
       },
       {
@@ -788,47 +784,51 @@
         "featured": false
       },
       {
-        "text": "[GM] and M. Reynolds, \"Genetic algorithms for scheduling and optimization of ore train network,\" 4th Global Conference on Artificial Intelligence, EPiC Series in Computing, <em>GCAI 2018</em>,.",
+        "text": "[GM] and M. Reynolds, \"Genetic algorithms for scheduling and optimization of ore train network\", 4th Global Conference on Artificial Intelligence, EPiC Series in Computing, <em>GCAI 2018</em>,.",
         "featured": false
       },
       {
-        "text": "N. Phillips, [GM], A. Dyskin, C. MacNish and E. Pasternak, \"Digital Image Correlation to analyze nonlinear elastic behavior of materials,\"  IEEE International Conference on Image Processing, <em>ICIP 2017</em>.",
+        "text": "N. Phillips, [GM], A. Dyskin, C. MacNish and E. Pasternak, \"Digital Image Correlation to analyze nonlinear elastic behavior of materials\",  IEEE International Conference on Image Processing, <em>ICIP 2017</em>.",
         "featured": false
       },
       {
-        "text": "[GM], D. Hang, C. MacNish and A. Dyskin, \"Characteristics of Color Digital Image Correlation for deformation measurement,\" IEEE International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2016</em>.",
+        "text": "[GM], D. Hang, C. MacNish and A. Dyskin, \"Characteristics of Color Digital Image Correlation for deformation measurement\", IEEE International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2016</em>.",
         "featured": false
       },
       {
-        "text": "C. MacNish, [GM], A. Dyskin and E. Pasternak, \"Towards affordable and robust remote photogrammetric sensing for early warning of fracturing,\" IEEE International Humanitarian Technology Conference, <em>IHTC 2015</em>.",
+        "text": "C. MacNish, [GM], A. Dyskin and E. Pasternak, \"Towards affordable and robust remote photogrammetric sensing for early warning of fracturing\", IEEE International Humanitarian Technology Conference, <em>IHTC 2015</em>.",
         "featured": false
       },
       {
-        "text": "N.V. Dinh, [GM], A. Dyskin and C. MacNish, \"Digital Image Correlation for Small Strain Measurement in Deformable Solids,\" IEEE International Conference on Image Processing, <em>ICIP 2015</em>.",
+        "text": "N.V. Dinh, [GM], A. Dyskin and C. MacNish, \"Digital Image Correlation for Small Strain Measurement in Deformable Solids\", IEEE International Conference on Image Processing, <em>ICIP 2015</em>.",
         "featured": false
       },
       {
-        "text": "[GM], C. MacNish and A. Dyskin, \"Extending Digital Image Correlation to Reconstruct Displacement and Strain Fields around Discontinuities,\" IEEE IEEE Winter Conference on Applications of Computer Vision, <em>WACV 2015</em>.",
+        "text": "[GM], C. MacNish and A. Dyskin, \"Extending Digital Image Correlation to Reconstruct Displacement and Strain Fields around Discontinuities\", IEEE IEEE Winter Conference on Applications of Computer Vision, <em>WACV 2015</em>.",
         "featured": false
       },
       {
-        "text": "I. Ashraf, [GM], K.M. Yahya et al., \"Parameter Tuning of Evolutionary Algorithm by Meta-EAs for WCET Analysis,\" IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
+        "text": "I. Ashraf, [GM], K.M. Yahya et al., \"Parameter Tuning of Evolutionary Algorithm by Meta-EAs for WCET Analysis\", IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
         "featured": false
       },
       {
-        "text": "S.A.A. Shah, K.M. Yahya, [GM] and A. Bais, \"Quantification and Visualization of MRI Cartilage of the Knee,\" IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
+        "text": "S.A.A. Shah, K.M. Yahya, [GM] and A. Bais, \"Quantification and Visualization of MRI Cartilage of the Knee\", IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
         "featured": false
       },
       {
-        "text": "A. Bais, R. Sablatnig, J. Hu, K.M. Yahya, M. Usman, [GM] and M.T. Iqbal, \"Stereo Vision Based Self-Localization of Autonomous Mobile Robots,\" Robot Vision Conference, Springer, <em>RobVis 2008</em>.",
+        "text": "A. Bais, R. Sablatnig, J. Hu, K.M. Yahya, M. Usman, [GM] and M.T. Iqbal, \"Stereo Vision Based Self-Localization of Autonomous Mobile Robots\", Robot Vision Conference, Springer, <em>RobVis 2008</em>.",
         "featured": false
       },
       {
-        "text": "S. Ahmed, M.N. Karsiti and [GM], \"Feedback Linearization Techniques for Collaborative Robots,\" IEEE International Conference on Control, Automation and Systems <em>ICCAS 2007</em>.",
+        "text": "M. F. Nazir, [GM], I.G. Chaudhry, S.A. Khan and K.M. Yahya, “To analyze customers’ willingness to change Mobile Service using MNP based on Quality Service parameters”, Asian Network for Quality Congress – 5th Asian Quality Congress, Page 960-968, 2007.",
         "featured": false
       },
       {
-        "text": "[GM], K.M. Yahya and I.U. Haq, \"Leader-Follower Approach using Full-State Linearization via Dynamic Extension,\" IEEE International Conference of Emerging Technologies <em>ICET 2006</em>.",
+        "text": "S. Ahmed, M.N. Karsiti and [GM], \"Feedback Linearization Techniques for Collaborative Robots\", IEEE International Conference on Control, Automation and Systems <em>ICCAS 2007</em>.",
+        "featured": false
+      },
+      {
+        "text": "[GM], K.M. Yahya and I.U. Haq, \"Leader-Follower Approach using Full-State Linearization via Dynamic Extension\", IEEE International Conference of Emerging Technologies <em>ICET 2006</em>.",
         "featured": false
       }
     ]
