@@ -277,9 +277,10 @@ body { font-family: 'Inter', sans-serif; font-size: 14px; background: var(--bg);
           <h2>Awards & Recognition</h2>
           <span style="font-size:0.75rem;color:var(--text-muted)">Drag not supported — use ↑↓ buttons</span>
         </div>
+        <p class="hint" style="margin-bottom:1rem">You can include links using HTML: <code style="background:var(--bg-alt);padding:0.1rem 0.4rem;border-radius:2px;font-size:0.72rem">&lt;a href="URL" target="_blank"&gt;link text&lt;/a&gt;</code></p>
         <div id="awards-list"></div>
         <div class="add-row">
-          <input class="field-input" id="award-new" placeholder="New award text…" />
+          <input class="field-input" id="award-new" placeholder="New award text… (HTML links supported)" />
           <button class="btn btn-green" onclick="addAward()">+ Add</button>
         </div>
       </div>
@@ -287,9 +288,10 @@ body { font-family: 'Inter', sans-serif; font-size: 14px; background: var(--bg);
       <!-- MEMBERSHIPS -->
       <div class="section-panel" id="panel-memberships">
         <div class="section-header"><h2>Professional Memberships</h2></div>
+        <p class="hint" style="margin-bottom:1rem">You can include links using HTML: <code style="background:var(--bg-alt);padding:0.1rem 0.4rem;border-radius:2px;font-size:0.72rem">&lt;a href="URL" target="_blank"&gt;link text&lt;/a&gt;</code></p>
         <div id="memberships-list"></div>
         <div class="add-row">
-          <input class="field-input" id="membership-new" placeholder="New membership…" />
+          <input class="field-input" id="membership-new" placeholder="e.g. IEEE or &lt;a href=&quot;https://ieee.org&quot; target=&quot;_blank&quot;&gt;IEEE&lt;/a&gt;" />
           <button class="btn btn-green" onclick="addMembership()">+ Add</button>
         </div>
       </div>
