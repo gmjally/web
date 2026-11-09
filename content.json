@@ -20,8 +20,8 @@
     ]
   },
   "awards": [
-    "UWA Early Career Research Award Commendations 2025",
     "Early Career Research Award — Physics, Mathematics & Computing 2025",
+    "UWA Early Career Research Award Commendations 2025",
     "AAEE Award for Engineering Education Research Design 2023",
     "Early Career Research Award Commendations — Physics, Mathematics & Computing 2023",
     "Fellowship of the Higher Education Academy UK 2022",
@@ -38,12 +38,12 @@
     "SUN Microsystems Certified Programmer for Java"
   ],
   "memberships": [
-    "AI Augmentation in Modern Medicine (A²M²)",
+    "Founder & Co-Director: AI Augmentation in Modern Medicine (A²M²)",
+    "Co-founder & Committee Member: Australasian Artificial Intelligence in Engineering Education Centre (AAIEEC)",
+    "Senior Member: Institute of Electrical and Electronics Engineers (IEEE)",
     "Australian Centre for Quantitative Imaging (ACQI)",
-    "Institute of Electrical and Electronics Engineers (IEEE)",
-    "Australasian Artificial Intelligence in Engineering Education Centre (AAIEEC)",
     "Australian Association of Engineering Educators (AAEE)",
-    "Higher Education Academy UK",
+    "Fellow: Higher Education Academy UK",
     "Engineers Australia (EA)",
     "Pakistan Engineering Council (PEC)"
   ],
@@ -93,7 +93,7 @@
         "featured": true
       },
       {
-        "title": "\"Accelerating Clinical Translation: Radiomics Models in Glioblastoma\"",
+        "title": "\"Accelerating Clinical Translation: An Open-Source Framework for Robust, Automated Development of Radiomics Models in Glioblastoma\"",
         "authors": "N. Barry, M. Bynevelt, J. Kendrick, M. Ebert, [GM], P. Rowshan Farzad",
         "funder": "Royal Perth Hospital",
         "amount": "AUD $80,000",
@@ -138,7 +138,7 @@
         "years": "2023–2024"
       },
       {
-        "title": "Workshop AAEE2023 \"ChatGPT vs Engineering Education\"",
+        "title": "Workshop AAEE2023 \"ChatGPT vs Engineering Education: A pathway to becoming an everyday tool\"",
         "authors": "[GM]",
         "funder": "UWA Data Institute Travel Grant",
         "amount": "AUD $2,927",
@@ -896,6 +896,7 @@
       "Lucie Ketelsen",
       "Pasa Ciceklidag",
       "Suning (Juliet) Li",
+      "Bandar Salem Alsaadi",
       "Branimir Rusanov",
       "Azani Hasibuan"
     ],
@@ -914,7 +915,7 @@
       },
       {
         "name": "Dr. Nathaniel Barry",
-        "thesis": "Augmenting the clinical approach to glioblastoma: automatic segmentation and radiomics"
+        "thesis": "Augmenting the clinical approach to glioblastoma: investigating the potential of automatic segmentation and radiomics to improve patient management"
       },
       {
         "name": "Dr. Xin Lyu",
@@ -926,7 +927,7 @@
       },
       {
         "name": "Dr. Abdullah Alelyani",
-        "thesis": "Cloud Computing Efficiency: Optimizing Resource Utilization using Intelligent Algorithms"
+        "thesis": "Cloud Computing Efficiency: Optimizing Resource Utilization, Energy Consumption, Latency, Availability, and Reliability using Intelligent Algorithms"
       },
       {
         "name": "Dr. Rini Anggrainingsih",
@@ -955,6 +956,10 @@
       {
         "name": "Dr. Yangjinbo Zhang",
         "thesis": "Development of a Visual Data Storytelling Framework"
+      },
+      {
+        "name": "Dr. Lucie Ketelsen",
+        "thesis": "The impossible image: Bacterial iridescence and the view from anywhere"
       }
     ]
   }
