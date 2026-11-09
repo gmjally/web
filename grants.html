@@ -47,7 +47,6 @@
   .grant-right { text-align: right; }
   .grant-amount { font-size: 0.92rem; font-weight: 700; color: var(--gold); white-space: nowrap; }
   .grant-year { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
-  .loading { padding: 3rem 4rem; color: var(--text-muted); font-size: 0.88rem; }
 
   @media (max-width: 640px) {
     .page-header { padding: 2.5rem 1.5rem 2rem; }
@@ -72,65 +71,43 @@
 </header>
 
 <div class="content" id="grants-content">
-  <div class="loading">Loading grants…</div>
+  <p style="color:var(--text-muted);font-size:0.85rem">Loading grants…</p>
 </div>
 
 <script>
-function gmName(text) {
-  return text.replace(/\[GM\]/g, '<span class="gm-name">Ghulam Mubashar Hassan</span>');
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
-
-function render(data) {
-  const grants = data.grants || {};
-  document.getElementById('total-badge').textContent = grants.total || '';
-  const items = grants.items || [];
-  const html = items.map(g => `
-    <div class="grant-item">
-      <div>
-        <div class="grant-title">${g.title || ''}</div>
-        <div class="grant-authors">${gmName(g.authors || '')}</div>
-        <div class="grant-funder">${g.funder || ''}</div>
-      </div>
-      <div class="grant-right">
-        <div class="grant-amount">${g.amount || ''}</div>
-        <div class="grant-year">${g.years || ''}</div>
-      </div>
-    </div>`).join('');
-  document.getElementById('grants-content').innerHTML = html || '<p style="color:var(--text-muted);padding:2rem 0">No grants found.</p>';
+function gmName(s) {
+  return String(s||'').replace(/\[GM\]/g,'<span class="gm-name">Ghulam Mubashar Hassan</span>');
 }
 
 fetch('content.json')
-  .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
-  .then(data => render(data))
-  .catch(() => render(FALLBACK_DATA));
-
-const FALLBACK_DATA = {
-  grants: {
-    total: "AUD $2,448,923",
-    items: [
-      { title:'"WA Human Milk Research Biorepository"', authors:"Donna Geddes, Debbie Palmer, Mark Nicol, Mary Sharp, [GM], Sharon Perrella, Lisa Stinson", funder:"Stan Perron Charitable Foundation", amount:"AUD $1,305,695", years:"2025–2029" },
-      { title:'"Clinical Evaluation of Deep Learning for Identification and Prognosis in Metastatic Prostate Cancer"', authors:"Jake Kendrick, Martin Ebert, [GM], Nathaniel Barry, Pejman Rowshan Farzad, Branimir Rusanov, Jeremy Ong, Mikaela Dell\'Oro", funder:"Department of Health (Western Australia)", amount:"AUD $361,146", years:"2025–2026" },
-      { title:'"Accelerating Clinical Translation: Radiomics Models in Glioblastoma"', authors:"N. Barry, M. Bynevelt, J. Kendrick, M. Ebert, [GM], P. Rowshan Farzad", funder:"Royal Perth Hospital", amount:"AUD $80,000", years:"2025–2026" },
-      { title:'"Matariki Funding Application (Deepfakes)"', authors:"[GM], T. Reed, M. Farhad, M. Hardey, L.S. Scharnick-Udemans, Y. Watanabe, W. Ahmed, K. Sharma, R. Das", funder:"The Matariki Network of Universities (MNU)", amount:"AUD $8,314", years:"2025–2026" },
-      { title:'"AI Adoption in WA Volunteering Sector"', authors:"R. Das, S. Roy, [GM], T. Reed, M. Loyola", funder:"Volunteer Centre of Western Australia INC", amount:"AUD $20,000", years:"2025–2026" },
-      { title:'"Investigation of Integrating Generative AI into Engineering across Australasian Universities"', authors:"Peter Neal, Marina Belkina, Sarah Grundy, [GM], Rezwanul Haque, Scott Daniel, Sasha Nikolic, Sarah Lyden", funder:"Australasian Association for Engineering Education", amount:"AUD $20,000", years:"2024" },
-      { title:'"Conversion between Brain Cancer Imaging Modalities using Generative AI"', authors:"Martin Ebert, Nathaniel Barry, Branimir Rusanov, Jake Kendrick, Saima Safdar, Pejman Rowshan Farzad, [GM]", funder:"Innovation Challenge 2023, Department of Health (WA)", amount:"AUD $38,805", years:"2023–2024" },
-      { title:'"Radiomics for Survival Prediction in Prostate Cancer Patients"', authors:"Jake Kendrick and [GM]", funder:"UWA Data Institute Summer Research Project Grant", amount:"AUD $8,000", years:"2023–2024" },
-      { title:'Workshop AAEE2023 "ChatGPT vs Engineering Education"', authors:"[GM]", funder:"UWA Data Institute Travel Grant", amount:"AUD $2,927", years:"2023" },
-      { title:'"Smart Roadside Barriers with Enhanced Sustainability and Impact Resistance"', authors:"Mohamed Elchalakani, [GM], Adam Wittak and Thomas Braunl", funder:"Road Safety Innovation Funds, Department of Infrastructure", amount:"AUD $300,500", years:"2021–2023" },
-      { title:'"Digitization of Centrifugal Slurry Pumps"', authors:"Ali Karrech, [GM] and Mohamed Elchalakani", funder:"Metso Sweden", amount:"AUD $66,500", years:"2021–2024" },
-      { title:'"Drone Video Analytics for Short-Term Traffic Prediction"', authors:"Chao Sun, Mark Reynolds, Du Huynh, [GM] and Sharron Biermann", funder:"WA Main Roads", amount:"AUD $124,500", years:"2019–2020" },
-      { title:'"More Accurate Neurosurgical Navigation Through Computation of Brain Deformation"', authors:"Adam Wittek, [GM], Elena Pasternak, Arcady Dyskin, Karol Miller and Simon Warfield", funder:"UWA Research Income Growth Grant", amount:"AUD $20,000", years:"2018–2019" },
-      { title:'"Smart Material, Smart Construction, Smart Structures"', authors:"Arcady Dyskin, Elena Pasternak, Yuxia Hu and [GM]", funder:"UWA Research Income Growth Grant", amount:"AUD $10,000", years:"2018–2019" },
-      { title:'"Developing Technological Leaders"', authors:"Sally Male, Santiago Perez, [GM], et al.", funder:"UWA Community of Practice Initiative", amount:"AUD $20,000", years:"2018–2019" },
-      { title:'"VR Safety in Design"', authors:"Sally Male, Andrew Guzzomi and [GM]", funder:"UWA Education Futures", amount:"AUD $10,000", years:"2017–2018" },
-      { title:'"Ezone 4D Environment"', authors:"Sally Male, Andrew Guzzomi and [GM]", funder:"UWA Education Futures", amount:"AUD $10,000", years:"2017–2018" },
-      { title:'"UWA Summer School"', authors:"[GM]", funder:"UWA Education Futures", amount:"AUD $10,000", years:"2017–2018" },
-      { title:'"Photogrammetric Method of Distant Reconstruction of Displacement Fields"', authors:"[GM]", funder:"International Mining for Developing Countries — IM4DC", amount:"AUD $10,000", years:"2014–2015" },
-      { title:'"UWA Postgraduate Travel"', authors:"[GM]", funder:"UWA Graduate Research School", amount:"AUD $1,850", years:"2015–2016" }
-    ]
-  }
-};
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(data => {
+    const grants = data.grants || {};
+    document.getElementById('total-badge').textContent = grants.total || '';
+    const items = grants.items || [];
+    const html = items.map(g => `
+      <div class="grant-item">
+        <div>
+          <div class="grant-title">${esc(g.title||'')}</div>
+          <div class="grant-authors">${gmName(g.authors||'')}</div>
+          <div class="grant-funder">${esc(g.funder||'')}</div>
+        </div>
+        <div class="grant-right">
+          <div class="grant-amount">${esc(g.amount||'')}</div>
+          <div class="grant-year">${esc(g.years||'')}</div>
+        </div>
+      </div>`).join('');
+    document.getElementById('grants-content').innerHTML =
+      html || '<p style="color:var(--text-muted);padding:2rem 0">No grants found in content.json.</p>';
+  })
+  .catch(err => {
+    document.getElementById('grants-content').innerHTML =
+      '<p style="color:var(--text-muted);padding:2rem 0">Could not load grants. Please ensure content.json is in the same folder.</p>';
+    console.warn('grants: could not load content.json:', err.message);
+  });
 </script>
 </body>
 </html>
