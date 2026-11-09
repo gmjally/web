@@ -246,10 +246,6 @@
     ],
     "journalPapers": [
       {
-        "text": "N. Barry, E.S. Koh, M. Ebert, A. Moore, R.J. Francis, P. Rowshanfarzad, [GM], et. al., \"[18]F-fluoroethyl-l-tyrosine positron emission tomography for radiotherapy target delineation: Results from a Radiation Oncology credentialing program\", Physics and Imaging in Radiation Oncology, 2024, doi: 10.1016/j.phro.2024.100568.",
-        "featured": false
-      },
-      {
         "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"DRBD-Mamba for robust and efficient brain tumor segmentation with analytical insights,\" <em>Brain Informatics</em>, 2026.",
         "featured": true
       },
@@ -343,6 +339,10 @@
       },
       {
         "text": "R. Anggrainingsih, [GM] and A. Datta, \"Transformer-based models for combating rumours on microblogging platforms: a review,\" <em>Artificial Intelligence Review</em>, Vol. 57(212), 2024.",
+        "featured": false
+      },
+      {
+        "text": "N. Barry, E.S. Koh, M. Ebert, A. Moore, R.J. Francis, P. Rowshanfarzad, [GM], et. al., \"[18]F-fluoroethyl-l-tyrosine positron emission tomography for radiotherapy target delineation: Results from a Radiation Oncology credentialing program\", Physics and Imaging in Radiation Oncology, 2024, doi: 10.1016/j.phro.2024.100568.",
         "featured": false
       },
       {
