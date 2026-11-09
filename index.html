@@ -833,11 +833,11 @@
 
       // ── Awards ───────────────────────────────────────────────────────────
       const aw = document.getElementById('awards-grid');
-      if (aw) aw.innerHTML = (data.awards||[]).map(a=>`<div class="award-item">${esc(a)}</div>`).join('');
+      if (aw) aw.innerHTML = (data.awards||[]).map(a=>`<div class="award-item">${a}</div>`).join('');
 
       // ── Memberships ──────────────────────────────────────────────────────
       const mb = document.getElementById('memberships-list');
-      if (mb) mb.innerHTML = (data.memberships||[]).map(m=>`<li>${esc(m)}</li>`).join('');
+      if (mb) mb.innerHTML = (data.memberships||[]).map(m=>`<li>${m}</li>`).join('');
 
       // ── Education ────────────────────────────────────────────────────────
       const ed = document.getElementById('education-list');
