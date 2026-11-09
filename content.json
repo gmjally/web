@@ -536,10 +536,6 @@
         "featured": true
       },
       {
-        "text": "A. Bais, R. Sabtalnig, K.M. Yahya and [GM], “A Hybrid Approach towards Vision based Self-Localization of Autonomous Mobile Robots”, IEEE International Conference on Machine Vision <em>ICMV 2007</em>.",
-        "featured": false
-      },
-      {
         "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Challenges and Lessons from Integrating Digital Technologies in Slurry Pumping for the Mining Industry\", <em>CIM CONNECT 2026</em>.",
         "featured": false
       },
@@ -821,6 +817,10 @@
       },
       {
         "text": "M. F. Nazir, [GM], I.G. Chaudhry, S.A. Khan and K.M. Yahya, “To analyze customers’ willingness to change Mobile Service using MNP based on Quality Service parameters”, Asian Network for Quality Congress – 5th Asian Quality Congress, Page 960-968, 2007.",
+        "featured": false
+      },
+      {
+        "text": "A. Bais, R. Sabtalnig, K.M. Yahya and [GM], “A Hybrid Approach towards Vision based Self-Localization of Autonomous Mobile Robots”, IEEE International Conference on Machine Vision <em>ICMV 2007</em>.",
         "featured": false
       },
       {
