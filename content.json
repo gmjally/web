@@ -532,114 +532,6 @@
     ],
     "conferencePapers": [
       {
-        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Advancing Sustainability in Pumping Systems: A Comprehensive Methodology for Calculating, Monitoring and Minimising Power and Water Consumption\", International Future Mining Conference, <em>IFMC 2024</em>.",
-        "featured": false
-      },
-      {
-        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Optimizing Mill Circuit Pump Reliability: A Comprehensive Approach for Pump Selection, Design, and Continuous Improvement\", <em>Mill Circuit 2024</em>.",
-        "featured": false
-      },
-      {
-        "text": "H. Almutairi, [GM] and A. Datta, \"Detecting Sleep Disorders from NREM Using DeepSDBPLM\", 12th International Conference on Robotics, Vision, Signal Processing and Power Applications, <em>RoViSP 2023</em>.",
-        "featured": false
-      },
-      {
-        "text": "A. Varghese, S. Martins, E. Lessing, [GM], and A. Karrech, \"Pumps and Sustainability in Mineral Processing\", 26th World Mining Congress, <em>WMC 2023</em>.",
-        "featured": false
-      },
-      {
-        "text": "S. Nikolic, T. Suesse, S. Grundy, R. Haque, S. Lyden, [GM], S. Daniel, M. Belkina and S. Lal, \"A European vs Australasian Comparison of Engineering Laboratory Learning Objectives Rankings\", 50th European Society for Engineering Education Conference, <em>SEFI 2022</em>.",
-        "featured": false
-      },
-      {
-        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Pumping sustainably-power and water consumption in mineral processing plants: someone should care\", <em>IMPC Asia-Pacific 2022</em>.",
-        "featured": false
-      },
-      {
-        "text": "A. Gell, S. Male, M. Marinelli and [GM], \"How and when do Engineers in the mining industry in Australia learn about Safety Culture and start to associate it with their Engineering Identity?\", Research in Engineering Education Symposium and 32nd Australasian Association for Engineering Education, <em>REES/AAEE 2021</em>.",
-        "featured": false
-      },
-      {
-        "text": "A. Sones, M. Marinelli, S. Male and [GM], \"Competencies that lead to high performance as a project engineer in a management consulting engineering company\", Research in Engineering Education Symposium and 32nd Australasian Association for Engineering Education, <em>REES/AAEE 2021</em>.",
-        "featured": false
-      },
-      {
-        "text": "R. Tan, M. Marinelli, S. Male and [GM], \"Engineering in a pandemic: the impact of remote working and learning on quality of work produced\", Research in Engineering Education Symposium and 32nd Australasian Association for Engineering Education, <em>REES/AAEE 2021</em>.",
-        "featured": false
-      },
-      {
-        "text": "Z. Malakan, [GM], M. Jalwana, N. Aafaq and A. Mian, \"Semantic attribute enriched storytelling from a sequence of images\",  International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2021</em>.",
-        "featured": false
-      },
-      {
-        "text": "Z. Aljawy, N. Aafaq, [GM] and A. Mian, \"Contextualise, attend, modulate and tell: visual storytelling, 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications <em>VISIGRAPP 2021</em>.",
-        "featured": false
-      },
-      {
-        "text": "K. Ludewick, S. Male, A. Valentine and [GM], \"Identification of threshold capabilities in engineering workplace conflict resolution\", 31st Australasian Association for Engineering Education, <em>AAEE 2020</em>.",
-        "featured": false
-      },
-      {
-        "text": "Y. Liu, M. Reynolds, D. Huynh and [GM], \"Study of accurate and fast estimation method of vehicle length based on YOLOs\", IEEE International Conference on Artificial Intelligence and Information Systems, <em>ICAIIS 2020</em>.",
-        "featured": false
-      },
-      {
-        "text": "J. Skotny, A. Valentine, [GM] and S. Male, \"Conceptual learning and immersive properties in dead-mounted-display virtual reality simulations\", 30th Australasian Association for Engineering Education <em>AAEE 2019</em>. ★ WAITTA INCITE Award finalist.",
-        "featured": false
-      },
-      {
-        "text": "F. Ta, A. Valentine, S. Male and [GM], \"Piloted online training module to teach on-site safety in engineering\", 36th International Conference on Innovation, Practice and Research in the Use of Educational Technologies in Tertiary Education, Australasian Society for Computers in Learning in Tertiary Education, <em>ASCILITE 2019</em>.",
-        "featured": false
-      },
-      {
-        "text": "R. Barker, A. Hurst, R. Shrubsall, [GM] and T. French, \"A low-cost hardware-in-the-loop agent-based simulation testbed for autonomous vehicles\", IEEE/ASME International Conference on Advanced Intelligent Mechatronics, <em>AIM 2018</em>. ★ WAITTA INCITE Award finalist.",
-        "featured": false
-      },
-      {
-        "text": "M. Irfan, Q. Habib, [GM], K.M. Yahya and S. Hayat, “Combinational Digital Circuit Synthesis using Cartesian Genetic Programming from a NAND Gate Template”, IEEE 6th International Conference on Emerging Technologies, <em>ICET 2010</em>.",
-        "featured": false
-      },
-      {
-        "text": "M.F. Jan, Q. Habib, M. Irfan, M. Murad, K.M. Yahya and [GM], “Carbon Monoxide Detection and Autonomous Countermeasure System for a Steel Mill using Wireless Sensor and Actuator Network”, IEEE 6th International Conference on Emerging Technologies, <em>ICET 2010</em>.",
-        "featured": false
-      },
-      {
-        "text": "W. Ahmad, S.A. Hassan, M.A. Irfan, A. Bais, [GM], S.A.A. Shah and K.M. Yahya, “Design and Implementation of Real Time LPR System on a Fixed Point DSP”, IEEE 6th International Conference on Enabling Technologies, <em>ICET 2010</em>.",
-        "featured": false
-      },
-      {
-        "text": "M.A. Manzoor, M. Farooq, S.A.A. Shah, A.A. Shah, S. Ullah, A. Bais, [GM] and K.M. Yahya, “Real Time Image Registration Based on Feature Tracking using Digital Signal Processor”, IEEE 6th International Conference on Emerging Technologies, <em>ICET 2010</em>.",
-        "featured": false
-      },
-      {
-        "text": "S.A.A. Shah, M.A. Manzoor, M. Farooq, A.A. Shah, A. Bais, K.M. Yahya and [GM], “Efficient implementation of Image Registration based on Feature Tracking”, IEEE International Conference on Wireless Communications Networking & Mobile Computing 2010.",
-        "featured": false
-      },
-      {
-        "text": "M. Murad, K.M. Yahya and [GM], “Web Based Poultry Farm Monitoring System Using Wireless Sensor Network”, ACM Frontiers of Information & Technology, <em>FIT 2009</em>.",
-        "featured": false
-      },
-      {
-        "text": "[GM], A.I. Marwat, S. Wahid, F. Kareem, K.M. Yahya and A. Bais, “Cell Phone based Geographical Advertisement System (CGAS)”, IEEE Student Conference on Research & Development 2009.",
-        "featured": false
-      },
-      {
-        "text": "A. Bais, M.U.K.Khan, K.M. Yahya, R. Sablatnig and [GM], “Memory Efficient Vision Based Line Feature Extraction for Tiny Mobile Robots”, International Conference on Image Analysis and Recognition, LNCS, Springer, <em>ICIAR 2009</em>.",
-        "featured": false
-      },
-      {
-        "text": "M.U.K. Khan, A. Bais, K.M. Yahya, [GM] and R. Arshad, “A Swift and Memory Efficient Hough Transform for Systems with Limited Fast Memory”, International Conference on Image Analysis and Recognition, LNCS, Springer, <em>ICIAR 2009,</em>.",
-        "featured": false
-      },
-      {
-        "text": "S. Mahmood, [GM] and M.H. Hassan, “DoS and DDoS Attacks: Analysis and Prevention”, 1st National Conference on Security, Computing & Communication, 2008.",
-        "featured": false
-      },
-      {
-        "text": "I.U. Haq, K.M. Yahya, [GM] and T.M. Jadoon, “Analysis of VoIP by Using Different Vocoders in IEEE 802.11b Wireless Networks”, 1st National Conference on Security, Computing & Communication 2008.",
-        "featured": false
-      },
-      {
         "text": "K. Nguyen, D. Edirimuni, [GM], A. Mian, \"RI-Mamba: Rotation-Invariant Mamba for Robust Text-to-Shape Retrieval\",  IEEE Conference on Computer Vision and Pattern Recognition, <em>CVPR 2026</em>.",
         "featured": true
       },
@@ -684,7 +576,15 @@
         "featured": false
       },
       {
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Optimizing Mill Circuit Pump Reliability: A Comprehensive Approach for Pump Selection, Design, and Continuous Improvement\", <em>Mill Circuit 2024</em>.",
+        "featured": false
+      },
+      {
         "text": "P. Ciceklidag, M. Ibrahim, H. Wang, Y. Miao, J. Hong, [GM] and A. Mian, \"High-Definition 3D Point Cloud Mapping of the City of Subiaco\", International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2024</em>.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Advancing Sustainability in Pumping Systems: A Comprehensive Methodology for Calculating, Monitoring and Minimising Power and Water Consumption\", International Future Mining Conference, <em>IFMC 2024</em>.",
         "featured": false
       },
       {
@@ -732,6 +632,22 @@
         "featured": false
       },
       {
+        "text": "H. Almutairi, [GM] and A. Datta, \"Detecting Sleep Disorders from NREM Using DeepSDBPLM\", 12th International Conference on Robotics, Vision, Signal Processing and Power Applications, <em>RoViSP 2023</em>.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM], and A. Karrech, \"Pumps and Sustainability in Mineral Processing\", 26th World Mining Congress, <em>WMC 2023</em>.",
+        "featured": false
+      },
+      {
+        "text": "S. Nikolic, T. Suesse, S. Grundy, R. Haque, S. Lyden, [GM], S. Daniel, M. Belkina and S. Lal, \"A European vs Australasian Comparison of Engineering Laboratory Learning Objectives Rankings\", 50th European Society for Engineering Education Conference, <em>SEFI 2022</em>.",
+        "featured": false
+      },
+      {
+        "text": "A. Varghese, S. Martins, E. Lessing, [GM] and A. Karrech, \"Pumping sustainably-power and water consumption in mineral processing plants: someone should care\", <em>IMPC Asia-Pacific 2022</em>.",
+        "featured": false
+      },
+      {
         "text": "J. Bardwell, [GM], F. Salami and N. Akhtar, \"Cognitive impairment prediction by normal cognitive brain MRI scans using deep learning\", 35th Australasian Joint Conference on Artificial Intelligence, <em>AJCAI 2022</em>.",
         "featured": false
       },
@@ -768,6 +684,34 @@
         "featured": false
       },
       {
+        "text": "A. Gell, S. Male, M. Marinelli and [GM], \"How and when do Engineers in the mining industry in Australia learn about Safety Culture and start to associate it with their Engineering Identity?\", Research in Engineering Education Symposium and 32nd Australasian Association for Engineering Education, <em>REES/AAEE 2021</em>.",
+        "featured": false
+      },
+      {
+        "text": "A. Sones, M. Marinelli, S. Male and [GM], \"Competencies that lead to high performance as a project engineer in a management consulting engineering company\", Research in Engineering Education Symposium and 32nd Australasian Association for Engineering Education, <em>REES/AAEE 2021</em>.",
+        "featured": false
+      },
+      {
+        "text": "R. Tan, M. Marinelli, S. Male and [GM], \"Engineering in a pandemic: the impact of remote working and learning on quality of work produced\", Research in Engineering Education Symposium and 32nd Australasian Association for Engineering Education, <em>REES/AAEE 2021</em>.",
+        "featured": false
+      },
+      {
+        "text": "Z. Malakan, [GM], M. Jalwana, N. Aafaq and A. Mian, \"Semantic attribute enriched storytelling from a sequence of images\",  International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2021</em>.",
+        "featured": false
+      },
+      {
+        "text": "Z. Aljawy, N. Aafaq, [GM] and A. Mian, \"Contextualise, attend, modulate and tell: visual storytelling, 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications <em>VISIGRAPP 2021</em>.",
+        "featured": false
+      },
+      {
+        "text": "K. Ludewick, S. Male, A. Valentine and [GM], \"Identification of threshold capabilities in engineering workplace conflict resolution\", 31st Australasian Association for Engineering Education, <em>AAEE 2020</em>.",
+        "featured": false
+      },
+      {
+        "text": "Y. Liu, M. Reynolds, D. Huynh and [GM], \"Study of accurate and fast estimation method of vehicle length based on YOLOs\", IEEE International Conference on Artificial Intelligence and Information Systems, <em>ICAIIS 2020</em>.",
+        "featured": false
+      },
+      {
         "text": "H. Satnani, M. Marinelli, S. Male and [GM], \"Engineering graduates working in maintenance within the mining industry in Australia\", 31st Australasian Association for Engineering Education, <em>AAEE 2020</em>. ★ Best Student Paper Award",
         "featured": false
       },
@@ -777,6 +721,18 @@
       },
       {
         "text": "B. Lee, S.Z. Gilani, [GM] and A. Mian, \"Facial gender classification - analysis using convolutional neural network\", IEEE International Conference on Digital Image Computing: Techniques and Applications, <em>DICTA 2019</em>.",
+        "featured": false
+      },
+      {
+        "text": "J. Skotny, A. Valentine, [GM] and S. Male, \"Conceptual learning and immersive properties in dead-mounted-display virtual reality simulations\", 30th Australasian Association for Engineering Education <em>AAEE 2019</em>. ★ WAITTA INCITE Award finalist.",
+        "featured": false
+      },
+      {
+        "text": "F. Ta, A. Valentine, S. Male and [GM], \"Piloted online training module to teach on-site safety in engineering\", 36th International Conference on Innovation, Practice and Research in the Use of Educational Technologies in Tertiary Education, Australasian Society for Computers in Learning in Tertiary Education, <em>ASCILITE 2019</em>.",
+        "featured": false
+      },
+      {
+        "text": "R. Barker, A. Hurst, R. Shrubsall, [GM] and T. French, \"A low-cost hardware-in-the-loop agent-based simulation testbed for autonomous vehicles\", IEEE/ASME International Conference on Advanced Intelligent Mechatronics, <em>AIM 2018</em>. ★ WAITTA INCITE Award finalist.",
         "featured": false
       },
       {
@@ -808,11 +764,55 @@
         "featured": false
       },
       {
+        "text": "M. Irfan, Q. Habib, [GM], K.M. Yahya and S. Hayat, “Combinational Digital Circuit Synthesis using Cartesian Genetic Programming from a NAND Gate Template”, IEEE 6th International Conference on Emerging Technologies, <em>ICET 2010</em>.",
+        "featured": false
+      },
+      {
+        "text": "M.F. Jan, Q. Habib, M. Irfan, M. Murad, K.M. Yahya and [GM], “Carbon Monoxide Detection and Autonomous Countermeasure System for a Steel Mill using Wireless Sensor and Actuator Network”, IEEE 6th International Conference on Emerging Technologies, <em>ICET 2010</em>.",
+        "featured": false
+      },
+      {
+        "text": "W. Ahmad, S.A. Hassan, M.A. Irfan, A. Bais, [GM], S.A.A. Shah and K.M. Yahya, “Design and Implementation of Real Time LPR System on a Fixed Point DSP”, IEEE 6th International Conference on Enabling Technologies, <em>ICET 2010</em>.",
+        "featured": false
+      },
+      {
+        "text": "M.A. Manzoor, M. Farooq, S.A.A. Shah, A.A. Shah, S. Ullah, A. Bais, [GM] and K.M. Yahya, “Real Time Image Registration Based on Feature Tracking using Digital Signal Processor”, IEEE 6th International Conference on Emerging Technologies, <em>ICET 2010</em>.",
+        "featured": false
+      },
+      {
+        "text": "S.A.A. Shah, M.A. Manzoor, M. Farooq, A.A. Shah, A. Bais, K.M. Yahya and [GM], “Efficient implementation of Image Registration based on Feature Tracking”, IEEE International Conference on Wireless Communications Networking & Mobile Computing 2010.",
+        "featured": false
+      },
+      {
         "text": "I. Ashraf, [GM], K.M. Yahya et al., \"Parameter Tuning of Evolutionary Algorithm by Meta-EAs for WCET Analysis\", IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
         "featured": false
       },
       {
         "text": "S.A.A. Shah, K.M. Yahya, [GM] and A. Bais, \"Quantification and Visualization of MRI Cartilage of the Knee\", IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
+        "featured": false
+      },
+      {
+        "text": "M. Murad, K.M. Yahya and [GM], “Web Based Poultry Farm Monitoring System Using Wireless Sensor Network”, ACM Frontiers of Information & Technology, <em>FIT 2009</em>.",
+        "featured": false
+      },
+      {
+        "text": "[GM], A.I. Marwat, S. Wahid, F. Kareem, K.M. Yahya and A. Bais, “Cell Phone based Geographical Advertisement System (CGAS)”, IEEE Student Conference on Research & Development 2009.",
+        "featured": false
+      },
+      {
+        "text": "A. Bais, M.U.K.Khan, K.M. Yahya, R. Sablatnig and [GM], “Memory Efficient Vision Based Line Feature Extraction for Tiny Mobile Robots”, International Conference on Image Analysis and Recognition, LNCS, Springer, <em>ICIAR 2009</em>.",
+        "featured": false
+      },
+      {
+        "text": "M.U.K. Khan, A. Bais, K.M. Yahya, [GM] and R. Arshad, “A Swift and Memory Efficient Hough Transform for Systems with Limited Fast Memory”, International Conference on Image Analysis and Recognition, LNCS, Springer, <em>ICIAR 2009,</em>.",
+        "featured": false
+      },
+      {
+        "text": "S. Mahmood, [GM] and M.H. Hassan, “DoS and DDoS Attacks: Analysis and Prevention”, 1st National Conference on Security, Computing & Communication, 2008.",
+        "featured": false
+      },
+      {
+        "text": "I.U. Haq, K.M. Yahya, [GM] and T.M. Jadoon, “Analysis of VoIP by Using Different Vocoders in IEEE 802.11b Wireless Networks”, 1st National Conference on Security, Computing & Communication 2008.",
         "featured": false
       },
       {
