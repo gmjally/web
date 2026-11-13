@@ -246,12 +246,16 @@
     ],
     "journalPapers": [
       {
+        "text": "S. Hakemi, N. Akhtar, [GM] and A. Mian, \"Faithful Image Editing via Degraded Representations\", <em>Transactions on Machine Learning Research</em>, 2026.",
+        "featured": true
+      },
+      {
         "text": "D. Ali, A. Mian, N. Akhtar and [GM], \"DRBD-Mamba for robust and efficient brain tumor segmentation with analytical insights\", <em>Brain Informatics</em>, 2026.",
         "featured": true
       },
       {
         "text": "K. Molin, J. Li, N. Barry, J. Ong, A. Iravani, M. Hofman, [GM], M. Ebert and J. Kendrick, \"Pre-therapeutic PSMA PET Imaging Biomarkers Demonstrate Prognostic Value\", <em>Clinical Genitourinary Cancer</em>, 2026.",
-        "featured": true
+        "featured": false
       },
       {
         "text": "B. Wright, M. Ebert, J. Kendrick and [GM], \"Robust optimisation for photon radiotherapy: A scoping review\", <em>Radiotherapy and Oncology</em>, 2026.",
@@ -531,6 +535,14 @@
       }
     ],
     "conferencePapers": [
+      {
+        "text": "D. Ali, A. Azimi, C. Galvin, T. Kapur, A. Golby, A. Mian, N. Akhtar, and [GM], \"Pre-Operative to Intra-Operative: A Brain Tumor Segmentation Generalization Study\", International Workshop on Brain Abnormality, <em>MICCAI 2026 (BrainWorks)</em>.",
+        "featured": true
+      },
+      {
+        "text": "V. Mutiawani, P. Kodrat, [GM] and N. Sharif, \"ArTiSan: Archetype-Aware TimeSformer for Fast Glaucoma Progression\", International Workshop on Ophthalmic Medical Image Analysis, <em>MICCAI 2026 (OMIA)</em>.",
+        "featured": true
+      },
       {
         "text": "K. Nguyen, D. Edirimuni, [GM], A. Mian, \"RI-Mamba: Rotation-Invariant Mamba for Robust Text-to-Shape Retrieval\",  IEEE Conference on Computer Vision and Pattern Recognition, <em>CVPR 2026</em>.",
         "featured": true
