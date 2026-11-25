@@ -274,15 +274,15 @@
         "featured": true
       },
       {
-        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM] et al., \"The long and winding road of radiomics: learnings from two meta-analyses of the radiomics quality score\", <em>Physics in Medicine and Biology</em>, 71(3), 2026.",
+        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM],  J. Dowling, J.L. Ong, P. Parizel, M.S. Hofman, B. Kocak, R. Cuocolo and M. Ebert, \"The long and winding road of radiomics: learnings from two meta-analyses of the radiomics quality score\", <em>Physics in Medicine and Biology</em>, 71(3), 2026.",
         "featured": false
       },
       {
-        "text": "J. Li, J. Kendrick, M. Ebert, [GM], N. Barry et al., \"Auto-segmentation, radiomic reproducibility, and comparison of radiomics for coronary arteries in cardiac [18F]NaF PET/CT images\", <em>EJNMMI Physics</em>, 2025.",
+        "text": "J. Li, J. Kendrick, M. Ebert, [GM], N. Barry, K. Wright, S. Lee, J. Bellinge and C. Schultz, \"Auto-segmentation, radiomic reproducibility, and comparison of radiomics for coronary arteries in cardiac [18F]NaF PET/CT images\", <em>EJNMMI Physics</em>, 2025.",
         "featured": false
       },
       {
-        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM] et al., \"Correction: Evaluating the impact of the radiomics quality score\", <em>European Radiology</em>, Vol. 35(10), 2025.",
+        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM], J. Dowling, P.M. Parizel, M.S. Hofman and M. Ebert, \"Correction: Evaluating the impact of the radiomics quality score\", <em>European Radiology</em>, Vol. 35(10), 2025.",
         "featured": false
       },
       {
@@ -314,7 +314,7 @@
         "featured": false
       },
       {
-        "text": "N. Barry, J. Kendrick, P. Rowshanfarzad, [GM] et al., \"An External, Independent Validation of an [18F]-FET PET Automatic Segmentation Network in Glioblastoma\", <em>Journal of Nuclear Medicine</em>, 2025.",
+        "text": "N. Barry, J. Kendrick, P. Rowshanfarzad, [GM], RJ Francis, N. Bucknell, E.S. Koh, A. Scott, M. Ebert, R. Gutsche, K. Ciantar, N. Galldiks, K.J. Langen and P. Lohmann, \"An External, Independent Validation of an [18F]-FET PET Automatic Segmentation Network in Glioblastoma\", <em>Journal of Nuclear Medicine</em>, 2025.",
         "featured": false
       },
       {
@@ -330,15 +330,15 @@
         "featured": false
       },
       {
-        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM] et al., \"Evaluating the impact of the Radiomics Quality Score: a systematic review and meta-analysis\", <em>European Radiology</em>, 2025.",
+        "text": "N. Barry, J. Kendrick, K. Molin, S. Li, P. Rowshanfarzad, [GM], J. Dowling, P. Parizel, M.S. Hofman and M. Ebert, \"Evaluating the impact of the Radiomics Quality Score: a systematic review and meta-analysis\", <em>European Radiology</em>, 2025.",
         "featured": false
       },
       {
-        "text": "X. Jin, C. Lai, S. Perrella, X. Zhou, [GM] et al., \"Milk composition is predictive of low milk supply using machine learning approaches\", <em>Diagnostics</em>, 2025.",
+        "text": "X. Jin, C. Lai, S. Perrella, X. Zhou, [GM], J. McEachran, Z. Gridneva, N. Taylor, M. Wlodek and D. Geddas, \"Milk composition is predictive of low milk supply using machine learning approaches\", <em>Diagnostics</em>, 2025.",
         "featured": false
       },
       {
-        "text": "K. Molin, N. Barry, S. Gill, [GM] et al., \"Evaluating the prognostic value of radiomics in metastatic prostate cancer using [68Ga]Ga-PSMA-11 PET/CT\", <em>Physical and Engineering Sciences in Medicine</em>, 2025.",
+        "text": "K. Molin, N. Barry, S. Gill, [GM], R.J. Francis, J.S. L. Ong, M. Ebert and J. Kendrick, \"Evaluating the prognostic value of radiomics in metastatic prostate cancer using [68Ga]Ga-PSMA-11 PET/CT\", <em>Physical and Engineering Sciences in Medicine</em>, 2025.",
         "featured": false
       },
       {
@@ -792,7 +792,7 @@
         "featured": false
       },
       {
-        "text": "I. Ashraf, [GM], K.M. Yahya et al., \"Parameter Tuning of Evolutionary Algorithm by Meta-EAs for WCET Analysis\", IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
+        "text": "I. Ashraf, [GM], K.M. Yahya, S.A.A. Shah, S. Ullah, M.A. Manzoor and M. Murad, \"Parameter Tuning of Evolutionary Algorithm by Meta-EAs for WCET Analysis\", IEEE International Conference of Emerging Technologies, <em>ICET 2010</em>.",
         "featured": false
       },
       {
