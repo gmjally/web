@@ -246,6 +246,10 @@
     ],
     "journalPapers": [
       {
+        "text": "R. Anggrainingsih, J. Dewanto and [GM], \"Layer wise IndoBERT representation evolution for Indonesian misinformation detection\", <em>Discover Artificial Intelligence</em>, 2026.",
+        "featured": false
+      },
+      {
         "text": "S. Hakemi, N. Akhtar, [GM] and A. Mian, \"Faithful Image Editing via Degraded Representations\", <em>Transactions on Machine Learning Research</em>, 2026.",
         "featured": true
       },
@@ -535,6 +539,10 @@
       }
     ],
     "conferencePapers": [
+      {
+        "text": "P. ciceklidag, A. Mian, [GM] and J. Hong, \"RoadTwin: A Training-Free Drivable Hybrid Digital Twin of a 114 km Freeway from Mobile LiDAR\", International Conference on Image and Vision Computing New Zealand<em>IVCNZ 2026</em>.",
+        "featured": false
+      },
       {
         "text": "D. Ali, A. Azimi, C. Galvin, T. Kapur, A. Golby, A. Mian, N. Akhtar, and [GM], \"Pre-Operative to Intra-Operative: A Brain Tumor Segmentation Generalization Study\", International Workshop on Brain Abnormality, <em>MICCAI 2026 (BrainWorks)</em>.",
         "featured": true
